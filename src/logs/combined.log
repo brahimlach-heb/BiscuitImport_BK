@@ -1,0 +1,758 @@
+2026-01-14T23:44:15.920Z info: Server listening on port 3000
+2026-01-14T23:44:15.931Z info: Base SQLite connectée avec succès
+2026-01-14T23:57:03.038Z info: Server listening on port 3000
+2026-01-14T23:57:03.055Z info: Base SQLite connectée avec succès
+2026-01-14T23:57:21.881Z info: GET /swagger.json 404 2.953 ms -
+2026-01-14T23:57:33.099Z info: GET /api-docs.json 404 0.575 ms -
+2026-01-14T23:57:42.062Z info: GET /v3/api-docs 404 0.318 ms -
+2026-01-14T23:57:53.187Z info: GET /api-docs 301 2.600 ms -
+2026-01-14T23:57:53.194Z info: GET /api-docs/ 200 1.695 ms -
+2026-01-14T23:58:49.038Z info: GET /api-docs 301 0.618 ms -
+2026-01-14T23:58:49.043Z info: GET /api-docs/ 200 1.269 ms -
+2026-01-14T23:58:55.507Z info: GET /api-docs 301 0.415 ms -
+2026-01-14T23:58:55.511Z info: GET /api-docs/ 200 1.075 ms -
+2026-01-14T23:58:59.607Z info: GET /swagger.json 404 0.354 ms -
+2026-01-14T23:59:02.207Z info: GET /api-docs.json 404 0.764 ms -
+2026-01-14T23:59:04.451Z info: GET /v3/api-docs 404 0.459 ms -
+2026-01-14T23:59:07.464Z info: GET /api-docs 301 0.854 ms -
+2026-01-14T23:59:07.471Z info: GET /api-docs/ 200 1.633 ms -
+2026-01-14T23:59:07.672Z info: GET /api-docs/swagger-ui-init.js 200 0.803 ms -
+2026-01-14T23:59:07.684Z info: GET /api-docs/swagger-ui.css 200 19.846 ms -
+2026-01-14T23:59:07.694Z info: GET /api-docs/swagger-ui-standalone-preset.js 200 19.608 ms -
+2026-01-14T23:59:07.740Z info: GET /api-docs/swagger-ui-bundle.js 200 45.359 ms -
+2026-01-15T13:19:12.660Z info: Server listening on port 3000
+2026-01-15T13:19:12.670Z info: Base SQLite connectée avec succès
+2026-01-15T13:22:06.799Z info: OPTIONS /auth/login 200 4.437 ms -
+2026-01-15T13:22:21.035Z info: OPTIONS /auth/login 200 1.418 ms -
+2026-01-15T13:22:32.552Z info: OPTIONS /auth/login 200 1.163 ms -
+2026-01-15T13:23:00.433Z info: OPTIONS /auth/login 200 0.418 ms -
+2026-01-15T13:24:14.973Z info: OPTIONS /auth/login 200 0.259 ms -
+2026-01-15T13:24:18.549Z info: OPTIONS /auth/login 200 0.253 ms -
+2026-01-15T13:31:22.650Z info: OPTIONS /auth/login 200 0.522 ms -
+2026-01-15T13:32:39.045Z info: OPTIONS /auth/login 200 2.322 ms -
+2026-01-15T13:32:45.731Z info: GET /api-docs/ 304 5.695 ms -
+2026-01-15T13:32:45.765Z info: GET /api-docs/swagger-ui.css 304 3.184 ms -
+2026-01-15T13:32:45.769Z info: GET /api-docs/swagger-ui-bundle.js 304 1.359 ms -
+2026-01-15T13:32:45.773Z info: GET /api-docs/swagger-ui-init.js 304 1.053 ms -
+2026-01-15T13:32:45.775Z info: GET /api-docs/swagger-ui-standalone-preset.js 304 6.494 ms -
+2026-01-15T13:32:46.189Z info: GET /api-docs/favicon-32x32.png 304 1.266 ms -
+2026-01-15T13:33:21.400Z info: ACTION login email=b@gmail.com userId=1
+2026-01-15T13:33:21.403Z info: POST /auth/login 200 254.900 ms {"email":"b@gmail.com","password":"string"}
+2026-01-15T13:33:55.759Z info: OPTIONS /auth/login 200 0.758 ms -
+2026-01-15T13:35:20.671Z info: OPTIONS /auth/login 200 0.561 ms -
+2026-01-15T13:35:45.700Z info: OPTIONS /auth/login 200 0.388 ms -
+2026-01-15T13:35:49.016Z info: OPTIONS /auth/login 200 0.221 ms -
+2026-01-15T13:37:43.437Z info: OPTIONS /auth/login 200 0.319 ms -
+2026-01-15T13:37:55.241Z error: Error: Invalid credentials
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:74:17)
+    at async login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:18)
+2026-01-15T13:37:55.243Z info: POST /auth/login 401 63.058 ms {"email":"b@gmail.com","password":"stringqq"}
+2026-01-15T13:39:45.393Z info: ACTION login email=b@gmail.com userId=1
+2026-01-15T13:39:45.396Z info: POST /auth/login 200 74.803 ms {"email":"b@gmail.com","password":"string"}
+2026-01-15T13:41:08.092Z info: OPTIONS /auth/login 200 0.496 ms -
+2026-01-15T13:41:36.106Z info: OPTIONS /auth/login 200 0.220 ms -
+2026-01-15T13:42:07.538Z info: OPTIONS /auth/login 200 0.312 ms -
+2026-01-15T13:42:18.908Z info: OPTIONS /auth/login 200 0.656 ms -
+2026-01-15T13:47:39.260Z info: OPTIONS /auth/login 200 0.366 ms -
+2026-01-15T13:47:57.362Z info: OPTIONS /auth/login 200 0.256 ms -
+2026-01-15T13:48:22.562Z info: Server listening on port 3000
+2026-01-15T13:48:22.606Z info: Base SQLite connectée avec succès
+2026-01-15T13:51:03.704Z error: SyntaxError: "[object Object]" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\body-parser\lib\types\json.js:72:19)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\body-parser\lib\read.js:162:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:524:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2026-01-15T13:51:03.726Z info: POST /auth/login 500 143.056 ms -
+2026-01-15T13:51:40.942Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T13:51:40.946Z info: POST /auth/login 400 5.931 ms {"username":"b@gmail.com","password":"ffff"}
+2026-01-15T13:51:47.317Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T13:51:47.319Z info: POST /auth/login 400 2.019 ms {"username":"b@gmail.com","password":"string"}
+2026-01-15T13:51:48.976Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T13:51:48.980Z info: POST /auth/login 400 2.059 ms {"username":"b@gmail.com","password":"string"}
+2026-01-15T13:53:11.481Z info: ACTION login email=b@gmail.com userId=1
+2026-01-15T13:53:11.482Z info: POST /auth/login 200 110.270 ms {"email":"b@gmail.com","password":"string"}
+2026-01-15T13:53:20.426Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T13:53:20.429Z info: POST /auth/login 400 1.743 ms {"username":"b@gmail.com","password":"string"}
+2026-01-15T13:53:41.148Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T13:53:41.149Z info: POST /auth/login 400 1.233 ms {"username":"b@gmail.com","password":"string"}
+2026-01-15T13:54:20.950Z info: Server listening on port 3000
+2026-01-15T13:54:20.964Z info: Base SQLite connectée avec succès
+2026-01-15T13:54:23.953Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T13:54:23.964Z info: POST /auth/login 400 59.987 ms {"username":"b@gmail.com","password":"string"}
+2026-01-15T14:00:55.628Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T14:00:55.630Z info: POST /auth/login 400 2.393 ms {"username":"b@gmail.com","password":"string"}
+2026-01-15T14:01:31.659Z info: Server listening on port 3000
+2026-01-15T14:01:31.676Z info: Base SQLite connectée avec succès
+2026-01-15T14:01:33.478Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:58:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T14:01:33.481Z info: POST /auth/login 400 108.281 ms {"username":"b@gmail.com","password":"string"}
+2026-01-15T14:03:05.593Z info: ACTION login email=b@gmail.com userId=1
+2026-01-15T14:03:05.598Z info: POST /auth/login 200 228.225 ms {"email":"b@gmail.com","password":"string"}
+2026-01-15T14:03:23.362Z info: ACTION login email=b@gmail.com userId=1
+2026-01-15T14:03:23.363Z info: POST /auth/login 200 146.845 ms {"email":"b@gmail.com","password":"string"}
+2026-01-15T14:03:31.931Z info: ACTION login email=b@gmail.com userId=1
+2026-01-15T14:03:31.932Z info: POST /auth/login 200 120.835 ms {"email":"b@gmail.com","password":"string"}
+2026-01-15T14:05:10.721Z info: ACTION login email=b@gmail.com userId=1
+2026-01-15T14:05:10.728Z info: POST /auth/login 200 279.638 ms {"email":"b@gmail.com","password":"string"}
+2026-01-15T14:06:31.626Z info: ACTION login email=b@gmail.com userId=1
+2026-01-15T14:06:31.634Z info: POST /auth/login 200 236.310 ms {"email":"b@gmail.com","password":"string"}
+2026-01-15T14:11:10.002Z info: ACTION login email=b@gmail.com userId=1
+2026-01-15T14:11:10.008Z info: POST /auth/login 200 402.629 ms {"email":"b@gmail.com","password":"string"}
+2026-01-15T14:43:20.363Z info: Server listening on port 3000
+2026-01-15T14:43:20.376Z info: Base SQLite connectée avec succès
+2026-01-15T14:44:00.932Z info: ACTION login email=b@gmail.com userId=1
+2026-01-15T14:44:00.950Z info: POST /auth/login 200 680.106 ms {"email":"b@gmail.com","password":"string"}
+2026-01-15T14:50:31.866Z info: Server listening on port 3000
+2026-01-15T14:50:31.905Z info: Base SQLite connectée avec succès
+2026-01-15T22:26:15.453Z info: Server listening on port 3000
+2026-01-15T22:26:15.465Z info: Base SQLite connectée avec succès
+2026-01-15T22:26:25.943Z info: ACTION login email=b@gmail.com userId=1
+2026-01-15T22:26:25.952Z info: POST /auth/login 200 385.202 ms {"email":"b@gmail.com","password":"string"}
+2026-01-15T22:26:49.397Z info: ACTION login email=b@gmail.com userId=1
+2026-01-15T22:26:49.401Z info: POST /auth/login 200 140.888 ms {"email":"b@gmail.com","password":"string"}
+2026-01-16T10:23:41.043Z info: Server listening on port 3000
+2026-01-16T10:23:41.085Z info: Base SQLite connectée avec succès
+2026-01-16T14:00:10.882Z info: ACTION login email=b@gmail.com userId=1
+2026-01-16T14:00:10.913Z info: POST /auth/login 200 731.246 ms {"email":"b@gmail.com","password":"string"}
+2026-01-16T14:16:15.761Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T14:16:15.768Z info: GET /api/products 200 49.236 ms -
+2026-01-16T14:16:15.779Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T14:16:15.792Z info: GET /api/categories 200 38.650 ms -
+2026-01-16T14:16:15.806Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T14:16:15.813Z info: GET /api/users 200 121.055 ms -
+2026-01-16T14:16:15.821Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:16:15.829Z info: GET /api/orders 500 97.107 ms -
+2026-01-16T14:16:15.841Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T14:16:15.845Z info: GET /api/products 304 42.790 ms -
+2026-01-16T14:16:15.862Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T14:16:15.866Z info: GET /api/categories 304 27.797 ms -
+2026-01-16T14:16:15.887Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T14:16:15.895Z info: GET /api/users 304 40.463 ms -
+2026-01-16T14:16:15.910Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:16:15.928Z info: GET /api/orders 500 39.487 ms -
+2026-01-16T14:16:32.769Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T14:16:32.788Z info: GET /api/products 304 19.336 ms -
+2026-01-16T14:16:33.400Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:16:33.556Z info: GET /api/orders 500 625.273 ms -
+2026-01-16T14:16:33.643Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T14:16:33.769Z info: GET /api/users 304 703.906 ms -
+2026-01-16T14:16:33.869Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T14:16:34.051Z info: GET /api/categories 304 743.515 ms -
+2026-01-16T14:16:34.593Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T14:16:34.696Z info: GET /api/products 304 490.479 ms -
+2026-01-16T14:16:34.941Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T14:16:34.986Z info: GET /api/categories 304 423.062 ms -
+2026-01-16T14:16:35.107Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T14:16:35.155Z info: GET /api/users 304 830.710 ms -
+2026-01-16T14:16:35.209Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:16:35.308Z info: GET /api/orders 500 1088.073 ms -
+2026-01-16T14:24:40.247Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T14:24:40.338Z info: GET /api/users 304 131.753 ms -
+2026-01-16T14:24:40.412Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T14:24:40.440Z info: GET /api/categories 304 206.393 ms -
+2026-01-16T14:24:40.510Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T14:24:40.543Z info: GET /api/products 304 51.168 ms -
+2026-01-16T14:24:40.623Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T14:24:40.637Z info: GET /api/categories 304 140.742 ms -
+2026-01-16T14:24:40.643Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:24:40.671Z info: GET /api/orders 500 290.107 ms -
+2026-01-16T14:24:40.697Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T14:24:40.710Z info: GET /api/users 304 226.129 ms -
+2026-01-16T14:24:40.713Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T14:24:40.734Z info: GET /api/products 304 85.620 ms -
+2026-01-16T14:24:40.792Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:24:40.831Z info: GET /api/orders 500 67.529 ms -
+2026-01-16T14:29:53.504Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T14:29:53.539Z info: GET /api/products 304 148.411 ms -
+2026-01-16T14:29:53.612Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T14:29:53.669Z info: GET /api/categories 304 231.504 ms -
+2026-01-16T14:29:53.735Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T14:29:53.749Z info: GET /api/users 304 350.731 ms -
+2026-01-16T14:29:53.812Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:29:53.844Z info: GET /api/orders 500 472.084 ms -
+2026-01-16T14:29:53.895Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T14:29:53.935Z info: GET /api/products 304 204.287 ms -
+2026-01-16T14:29:54.151Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T14:29:54.184Z info: GET /api/categories 304 402.262 ms -
+2026-01-16T14:29:54.362Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T14:29:54.404Z info: GET /api/users 304 393.663 ms -
+2026-01-16T14:29:54.470Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:29:54.495Z info: GET /api/orders 500 277.452 ms -
+2026-01-16T14:35:30.973Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T14:35:30.974Z info: GET /api/products 304 10.906 ms -
+2026-01-16T14:35:31.017Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T14:35:31.030Z info: GET /api/categories 304 55.163 ms -
+2026-01-16T14:35:31.043Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T14:35:31.047Z info: GET /api/users 304 81.893 ms -
+2026-01-16T14:35:31.061Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:35:31.074Z info: GET /api/orders 500 101.879 ms -
+2026-01-16T14:35:31.093Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T14:35:31.118Z info: GET /api/products 304 66.456 ms -
+2026-01-16T14:35:31.201Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T14:35:31.230Z info: GET /api/categories 304 162.912 ms -
+2026-01-16T14:35:31.411Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T14:35:31.463Z info: GET /api/users 304 278.492 ms -
+2026-01-16T14:35:31.522Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:35:31.544Z info: GET /api/orders 500 262.191 ms -
+2026-01-16T21:11:41.049Z info: ACTION login email=b@gmail.com userId=1
+2026-01-16T21:11:41.055Z info: POST /auth/login 200 242.692 ms {"email":"b@gmail.com","password":"string"}
+2026-01-16T21:11:52.140Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T21:11:52.142Z info: GET /api/products 304 4.136 ms -
+2026-01-16T21:11:52.142Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T21:11:52.144Z info: GET /api/categories 304 4.711 ms -
+2026-01-16T21:11:52.166Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T21:11:52.169Z info: GET /api/products 304 9.221 ms -
+2026-01-16T21:11:52.170Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T21:11:52.172Z info: GET /api/categories 304 11.095 ms -
+2026-01-16T21:11:52.173Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T21:11:52.175Z info: GET /api/users 200 19.063 ms -
+2026-01-16T21:11:52.180Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:11:52.183Z info: GET /api/orders 500 33.409 ms -
+2026-01-16T21:11:52.190Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T21:11:52.192Z info: GET /api/users 304 4.541 ms -
+2026-01-16T21:11:52.199Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:11:52.200Z info: GET /api/orders 500 6.489 ms -
+2026-01-16T21:12:23.401Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T21:12:23.414Z info: GET /api/products 304 12.367 ms -
+2026-01-16T21:12:23.425Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T21:12:23.428Z info: GET /api/categories 304 11.405 ms -
+2026-01-16T21:12:23.432Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T21:12:23.434Z info: GET /api/products 304 8.795 ms -
+2026-01-16T21:12:23.435Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T21:12:23.437Z info: GET /api/users 304 19.983 ms -
+2026-01-16T21:12:23.440Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:12:23.441Z info: GET /api/orders 500 21.789 ms -
+2026-01-16T21:12:23.446Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T21:12:23.448Z info: GET /api/categories 304 9.393 ms -
+2026-01-16T21:12:23.453Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T21:12:23.454Z info: GET /api/users 304 11.362 ms -
+2026-01-16T21:12:23.455Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:12:23.457Z info: GET /api/orders 500 6.819 ms -
+2026-01-16T21:12:37.503Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T21:12:37.505Z info: GET /api/products 304 7.907 ms -
+2026-01-16T21:12:37.506Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T21:12:37.509Z info: GET /api/categories 304 9.422 ms -
+2026-01-16T21:12:37.521Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:12:37.523Z info: GET /api/orders 500 22.546 ms -
+2026-01-16T21:12:37.523Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T21:12:37.525Z info: GET /api/products 304 5.945 ms -
+2026-01-16T21:12:37.527Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T21:12:37.530Z info: GET /api/categories 304 9.025 ms -
+2026-01-16T21:12:37.531Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T21:12:37.533Z info: GET /api/users 304 19.821 ms -
+2026-01-16T21:12:37.547Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:12:37.549Z info: GET /api/orders 500 13.102 ms -
+2026-01-16T21:12:37.550Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T21:12:37.552Z info: GET /api/users 304 11.649 ms -
+2026-01-16T21:13:53.524Z info: Server listening on port 3000
+2026-01-16T21:13:53.536Z info: Base SQLite connectée avec succès
+2026-01-16T21:31:58.847Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T21:31:58.854Z info: GET /api/products 304 35.696 ms -
+2026-01-16T21:31:58.856Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T21:31:58.858Z info: GET /api/categories 304 17.647 ms -
+2026-01-16T21:31:58.866Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T21:31:58.868Z info: GET /api/users 304 46.639 ms -
+2026-01-16T21:31:58.869Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T21:31:58.870Z info: GET /api/products 304 6.699 ms -
+2026-01-16T21:31:58.872Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:31:58.875Z info: GET /api/orders 500 33.052 ms -
+2026-01-16T21:31:58.877Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T21:31:58.881Z info: GET /api/categories 304 13.743 ms -
+2026-01-16T21:31:58.891Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T21:31:58.892Z info: GET /api/users 304 8.709 ms -
+2026-01-16T21:31:58.895Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:31:58.897Z info: GET /api/orders 500 9.119 ms -
+2026-01-16T21:33:24.904Z info: Server listening on port 3000
+2026-01-16T21:33:24.936Z info: Base SQLite connectée avec succès
+2026-01-16T21:35:00.351Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T21:35:00.361Z info: GET /api/products 304 35.443 ms -
+2026-01-16T21:35:00.364Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T21:35:00.370Z info: GET /api/categories 304 37.337 ms -
+2026-01-16T21:35:00.386Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T21:35:00.390Z info: GET /api/users 304 53.805 ms -
+2026-01-16T21:35:00.392Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T21:35:00.396Z info: GET /api/products 304 12.626 ms -
+2026-01-16T21:35:00.400Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:35:00.407Z info: GET /api/orders 500 56.619 ms -
+2026-01-16T21:35:00.409Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T21:35:00.412Z info: GET /api/categories 304 26.146 ms -
+2026-01-16T21:35:00.429Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T21:35:00.432Z info: GET /api/users 304 16.281 ms -
+2026-01-16T21:35:00.434Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:35:00.436Z info: GET /api/orders 500 15.328 ms -
+2026-01-16T21:57:26.727Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T21:57:26.729Z info: GET /api/products 304 4.737 ms -
+2026-01-16T21:57:26.730Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T21:57:26.734Z info: GET /api/categories 304 6.031 ms -
+2026-01-16T21:57:26.744Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T21:57:26.746Z info: GET /api/users 200 9.329 ms -
+2026-01-16T21:57:26.751Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:57:26.753Z info: GET /api/orders 500 13.379 ms -
+2026-01-16T21:57:26.758Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T21:57:26.760Z info: GET /api/products 304 9.910 ms -
+2026-01-16T21:57:26.761Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T21:57:26.763Z info: GET /api/categories 304 7.464 ms -
+2026-01-16T21:57:26.775Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T21:57:26.777Z info: GET /api/users 304 8.170 ms -
+2026-01-16T21:57:26.786Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:57:26.788Z info: GET /api/orders 500 7.570 ms -
+2026-01-16T22:02:17.859Z info: DB createProduct: name=XX price=23 actor=1
+2026-01-16T22:02:17.897Z info: AUDIT ADD_PRODUCT: id=1 user=1
+2026-01-16T22:02:17.898Z info: ACTION createProduct id=1 name=XX price=23 category=null by=undefined undefined (1)
+2026-01-16T22:02:17.900Z info: POST /api/products 201 211.844 ms {"name":"XX","category":"chocolats","brand":"XS","price":23,"stock":47,"description":"SXSXS","image":"https://abcg-formation.com/definition-produit-detergent/"}
+2026-01-16T22:06:58.825Z info: DB createProduct: name=XCVV price=466 actor=1
+2026-01-16T22:06:58.849Z info: AUDIT ADD_PRODUCT: id=2 user=1
+2026-01-16T22:06:58.851Z info: ACTION createProduct id=2 name=XCVV price=466 category=null by=undefined undefined (1)
+2026-01-16T22:06:58.853Z info: POST /api/products 201 30.372 ms {"name":"XCVV","category":"biscuits","brand":"DZED","price":466,"stock":38888,"description":"DFEFRGTHGT","image":"https://abcg-formation.com/definition-produit-detergent/"}
+2026-01-16T22:07:59.367Z info: DB createCategory: name=EZDFD actor=1
+2026-01-16T22:07:59.402Z info: AUDIT ADD_CATEGORY: id=1 user=1
+2026-01-16T22:07:59.403Z info: ACTION createCategory id=1 name=EZDFD by=undefined undefined (1)
+2026-01-16T22:07:59.405Z info: POST /api/categories 201 46.282 ms {"name":"EZDFD","icon":"📦","description":"EDFDF"}
+2026-01-16T22:08:33.112Z info: DB createProduct: name=DFDF price=1.1 actor=1
+2026-01-16T22:08:33.155Z info: AUDIT ADD_PRODUCT: id=3 user=1
+2026-01-16T22:08:33.155Z info: ACTION createProduct id=3 name=DFDF price=1.1 category=null by=undefined undefined (1)
+2026-01-16T22:08:33.157Z info: POST /api/products 201 52.709 ms {"name":"DFDF","category":"1","brand":"DFDF","price":1.1,"stock":223,"description":"DEEF","image":"https://abcg-formation.com/definition-produit-detergent/"}
+2026-01-16T22:10:29.109Z info: ACTION getAllProducts count=3 filter={} by=anonymous
+2026-01-16T22:10:29.111Z info: GET /api/products 200 2.686 ms -
+2026-01-16T22:10:29.113Z info: ACTION getAllCategories count=1 by=anonymous
+2026-01-16T22:10:29.114Z info: GET /api/categories 200 4.833 ms -
+2026-01-16T22:10:29.121Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:10:29.123Z info: GET /api/orders 500 4.136 ms -
+2026-01-16T22:10:29.123Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T22:10:29.134Z info: GET /api/users 304 8.422 ms -
+2026-01-16T22:10:29.141Z info: ACTION getAllCategories count=1 by=anonymous
+2026-01-16T22:10:29.142Z info: GET /api/categories 304 6.488 ms -
+2026-01-16T22:10:29.144Z info: ACTION getAllProducts count=3 filter={} by=anonymous
+2026-01-16T22:10:29.147Z info: GET /api/products 304 9.299 ms -
+2026-01-16T22:10:29.154Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T22:10:29.156Z info: GET /api/users 304 17.884 ms -
+2026-01-16T22:10:29.157Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:10:29.160Z info: GET /api/orders 500 7.640 ms -
+2026-01-16T22:23:30.146Z info: ACTION getHistory count=4 filter={} by=undefined undefined (1)
+2026-01-16T22:23:30.150Z info: GET /api/history 200 17.587 ms -
+2026-01-16T22:23:44.268Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:23:44.270Z info: GET /api/categories 200 6.571 ms -
+2026-01-16T22:23:44.270Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:23:44.272Z info: GET /api/products 200 7.868 ms -
+2026-01-16T22:23:44.278Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:23:44.279Z info: GET /api/products 304 2.249 ms -
+2026-01-16T22:23:44.279Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:23:44.280Z info: GET /api/categories 304 2.660 ms -
+2026-01-16T22:26:25.489Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:26:25.491Z info: GET /api/products 304 13.546 ms -
+2026-01-16T22:26:25.493Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:26:25.494Z info: GET /api/categories 304 15.041 ms -
+2026-01-16T22:26:25.504Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:26:25.506Z info: GET /api/orders 500 24.977 ms -
+2026-01-16T22:26:25.507Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T22:26:25.509Z info: GET /api/users 304 23.424 ms -
+2026-01-16T22:26:25.509Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:26:25.511Z info: GET /api/products 304 12.565 ms -
+2026-01-16T22:26:25.511Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:26:25.512Z info: GET /api/categories 304 9.081 ms -
+2026-01-16T22:26:25.521Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T22:26:25.523Z info: GET /api/users 304 8.741 ms -
+2026-01-16T22:26:25.524Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:26:25.525Z info: GET /api/orders 500 7.394 ms -
+2026-01-16T22:26:52.759Z info: DB createCategory: name=hghhj actor=1
+2026-01-16T22:26:52.790Z info: AUDIT ADD_CATEGORY: id=2 user=1
+2026-01-16T22:26:52.790Z info: ACTION createCategory id=2 name=hghhj by=undefined undefined (1)
+2026-01-16T22:26:52.792Z info: POST /api/categories 201 42.370 ms {"name":"hghhj","icon":"📦","description":"hbbh"}
+2026-01-16T22:27:28.594Z info: DB createProduct: name=ghbj price=9999 actor=1
+2026-01-16T22:27:28.635Z info: AUDIT ADD_PRODUCT: id=4 user=1
+2026-01-16T22:27:28.636Z info: ACTION createProduct id=4 name=ghbj price=9999 category=null by=undefined undefined (1)
+2026-01-16T22:27:28.637Z info: POST /api/products 201 51.439 ms {"name":"ghbj","category":"2","brand":"ujijk","price":9999,"stock":20,"description":"JKJJNJK","image":"https://abcg-formation.com/definition-produit-detergent/"}
+2026-01-16T22:30:58.538Z info: ACTION getAllProducts count=1 filter={} by=anonymous
+2026-01-16T22:30:58.539Z info: GET /api/products 200 4.174 ms -
+2026-01-16T22:30:58.540Z info: ACTION getAllCategories count=1 by=anonymous
+2026-01-16T22:30:58.542Z info: GET /api/categories 200 4.726 ms -
+2026-01-16T22:30:58.550Z info: ACTION getAllCategories count=1 by=anonymous
+2026-01-16T22:30:58.551Z info: GET /api/categories 304 2.077 ms -
+2026-01-16T22:30:58.860Z info: ACTION getAllProducts count=1 filter={} by=anonymous
+2026-01-16T22:30:58.864Z info: GET /api/products 304 7.117 ms -
+2026-01-16T22:31:43.336Z info: ACTION getAllCategories count=1 by=anonymous
+2026-01-16T22:31:43.338Z info: GET /api/categories 304 11.772 ms -
+2026-01-16T22:31:43.339Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:31:43.341Z info: GET /api/products 200 12.788 ms -
+2026-01-16T22:31:43.346Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T22:31:43.347Z info: GET /api/users 304 15.917 ms -
+2026-01-16T22:31:43.348Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:31:43.349Z info: GET /api/orders 500 15.031 ms -
+2026-01-16T22:31:43.349Z info: ACTION getAllCategories count=1 by=anonymous
+2026-01-16T22:31:43.354Z info: GET /api/categories 304 4.541 ms -
+2026-01-16T22:31:43.361Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:31:43.362Z info: GET /api/products 304 7.335 ms -
+2026-01-16T22:31:43.365Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:31:43.366Z info: GET /api/orders 500 6.383 ms -
+2026-01-16T22:31:43.367Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T22:31:43.368Z info: GET /api/users 304 10.679 ms -
+2026-01-16T22:31:54.679Z info: DB deleteCategory: id=2 actor=1
+2026-01-16T22:31:54.721Z info: AUDIT DELETE_CATEGORY: id=2 user=1
+2026-01-16T22:31:54.722Z info: ACTION deleteCategory id=2 by=undefined undefined (1)
+2026-01-16T22:31:54.724Z info: DELETE /api/categories/2 200 56.209 ms -
+2026-01-16T22:34:08.912Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:34:08.914Z info: GET /api/products 304 3.956 ms -
+2026-01-16T22:34:08.915Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:34:08.920Z info: GET /api/categories 200 5.131 ms -
+2026-01-16T22:34:08.923Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:34:08.924Z info: GET /api/products 304 1.856 ms -
+2026-01-16T22:34:08.930Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:34:08.932Z info: GET /api/categories 304 1.836 ms -
+2026-01-16T22:34:58.538Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:34:58.539Z info: GET /api/products 304 17.163 ms -
+2026-01-16T22:34:58.540Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:34:58.541Z info: GET /api/categories 304 17.117 ms -
+2026-01-16T22:34:58.542Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T22:34:58.543Z info: GET /api/users 304 18.471 ms -
+2026-01-16T22:34:58.547Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:34:58.548Z info: GET /api/products 304 2.661 ms -
+2026-01-16T22:34:58.553Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:34:58.555Z info: GET /api/orders 500 26.954 ms -
+2026-01-16T22:34:58.556Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:34:58.557Z info: GET /api/categories 304 10.121 ms -
+2026-01-16T22:34:58.559Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T22:34:58.560Z info: GET /api/users 304 10.563 ms -
+2026-01-16T22:34:58.565Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:34:58.567Z info: GET /api/orders 500 4.389 ms -
+2026-01-16T22:38:31.199Z info: ACTION login email=b@gmail.com userId=1
+2026-01-16T22:38:31.202Z info: POST /auth/login 200 227.764 ms {"email":"b@gmail.com","password":"string"}
+2026-01-16T22:38:32.254Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:38:32.256Z info: GET /api/products 200 3.902 ms -
+2026-01-16T22:38:32.257Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:38:32.258Z info: GET /api/categories 200 3.734 ms -
+2026-01-16T22:38:32.267Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:38:32.270Z info: GET /api/products 304 4.479 ms -
+2026-01-16T22:38:32.276Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:38:32.280Z info: GET /api/categories 304 4.508 ms -
+2026-01-16T22:38:36.270Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:38:36.271Z info: GET /api/products 304 5.272 ms -
+2026-01-16T22:38:36.272Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:38:36.274Z info: GET /api/categories 304 6.611 ms -
+2026-01-16T22:38:36.293Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:38:36.296Z info: GET /api/products 304 9.650 ms -
+2026-01-16T22:38:36.297Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:38:36.298Z info: GET /api/categories 304 10.513 ms -
+2026-01-16T22:38:36.300Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T22:38:36.302Z info: GET /api/users 200 19.336 ms -
+2026-01-16T22:38:36.303Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:38:36.304Z info: GET /api/orders 500 13.010 ms -
+2026-01-16T22:38:36.316Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:38:36.318Z info: GET /api/orders 500 7.821 ms -
+2026-01-16T22:38:36.319Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T22:38:36.320Z info: GET /api/users 304 7.137 ms -
+2026-01-16T22:39:28.497Z info: DB createCategory: name=sdxs actor=1
+2026-01-16T22:39:28.529Z info: AUDIT ADD_CATEGORY: id=3 user=1
+2026-01-16T22:39:28.530Z info: ACTION createCategory id=3 name=sdxs by=undefined undefined (1)
+2026-01-16T22:39:28.531Z info: POST /api/categories 201 40.512 ms {"name":"sdxs","icon":"📦","description":"sqdxsq"}
+2026-01-16T22:39:46.216Z info: DB createProduct: name=sdsqd price=11222 actor=1
+2026-01-16T22:39:46.247Z info: AUDIT ADD_PRODUCT: id=5 user=1
+2026-01-16T22:39:46.248Z info: ACTION createProduct id=5 name=sdsqd price=11222 category=null by=undefined undefined (1)
+2026-01-16T22:39:46.250Z info: POST /api/products 201 39.403 ms {"name":"sdsqd","category":"3","brand":"sdsq","price":11222,"stock":222,"description":"ZXCCD","image":"DFF"}
+2026-01-16T22:40:25.163Z info: ACTION getAllProducts count=1 filter={} by=anonymous
+2026-01-16T22:40:25.166Z info: GET /api/products 200 12.071 ms -
+2026-01-16T22:40:25.167Z info: ACTION getAllCategories count=1 by=anonymous
+2026-01-16T22:40:25.169Z info: GET /api/categories 200 14.178 ms -
+2026-01-16T22:40:25.173Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T22:40:25.178Z info: GET /api/users 304 21.338 ms -
+2026-01-16T22:40:25.183Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:40:25.184Z info: GET /api/orders 500 23.573 ms -
+2026-01-16T22:40:25.185Z info: ACTION getAllProducts count=1 filter={} by=anonymous
+2026-01-16T22:40:25.186Z info: GET /api/products 304 5.323 ms -
+2026-01-16T22:40:25.192Z info: ACTION getAllCategories count=1 by=anonymous
+2026-01-16T22:40:25.194Z info: GET /api/categories 304 11.343 ms -
+2026-01-16T22:40:25.201Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T22:40:25.202Z info: GET /api/users 304 14.801 ms -
+2026-01-16T22:40:25.204Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:40:25.208Z info: GET /api/orders 500 9.651 ms -
+2026-01-16T22:40:40.274Z info: DB createCategory: name=DCDSF actor=1
+2026-01-16T22:40:40.315Z info: AUDIT ADD_CATEGORY: id=4 user=1
+2026-01-16T22:40:40.316Z info: ACTION createCategory id=4 name=DCDSF by=undefined undefined (1)
+2026-01-16T22:40:40.317Z info: POST /api/categories 201 47.359 ms {"name":"DCDSF","icon":"📦","description":"DSFDDS"}
+2026-01-16T22:43:50.399Z info: DB createProduct: name=HGVHKJH price=3344 actor=1
+2026-01-16T22:43:50.427Z info: AUDIT ADD_PRODUCT: id=6 user=1
+2026-01-16T22:43:50.427Z info: ACTION createProduct id=6 name=HGVHKJH price=3344 category=null by=undefined undefined (1)
+2026-01-16T22:43:50.428Z info: POST /api/products 201 31.542 ms {"name":"HGVHKJH","category":"4","brand":"HGH","price":3344,"stock":13,"description":"HGB","image":"GVVGHGB"}
+2026-01-16T22:45:11.635Z info: ACTION login email=b@gmail.com userId=1
+2026-01-16T22:45:11.638Z info: POST /auth/login 200 177.871 ms {"email":"b@gmail.com","password":"string"}
+2026-01-16T22:45:12.711Z info: ACTION getAllProducts count=2 filter={} by=anonymous
+2026-01-16T22:45:12.713Z info: GET /api/products 200 4.108 ms -
+2026-01-16T22:45:12.725Z info: ACTION getAllCategories count=2 by=anonymous
+2026-01-16T22:45:12.727Z info: GET /api/categories 200 3.629 ms -
+2026-01-16T22:45:12.727Z info: ACTION getAllProducts count=2 filter={} by=anonymous
+2026-01-16T22:45:12.728Z info: GET /api/products 304 4.011 ms -
+2026-01-16T22:45:12.736Z info: ACTION getAllCategories count=2 by=anonymous
+2026-01-16T22:45:12.738Z info: GET /api/categories 304 3.405 ms -
+2026-01-16T22:45:51.267Z info: ACTION getAllProducts count=2 filter={} by=anonymous
+2026-01-16T22:45:51.269Z info: GET /api/products 200 4.548 ms -
+2026-01-16T22:45:51.272Z info: ACTION getAllCategories count=2 by=anonymous
+2026-01-16T22:45:51.272Z info: GET /api/categories 200 1.655 ms -
+2026-01-16T22:45:51.277Z info: ACTION getAllProducts count=2 filter={} by=anonymous
+2026-01-16T22:45:51.278Z info: GET /api/products 304 1.442 ms -
+2026-01-16T22:45:51.279Z info: ACTION getAllCategories count=2 by=anonymous
+2026-01-16T22:45:51.280Z info: GET /api/categories 304 1.290 ms -
+2026-01-16T22:48:10.802Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T22:48:10.805Z info: GET /api/history 200 6.554 ms -
+2026-01-16T22:48:10.826Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T22:48:10.830Z info: GET /api/history 304 7.856 ms -
+2026-01-16T22:48:53.234Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:48:53.236Z info: GET /api/products 200 3.033 ms -
+2026-01-16T22:48:53.241Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:48:53.245Z info: GET /api/categories 200 5.097 ms -
+2026-01-16T22:48:53.262Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:48:53.264Z info: GET /api/products 304 3.724 ms -
+2026-01-16T22:48:53.267Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:48:53.269Z info: GET /api/categories 304 2.577 ms -
+2026-01-16T22:50:12.155Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:50:12.158Z info: GET /api/products 304 8.510 ms -
+2026-01-16T22:50:12.159Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:50:12.160Z info: GET /api/categories 304 9.568 ms -
+2026-01-16T22:50:12.165Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:50:12.168Z info: GET /api/products 304 3.266 ms -
+2026-01-16T22:50:12.171Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:50:12.172Z info: GET /api/categories 304 2.530 ms -
+2026-01-16T22:50:16.302Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T22:50:16.304Z info: GET /api/history 304 5.839 ms -
+2026-01-16T22:50:16.317Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T22:50:16.319Z info: GET /api/history 304 6.978 ms -
+2026-01-16T22:50:19.546Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T22:50:19.548Z info: GET /api/history 304 8.104 ms -
+2026-01-16T22:50:19.566Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T22:50:19.568Z info: GET /api/history 304 7.787 ms -
+2026-01-16T22:53:48.302Z info: DB deleteCategory: id=3 actor=1
+2026-01-16T22:53:48.306Z info: ACTION deleteCategory_not_found id=3 by=undefined undefined (1)
+2026-01-16T22:53:48.309Z info: DELETE /api/categories/3 404 11.768 ms -
+2026-01-16T22:53:55.108Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:53:55.110Z info: GET /api/categories 304 3.078 ms -
+2026-01-16T22:53:55.110Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:53:55.112Z info: GET /api/products 304 3.957 ms -
+2026-01-16T22:53:55.116Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:53:55.118Z info: GET /api/categories 304 2.333 ms -
+2026-01-16T22:53:55.121Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:53:55.122Z info: GET /api/products 304 2.018 ms -
+2026-01-16T22:54:31.164Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T22:54:31.166Z info: GET /api/history 304 6.882 ms -
+2026-01-16T22:57:11.304Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:57:11.306Z info: GET /api/products 304 3.075 ms -
+2026-01-16T22:57:11.306Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:57:11.307Z info: GET /api/categories 304 3.582 ms -
+2026-01-16T22:57:11.312Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:57:11.314Z info: GET /api/products 304 3.821 ms -
+2026-01-16T22:57:11.314Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:57:11.315Z info: GET /api/categories 304 3.743 ms -
+2026-01-16T22:57:11.326Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:57:11.327Z info: GET /api/products 304 1.729 ms -
+2026-01-16T22:57:11.332Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:57:11.333Z info: GET /api/categories 304 3.977 ms -
+2026-01-16T22:57:11.338Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:57:11.339Z info: GET /api/products 304 2.590 ms -
+2026-01-16T22:57:11.339Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:57:11.340Z info: GET /api/categories 304 2.532 ms -
+2026-01-16T22:58:08.498Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:58:08.499Z info: GET /api/products 304 3.477 ms -
+2026-01-16T22:58:08.500Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:58:08.501Z info: GET /api/categories 304 2.939 ms -
+2026-01-16T22:58:08.505Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:58:08.507Z info: GET /api/products 304 2.886 ms -
+2026-01-16T22:58:08.507Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:58:08.510Z info: GET /api/categories 304 3.347 ms -
+2026-01-16T22:58:22.340Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T22:58:22.341Z info: GET /api/history 304 5.029 ms -
+2026-01-16T22:58:22.355Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T22:58:22.357Z info: GET /api/history 304 6.668 ms -
+2026-01-16T22:58:31.514Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:58:31.515Z info: GET /api/products 304 2.115 ms -
+2026-01-16T22:58:31.518Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:58:31.519Z info: GET /api/categories 304 2.583 ms -
+2026-01-16T22:58:31.522Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T22:58:31.524Z info: GET /api/products 304 2.340 ms -
+2026-01-16T22:58:31.531Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T22:58:31.534Z info: GET /api/categories 304 5.215 ms -
+2026-01-16T23:00:06.228Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:00:06.230Z info: GET /api/products 304 13.616 ms -
+2026-01-16T23:00:06.231Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:00:06.233Z info: GET /api/categories 304 14.216 ms -
+2026-01-16T23:00:06.237Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T23:00:06.238Z info: GET /api/users 200 18.974 ms -
+2026-01-16T23:00:06.242Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:00:06.245Z info: GET /api/products 304 8.589 ms -
+2026-01-16T23:00:06.246Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:00:06.248Z info: GET /api/orders 500 24.861 ms -
+2026-01-16T23:00:06.249Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:00:06.252Z info: GET /api/categories 304 10.936 ms -
+2026-01-16T23:00:06.264Z info: ACTION getAllUsers by=1 count=7
+2026-01-16T23:00:06.266Z info: GET /api/users 304 10.956 ms -
+2026-01-16T23:00:06.267Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:00:06.269Z info: GET /api/orders 500 8.546 ms -
+2026-01-16T23:01:23.233Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:01:23.235Z info: GET /api/categories 304 3.251 ms -
+2026-01-16T23:01:23.235Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:01:23.237Z info: GET /api/products 304 3.753 ms -
+2026-01-16T23:01:23.241Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:01:23.242Z info: GET /api/categories 304 1.882 ms -
+2026-01-16T23:01:23.244Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:01:23.247Z info: GET /api/products 304 3.018 ms -
+2026-01-16T23:01:26.070Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:01:26.072Z info: GET /api/products 304 7.394 ms -
+2026-01-16T23:01:26.072Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:01:26.074Z info: GET /api/categories 304 8.346 ms -
+2026-01-16T23:01:26.085Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:01:26.087Z info: GET /api/products 304 4.470 ms -
+2026-01-16T23:01:26.087Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:01:26.091Z info: GET /api/categories 304 4.920 ms -
+2026-01-16T23:01:26.092Z info: ACTION getAllUsers by=1 count=6
+2026-01-16T23:01:26.093Z info: GET /api/users 200 17.308 ms -
+2026-01-16T23:01:26.102Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:01:26.104Z info: GET /api/orders 500 25.600 ms -
+2026-01-16T23:01:26.115Z info: ACTION getAllUsers by=1 count=6
+2026-01-16T23:01:26.117Z info: GET /api/users 304 11.450 ms -
+2026-01-16T23:01:26.121Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:01:26.122Z info: GET /api/orders 500 8.207 ms -
+2026-01-16T23:02:05.228Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:02:05.231Z info: GET /api/products 304 4.049 ms -
+2026-01-16T23:02:05.243Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:02:05.246Z info: GET /api/categories 304 5.375 ms -
+2026-01-16T23:02:05.250Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:02:05.254Z info: GET /api/products 304 4.260 ms -
+2026-01-16T23:02:05.261Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:02:05.265Z info: GET /api/categories 304 5.202 ms -
+2026-01-16T23:02:09.394Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:02:09.396Z info: GET /api/products 304 11.227 ms -
+2026-01-16T23:02:09.396Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:02:09.397Z info: GET /api/categories 304 9.567 ms -
+2026-01-16T23:02:09.407Z info: ACTION getAllUsers by=1 count=3
+2026-01-16T23:02:09.409Z info: GET /api/users 200 16.212 ms -
+2026-01-16T23:02:09.410Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:02:09.411Z info: GET /api/products 304 8.484 ms -
+2026-01-16T23:02:09.412Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:02:09.413Z info: GET /api/categories 304 8.375 ms -
+2026-01-16T23:02:09.414Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:02:09.415Z info: GET /api/orders 500 16.134 ms -
+2026-01-16T23:02:09.422Z info: ACTION getAllUsers by=1 count=3
+2026-01-16T23:02:09.424Z info: GET /api/users 304 5.704 ms -
+2026-01-16T23:02:09.430Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:02:09.431Z info: GET /api/orders 500 4.885 ms -

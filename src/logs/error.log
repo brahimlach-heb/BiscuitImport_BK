@@ -1,0 +1,182 @@
+2026-01-15T13:37:55.241Z error: Error: Invalid credentials
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:74:17)
+    at async login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:18)
+2026-01-15T13:51:03.704Z error: SyntaxError: "[object Object]" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\body-parser\lib\types\json.js:72:19)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\body-parser\lib\read.js:162:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:524:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2026-01-15T13:51:40.942Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T13:51:47.317Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T13:51:48.976Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T13:53:20.426Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T13:53:41.148Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T13:54:23.953Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T14:00:55.628Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:57:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-15T14:01:33.478Z error: Error: Email and password are required
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:58:17)
+    at login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-16T14:16:15.821Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:16:15.910Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:16:33.400Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:16:35.209Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:24:40.643Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:24:40.792Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:29:53.812Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:29:54.470Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:35:31.061Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T14:35:31.522Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:11:52.180Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:11:52.199Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:12:23.440Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:12:23.455Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:12:37.521Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:12:37.547Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:31:58.872Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:31:58.895Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:35:00.400Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:35:00.434Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:57:26.751Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T21:57:26.786Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:10:29.121Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:10:29.157Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:26:25.504Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:26:25.524Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:31:43.348Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:31:43.365Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:34:58.553Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:34:58.565Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:38:36.303Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:38:36.316Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:40:25.183Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T22:40:25.204Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:00:06.246Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:00:06.267Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:01:26.102Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:01:26.121Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:02:09.414Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:02:09.430Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)

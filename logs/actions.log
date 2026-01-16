@@ -1,0 +1,71 @@
+2026-01-14T17:08:38.105Z info: Server listening on port 3000
+2026-01-14T17:08:38.118Z info: Base SQLite connectée avec succès
+2026-01-14T17:08:52.924Z info: Server listening on port 3000
+2026-01-14T17:08:52.930Z info: Base SQLite connectée avec succès
+2026-01-14T17:09:17.086Z info: Server listening on port 3000
+2026-01-14T17:09:17.098Z info: Base SQLite connectée avec succès
+2026-01-14T17:09:25.477Z info: Server listening on port 3000
+2026-01-14T17:09:25.501Z info: Base SQLite connectée avec succès
+2026-01-14T17:09:29.916Z info: Server listening on port 3000
+2026-01-14T17:09:29.932Z info: Base SQLite connectée avec succès
+2026-01-14T17:09:33.145Z info: Server listening on port 3000
+2026-01-14T17:09:33.158Z info: Base SQLite connectée avec succès
+2026-01-14T17:09:38.093Z info: Server listening on port 3000
+2026-01-14T17:09:38.111Z info: Base SQLite connectée avec succès
+2026-01-14T17:09:46.328Z info: Server listening on port 3000
+2026-01-14T17:09:46.346Z info: Base SQLite connectée avec succès
+2026-01-14T17:10:49.996Z info: Server listening on port 3000
+2026-01-14T17:10:50.012Z info: Base SQLite connectée avec succès
+2026-01-14T17:11:13.757Z info: ACTION login email=b@gmail.com userId=1
+2026-01-14T17:11:13.766Z info: POST /auth/login 200 225.576 ms {"email":"b@gmail.com","password":"string"}
+2026-01-14T17:11:36.405Z info: ACTION login email=b@gmail.com userId=1
+2026-01-14T17:11:36.408Z info: POST /auth/login 200 93.468 ms {"email":"b@gmail.com","password":"string"}
+2026-01-14T17:12:27.534Z info: Server listening on port 3000
+2026-01-14T17:12:27.557Z info: Base SQLite connectée avec succès
+2026-01-14T17:14:41.072Z info: Server listening on port 3000
+2026-01-14T17:14:41.089Z info: Base SQLite connectée avec succès
+2026-01-14T17:22:33.755Z info: Server listening on port 3000
+2026-01-14T17:22:33.791Z info: Base SQLite connectée avec succès
+2026-01-14T20:47:53.094Z info: Server listening on port 3000
+2026-01-14T20:47:53.104Z info: Base SQLite connectée avec succès
+2026-01-14T20:50:09.988Z info: Server listening on port 3000
+2026-01-14T20:50:09.998Z info: Base SQLite connectée avec succès
+2026-01-14T20:51:16.425Z info: Server listening on port 3000
+2026-01-14T20:51:16.431Z info: Base SQLite connectée avec succès
+2026-01-14T20:51:19.784Z info: GET /api-docs/ 304 10.965 ms -
+2026-01-14T20:51:34.408Z info: GET /api-docs/ 304 0.981 ms -
+2026-01-14T20:51:34.449Z info: GET /api-docs/swagger-ui.css 304 4.151 ms -
+2026-01-14T20:51:34.454Z info: GET /api-docs/swagger-ui-init.js 200 0.609 ms -
+2026-01-14T20:51:34.458Z info: GET /api-docs/swagger-ui-bundle.js 304 5.290 ms -
+2026-01-14T20:51:34.460Z info: GET /api-docs/swagger-ui-standalone-preset.js 304 6.922 ms -
+2026-01-14T20:51:34.830Z info: GET /api-docs/favicon-32x32.png 304 0.801 ms -
+2026-01-14T20:51:42.860Z info: GET /api-docs/ 304 1.063 ms -
+2026-01-14T20:51:42.897Z info: GET /api-docs/swagger-ui.css 304 2.460 ms -
+2026-01-14T20:51:42.906Z info: GET /api-docs/swagger-ui-standalone-preset.js 304 1.619 ms -
+2026-01-14T20:51:42.919Z info: GET /api-docs/swagger-ui-init.js 304 2.782 ms -
+2026-01-14T20:51:42.925Z info: GET /api-docs/swagger-ui-bundle.js 304 1.986 ms -
+2026-01-14T20:51:43.125Z info: GET /api-docs/favicon-32x32.png 304 1.289 ms -
+2026-01-14T22:51:26.567Z info: Server listening on port 3000
+2026-01-14T22:51:26.582Z info: Base SQLite connectée avec succès
+2026-01-14T22:54:37.840Z info: Server listening on port 3000
+2026-01-14T22:54:37.848Z info: Base SQLite connectée avec succès
+2026-01-14T22:54:42.898Z info: Server listening on port 3000
+2026-01-14T22:54:42.916Z info: Base SQLite connectée avec succès
+2026-01-14T22:54:52.375Z info: Server listening on port 3000
+2026-01-14T22:54:52.384Z info: Base SQLite connectée avec succès
+2026-01-14T22:54:56.575Z info: Server listening on port 3000
+2026-01-14T22:54:56.584Z info: Base SQLite connectée avec succès
+2026-01-14T22:55:07.866Z info: Server listening on port 3000
+2026-01-14T22:55:07.883Z info: Base SQLite connectée avec succès
+2026-01-14T22:55:11.969Z info: Server listening on port 3000
+2026-01-14T22:55:11.987Z info: Base SQLite connectée avec succès
+2026-01-14T22:55:18.844Z info: Server listening on port 3000
+2026-01-14T22:55:18.856Z info: Base SQLite connectée avec succès
+2026-01-14T22:55:22.902Z info: Server listening on port 3000
+2026-01-14T22:55:22.910Z info: Base SQLite connectée avec succès
+2026-01-14T22:55:28.194Z info: Server listening on port 3000
+2026-01-14T22:55:28.207Z info: Base SQLite connectée avec succès
+2026-01-14T22:55:32.708Z info: Server listening on port 3000
+2026-01-14T22:55:32.720Z info: Base SQLite connectée avec succès
+2026-01-14T22:55:50.011Z info: Server listening on port 3000
+2026-01-14T22:55:50.016Z info: Base SQLite connectée avec succès
