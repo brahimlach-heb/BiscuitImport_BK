@@ -756,3 +756,153 @@
 2026-01-16T23:02:09.430Z error: ReferenceError: logger is not defined
     at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
 2026-01-16T23:02:09.431Z info: GET /api/orders 500 4.885 ms -
+2026-01-16T23:14:35.309Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:14:35.312Z info: GET /api/categories 304 4.745 ms -
+2026-01-16T23:14:35.312Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:14:35.314Z info: GET /api/products 304 6.255 ms -
+2026-01-16T23:14:35.318Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:14:35.320Z info: GET /api/categories 304 2.937 ms -
+2026-01-16T23:14:35.328Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:14:35.330Z info: GET /api/products 304 7.930 ms -
+2026-01-16T23:14:51.826Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:14:51.829Z info: GET /api/history 304 7.246 ms -
+2026-01-16T23:14:51.839Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:14:51.841Z info: GET /api/history 304 5.645 ms -
+2026-01-16T23:15:11.873Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:15:11.875Z info: GET /api/products 304 3.245 ms -
+2026-01-16T23:15:11.876Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:15:11.879Z info: GET /api/categories 304 5.874 ms -
+2026-01-16T23:15:11.882Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:15:11.883Z info: GET /api/products 304 2.199 ms -
+2026-01-16T23:15:11.886Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:15:11.888Z info: GET /api/categories 304 2.141 ms -
+2026-01-16T23:15:17.184Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:15:17.185Z info: GET /api/products 304 4.965 ms -
+2026-01-16T23:15:17.186Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:15:17.187Z info: GET /api/categories 304 5.452 ms -
+2026-01-16T23:15:17.193Z info: ACTION getAllUsers by=1 count=2
+2026-01-16T23:15:17.196Z info: GET /api/users 200 12.791 ms -
+2026-01-16T23:15:17.197Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:15:17.198Z info: GET /api/products 304 7.021 ms -
+2026-01-16T23:15:17.205Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:15:17.207Z info: GET /api/orders 500 18.535 ms -
+2026-01-16T23:15:17.208Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:15:17.209Z info: GET /api/categories 304 15.950 ms -
+2026-01-16T23:15:17.220Z info: ACTION getAllUsers by=1 count=2
+2026-01-16T23:15:17.223Z info: GET /api/users 304 7.024 ms -
+2026-01-16T23:15:17.232Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-16T23:15:17.235Z info: GET /api/orders 500 9.463 ms -
+2026-01-16T23:22:36.038Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:22:36.039Z info: GET /api/products 304 2.510 ms -
+2026-01-16T23:22:36.040Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:22:36.041Z info: GET /api/categories 304 3.723 ms -
+2026-01-16T23:22:36.045Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:22:36.046Z info: GET /api/products 304 2.164 ms -
+2026-01-16T23:22:36.047Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:22:36.048Z info: GET /api/categories 304 2.737 ms -
+2026-01-16T23:23:50.408Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:23:50.411Z info: GET /api/history 304 6.955 ms -
+2026-01-16T23:23:50.431Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:23:50.435Z info: GET /api/history 304 15.551 ms -
+2026-01-16T23:25:58.620Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:25:58.621Z info: GET /api/history 304 6.481 ms -
+2026-01-16T23:25:58.634Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:25:58.636Z info: GET /api/history 304 8.727 ms -
+2026-01-16T23:26:14.224Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:26:14.227Z info: GET /api/history 304 7.378 ms -
+2026-01-16T23:26:14.247Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:26:14.249Z info: GET /api/history 304 12.832 ms -
+2026-01-16T23:26:19.735Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:26:19.737Z info: GET /api/products 304 7.450 ms -
+2026-01-16T23:26:19.737Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:26:19.739Z info: GET /api/categories 304 6.016 ms -
+2026-01-16T23:26:19.744Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:26:19.745Z info: GET /api/products 304 4.429 ms -
+2026-01-16T23:26:19.746Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:26:19.747Z info: GET /api/categories 304 2.953 ms -
+2026-01-16T23:26:22.202Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:26:22.203Z info: GET /api/history 304 4.720 ms -
+2026-01-16T23:26:22.212Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:26:22.214Z info: GET /api/history 304 7.075 ms -
+2026-01-16T23:28:43.419Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:28:43.420Z info: GET /api/history 304 3.431 ms -
+2026-01-16T23:28:43.429Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:28:43.430Z info: GET /api/history 304 4.239 ms -
+2026-01-16T23:29:05.737Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:29:05.738Z info: GET /api/history 304 4.036 ms -
+2026-01-16T23:29:05.748Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:29:05.750Z info: GET /api/history 304 5.479 ms -
+2026-01-16T23:53:02.363Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:53:02.368Z info: GET /api/history 304 13.960 ms -
+2026-01-16T23:53:02.391Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:53:02.392Z info: GET /api/history 304 15.696 ms -
+2026-01-16T23:55:08.864Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:55:08.869Z info: GET /api/categories 304 9.724 ms -
+2026-01-16T23:55:08.870Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:55:08.872Z info: GET /api/products 304 10.520 ms -
+2026-01-16T23:55:08.878Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-16T23:55:08.881Z info: GET /api/categories 304 5.316 ms -
+2026-01-16T23:55:08.883Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-16T23:55:08.888Z info: GET /api/products 304 9.075 ms -
+2026-01-16T23:55:12.682Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:55:12.683Z info: GET /api/history 304 6.801 ms -
+2026-01-16T23:55:12.693Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-16T23:55:12.696Z info: GET /api/history 304 6.083 ms -
+2026-01-17T00:00:56.217Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-17T00:00:56.222Z info: GET /api/history 304 9.612 ms -
+2026-01-17T00:00:56.238Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-17T00:00:56.239Z info: GET /api/history 304 9.950 ms -
+2026-01-17T00:01:29.647Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-17T00:01:29.650Z info: GET /api/products 304 4.396 ms -
+2026-01-17T00:01:29.654Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-17T00:01:29.656Z info: GET /api/categories 304 2.586 ms -
+2026-01-17T00:01:29.668Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-17T00:01:29.670Z info: GET /api/products 304 3.794 ms -
+2026-01-17T00:01:29.671Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-17T00:01:29.673Z info: GET /api/categories 304 5.427 ms -
+2026-01-17T00:01:46.968Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-17T00:01:46.971Z info: GET /api/history 304 8.184 ms -
+2026-01-17T00:01:46.983Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-17T00:01:46.986Z info: GET /api/history 304 7.929 ms -
+2026-01-17T00:06:34.433Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-17T00:06:34.435Z info: GET /api/products 304 3.446 ms -
+2026-01-17T00:06:34.440Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-17T00:06:34.443Z info: GET /api/categories 304 2.692 ms -
+2026-01-17T00:06:34.472Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-17T00:06:34.476Z info: GET /api/products 304 6.226 ms -
+2026-01-17T00:06:34.477Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-17T00:06:34.479Z info: GET /api/categories 304 7.674 ms -
+2026-01-17T00:06:55.045Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-17T00:06:55.046Z info: GET /api/history 304 9.858 ms -
+2026-01-17T00:06:55.054Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-17T00:06:55.055Z info: GET /api/history 304 4.045 ms -
+2026-01-17T00:11:48.077Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-17T00:11:48.081Z info: GET /api/products 304 5.238 ms -
+2026-01-17T00:11:48.082Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-17T00:11:48.084Z info: GET /api/categories 304 6.941 ms -
+2026-01-17T00:11:48.095Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-17T00:11:48.096Z info: GET /api/products 304 8.673 ms -
+2026-01-17T00:11:48.097Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-17T00:11:48.099Z info: GET /api/categories 304 4.868 ms -
+2026-01-17T00:11:51.980Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-17T00:11:51.982Z info: GET /api/history 304 4.470 ms -
+2026-01-17T00:11:51.991Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-17T00:11:51.992Z info: GET /api/history 304 4.362 ms -
+2026-01-17T00:12:13.239Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-17T00:12:13.241Z info: GET /api/products 304 3.421 ms -
+2026-01-17T00:12:13.248Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-17T00:12:13.252Z info: GET /api/categories 304 11.929 ms -
+2026-01-17T00:12:13.258Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-17T00:12:13.260Z info: GET /api/products 304 5.001 ms -
+2026-01-17T00:12:13.262Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-17T00:12:13.267Z info: GET /api/categories 304 5.722 ms -
+2026-01-17T00:12:16.290Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-17T00:12:16.292Z info: GET /api/history 304 5.568 ms -
+2026-01-17T00:12:16.302Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-17T00:12:16.304Z info: GET /api/history 304 6.926 ms -
+2026-01-17T00:23:40.084Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-17T00:23:40.086Z info: GET /api/history 304 8.666 ms -
+2026-01-17T00:23:40.100Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
+2026-01-17T00:23:40.102Z info: GET /api/history 304 8.848 ms -
