@@ -8,6 +8,23 @@
 const express = require('express');
 const controller = require('../controllers/flavor.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+
+const flavorUploadDir = path.join(process.cwd(), 'uploads', 'flavors');
+fs.mkdirSync(flavorUploadDir, { recursive: true });
+
+const storage = multer.diskStorage({
+	destination: (req, file, cb) => cb(null, flavorUploadDir),
+	filename: (req, file, cb) => {
+		const ext = path.extname(file.originalname) || '.png';
+		const base = path.basename(file.originalname, ext).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'flavor';
+		cb(null, `${Date.now()}-${base}${ext}`);
+	}
+});
+
+const upload = multer({ storage });
 
 const router = express.Router();
 
@@ -114,8 +131,8 @@ const router = express.Router();
 
 router.get('/', controller.getAll);
 router.get('/:id', controller.getById);
-router.post('/', authMiddleware, controller.create);
-router.put('/:id', authMiddleware, controller.update);
+router.post('/', authMiddleware, upload.single('image'), controller.create);
+router.put('/:id', authMiddleware, upload.single('image'), controller.update);
 router.delete('/:id', authMiddleware, controller.remove);
 
 module.exports = router;

@@ -28,17 +28,19 @@ const options = {
             id: { type: 'integer' },
             name: { type: 'string' },
             description: { type: 'string' },
-            logo: { type: 'string' },
+            emoji: { type: 'string' },
             is_active: { type: 'boolean' }
           }
         },
         Flavor: {
           type: 'object',
+          required: ['name', 'description', 'color', 'image'],
           properties: {
             id: { type: 'integer' },
             name: { type: 'string' },
             description: { type: 'string' },
-            color: { type: 'string' }
+            color: { type: 'string' },
+            image: { type: 'string' }
           }
         },
         Product: {
@@ -88,11 +90,21 @@ const options = {
             action_date: { type: 'string' },
             description: { type: 'string' }
           }
+        },
+        Role: {
+          type: 'object',
+          required: ['code'],
+          properties: {
+            id: { type: 'integer' },
+            code: { type: 'string', description: 'Unique role code' },
+            label: { type: 'string', description: 'Role label/name' },
+            is_active: { type: 'boolean', description: 'Whether the role is active' }
+          }
         }
       }
     }
   },
-  apis: ["./src/routes/*.js"], // Où Swagger va lire les annotations
+  apis: ["./src/routes/*.js", "./src/controllers/*.js"], // Swagger reads annotations from routes and controllers
 };
 
 module.exports = swaggerJsdoc(options);

@@ -77,14 +77,13 @@ const login = async (email, password) => {
     throw err;
   }
   await userModel.updateLastLogin(user.id);
-  const token = jwt.sign({ id: user.id, role: user.role }, env.JWT_SECRET, { expiresIn: env.JWT_EXPIRES_IN });
+  const token = jwt.sign({ id: user.id }, env.JWT_SECRET, { expiresIn: env.JWT_EXPIRES_IN });
   return { token, user: {
     id: user.id,
     first_name: user.first_name,
     last_name: user.last_name,
     email: user.email,
-    phone: user.phone,
-    role: user.role
+    phone: user.phone
   }};
 };
 
@@ -94,7 +93,7 @@ const getProfile = async (id) => {
 };
 
 const updateProfile = async (id, data, modified_by) => {
-  const { first_name, last_name, email, phone, password, role } = data;
+  const { first_name, last_name, email, phone, password } = data;
   if (email && !validator.isEmail(email)) {
     const err = new Error('Invalid email');
     err.status = 400;
@@ -105,7 +104,7 @@ const updateProfile = async (id, data, modified_by) => {
     err.status = 400;
     throw err;
   }
-  const success = await userModel.updateUser(id, { first_name, last_name, email, phone, password, modified_by, role });
+  const success = await userModel.updateUser(id, { first_name, last_name, email, phone, password, modified_by });
   if (!success) {
     const err = new Error('User not found');
     err.status = 404;

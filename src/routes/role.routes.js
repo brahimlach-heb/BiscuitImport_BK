@@ -13,12 +13,12 @@ router.get('/:id', roleController.getRoleById);
 router.get('/code/:code', roleController.getRoleByCode);
 
 // Create a new role (protected, admin only)
-router.post('/', authMiddleware.authenticate, roleController.createRole);
+router.post('/', authMiddleware, roleController.createRole);
 
 // Update a role (protected, admin only)
-router.put('/:id', authMiddleware.authenticate, roleController.updateRole);
+router.put('/:id', authMiddleware, roleController.updateRole);
 
 // Delete a role (protected, admin only)
-router.delete('/:id', authMiddleware.authenticate, roleController.deleteRole);
+router.delete('/:id', authMiddleware, roleController.deleteRole);
 
 module.exports = router;

@@ -8,6 +8,21 @@ const createFlavor = async (data, actorUserId) => {
     err.status = 400;
     throw err;
   }
+  if (!data.description) {
+    const err = new Error('Description is required');
+    err.status = 400;
+    throw err;
+  }
+  if (!data.color) {
+    const err = new Error('Color is required');
+    err.status = 400;
+    throw err;
+  }
+  if (!data.image) {
+    const err = new Error('Image is required');
+    err.status = 400;
+    throw err;
+  }
   logger.info(`DB createFlavor: name=${data.name} actor=${actorUserId || 'system'}`);
   const fl = await flavorModel.createFlavor(data);
   if (actorUserId) {

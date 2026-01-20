@@ -9,7 +9,22 @@ const response = require('../utils/response');
  *     tags: [Roles]
  *     responses:
  *       200:
- *         description: List of roles
+ *         description: List of roles retrieved successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Success
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/Role'
  */
 const getAllRoles = async (req, res, next) => {
   try {
@@ -32,11 +47,36 @@ const getAllRoles = async (req, res, next) => {
  *         required: true
  *         schema:
  *           type: integer
+ *         description: Role ID
  *     responses:
  *       200:
- *         description: Role found
+ *         description: Role found successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Success
+ *                 data:
+ *                   $ref: '#/components/schemas/Role'
  *       404:
  *         description: Role not found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: Role not found
  */
 const getRoleById = async (req, res, next) => {
   try {
@@ -62,11 +102,36 @@ const getRoleById = async (req, res, next) => {
  *         required: true
  *         schema:
  *           type: string
+ *         description: Role code
  *     responses:
  *       200:
- *         description: Role found
+ *         description: Role found successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Success
+ *                 data:
+ *                   $ref: '#/components/schemas/Role'
  *       404:
  *         description: Role not found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: Role not found
  */
 const getRoleByCode = async (req, res, next) => {
   try {
@@ -86,22 +151,89 @@ const getRoleByCode = async (req, res, next) => {
  *   post:
  *     summary: Create a new role
  *     tags: [Roles]
+ *     security:
+ *       - bearerAuth: []
  *     requestBody:
  *       required: true
  *       content:
  *         application/json:
  *           schema:
  *             type: object
+ *             required:
+ *               - code
  *             properties:
  *               code:
  *                 type: string
+ *                 description: Unique role code
+ *                 example: "ADMIN"
  *               label:
  *                 type: string
+ *                 description: Role label/name
+ *                 example: "Administrator"
  *               is_active:
  *                 type: boolean
+ *                 description: Whether the role is active
+ *                 default: true
+ *                 example: true
+ *           example:
+ *             code: "ADMIN"
+ *             label: "Administrator"
+ *             is_active: true
  *     responses:
  *       201:
  *         description: Role created successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Created
+ *                 data:
+ *                   $ref: '#/components/schemas/Role'
+ *       400:
+ *         description: Invalid input
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: Invalid input
+ *       401:
+ *         description: Unauthorized - Missing or invalid token
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: Unauthorized
+ *       409:
+ *         description: Role code already exists
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: Role code already exists
  */
 const createRole = async (req, res, next) => {
   try {
@@ -118,12 +250,16 @@ const createRole = async (req, res, next) => {
  *   put:
  *     summary: Update a role
  *     tags: [Roles]
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
  *         schema:
  *           type: integer
+ *         description: Role ID
+ *         example: 1
  *     requestBody:
  *       required: true
  *       content:
@@ -133,13 +269,88 @@ const createRole = async (req, res, next) => {
  *             properties:
  *               code:
  *                 type: string
+ *                 description: Unique role code
+ *                 example: "ADMIN"
  *               label:
  *                 type: string
+ *                 description: Role label/name
+ *                 example: "Administrator"
  *               is_active:
  *                 type: boolean
+ *                 description: Whether the role is active
+ *                 example: true
+ *           example:
+ *             code: "ADMIN"
+ *             label: "Administrator"
+ *             is_active: true
  *     responses:
  *       200:
  *         description: Role updated successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Success
+ *                 data:
+ *                   $ref: '#/components/schemas/Role'
+ *       400:
+ *         description: Invalid input
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: Invalid input
+ *       401:
+ *         description: Unauthorized - Missing or invalid token
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: Unauthorized
+ *       404:
+ *         description: Role not found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: Role not found
+ *       409:
+ *         description: Role code already exists
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: Role code already exists
  */
 const updateRole = async (req, res, next) => {
   try {
@@ -156,15 +367,62 @@ const updateRole = async (req, res, next) => {
  *   delete:
  *     summary: Delete a role
  *     tags: [Roles]
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
  *         schema:
  *           type: integer
+ *         description: Role ID
+ *         example: 1
  *     responses:
  *       200:
  *         description: Role deleted successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Success
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     message:
+ *                       type: string
+ *                       example: Role deleted successfully
+ *       401:
+ *         description: Unauthorized - Missing or invalid token
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: Unauthorized
+ *       404:
+ *         description: Role not found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: Role not found
  */
 const deleteRole = async (req, res, next) => {
   try {

@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const logger = require('./config/logger');
 const loggerMiddleware = require('./middlewares/logger.middleware');
 const swaggerUi = require("swagger-ui-express");
@@ -26,6 +27,7 @@ app.use(cors({
 // Middlewares
 app.use(loggerMiddleware);
 app.use(express.json());
+app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
 // Swagger UI
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
