@@ -184,3 +184,6 @@
     at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
 2026-01-16T23:15:17.232Z error: ReferenceError: logger is not defined
     at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-19T15:28:29.746Z error: Error: Invalid credentials
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:64:17)
+    at async login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:18)

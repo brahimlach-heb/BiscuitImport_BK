@@ -906,3 +906,21 @@
 2026-01-17T00:23:40.086Z info: GET /api/history 304 8.666 ms -
 2026-01-17T00:23:40.100Z info: ACTION getHistory count=11 filter={} by=undefined undefined (1)
 2026-01-17T00:23:40.102Z info: GET /api/history 304 8.848 ms -
+2026-01-17T01:22:37.263Z info: Server listening on port 3000
+2026-01-17T01:22:37.389Z info: Base SQLite connectée avec succès
+2026-01-19T14:22:28.534Z info: Server listening on port 3000
+2026-01-19T14:22:28.547Z info: Base SQLite connectée avec succès
+2026-01-19T15:28:29.746Z error: Error: Invalid credentials
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:64:17)
+    at async login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:18)
+2026-01-19T15:28:29.839Z info: POST /auth/login 401 627.360 ms {"email":"ilham","password":"ilham123"}
+2026-01-19T15:29:20.446Z info: ACTION login email=b@gmail.com userId=1
+2026-01-19T15:29:20.466Z info: POST /auth/login 200 480.317 ms {"email":"b@gmail.com","password":"string"}
+2026-01-19T15:29:22.820Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-19T15:29:22.877Z info: GET /api/products 304 66.449 ms -
+2026-01-19T15:29:22.971Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-19T15:29:23.047Z info: GET /api/categories 304 113.517 ms -
+2026-01-19T15:29:23.111Z info: ACTION getAllProducts count=0 filter={} by=anonymous
+2026-01-19T15:29:23.133Z info: GET /api/products 304 171.079 ms -
+2026-01-19T15:29:23.181Z info: ACTION getAllCategories count=0 by=anonymous
+2026-01-19T15:29:23.196Z info: GET /api/categories 304 27.577 ms -
