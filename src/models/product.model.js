@@ -6,6 +6,7 @@ db.run(`CREATE TABLE IF NOT EXISTS product (
   name TEXT NOT NULL,
   description TEXT,
   ingredients TEXT,
+  allergens TEXT,
   price REAL NOT NULL,
   image TEXT,
   stock INTEGER DEFAULT 0,
@@ -13,6 +14,15 @@ db.run(`CREATE TABLE IF NOT EXISTS product (
   category_id INTEGER,
   FOREIGN KEY (category_id) REFERENCES category(id)
 )`);
+
+// Try to add columns if missing (for migrations)
+const tryAddColumn = (sql) => {
+  db.run(sql, (err) => {
+    // ignore error (column exists)
+  });
+};
+
+tryAddColumn("ALTER TABLE product ADD COLUMN allergens TEXT");
 
 // Create association table product_flavor if not exists
 db.run(`CREATE TABLE IF NOT EXISTS product_flavor (
@@ -23,10 +33,10 @@ db.run(`CREATE TABLE IF NOT EXISTS product_flavor (
   FOREIGN KEY (flavor_id) REFERENCES flavor(id)
 )`);
 
-const createProduct = ({ name, description, ingredients, price, image, stock, is_active, category_id }) => {
+const createProduct = ({ name, description, ingredients, allergens, price, image, stock, is_active, category_id }) => {
   return new Promise((resolve, reject) => {
-    const sql = 'INSERT INTO product (name, description, ingredients, price, image, stock, is_active, category_id) VALUES (?, ?, ?, ?, ?, ?, COALESCE(?, 1), ?)';
-    db.run(sql, [name, description || null, ingredients || null, price, image || null, typeof stock !== 'undefined' ? stock : 0, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, category_id || null], function (err) {
+    const sql = 'INSERT INTO product (name, description, ingredients, allergens, price, image, stock, is_active, category_id) VALUES (?, ?, ?, ?, ?, ?, ?, COALESCE(?, 1), ?)';
+    db.run(sql, [name, description || null, ingredients || null, allergens || null, price, image || null, typeof stock !== 'undefined' ? stock : 0, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, category_id || null], function (err) {
       if (err) return reject(err);
       db.get('SELECT * FROM product WHERE id = ?', [this.lastID], (err2, row) => {
         if (err2) return reject(err2);
@@ -60,10 +70,10 @@ const getProductById = (id) => {
   });
 };
 
-const updateProduct = (id, { name, description, ingredients, price, image, stock, is_active, category_id }) => {
+const updateProduct = (id, { name, description, ingredients, allergens, price, image, stock, is_active, category_id }) => {
   return new Promise((resolve, reject) => {
-    const sql = 'UPDATE product SET name = COALESCE(?, name), description = COALESCE(?, description), ingredients = COALESCE(?, ingredients), price = COALESCE(?, price), image = COALESCE(?, image), stock = COALESCE(?, stock), is_active = COALESCE(?, is_active), category_id = COALESCE(?, category_id) WHERE id = ?';
-    db.run(sql, [name || null, description || null, ingredients || null, typeof price !== 'undefined' ? price : null, image || null, typeof stock !== 'undefined' ? stock : null, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, typeof category_id !== 'undefined' ? category_id : null, id], function (err) {
+    const sql = 'UPDATE product SET name = COALESCE(?, name), description = COALESCE(?, description), ingredients = COALESCE(?, ingredients), allergens = COALESCE(?, allergens), price = COALESCE(?, price), image = COALESCE(?, image), stock = COALESCE(?, stock), is_active = COALESCE(?, is_active), category_id = COALESCE(?, category_id) WHERE id = ?';
+    db.run(sql, [name || null, description || null, ingredients || null, allergens || null, typeof price !== 'undefined' ? price : null, image || null, typeof stock !== 'undefined' ? stock : null, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, typeof category_id !== 'undefined' ? category_id : null, id], function (err) {
       if (err) return reject(err);
       resolve(this.changes > 0);
     });

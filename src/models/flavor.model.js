@@ -5,13 +5,23 @@ db.run(`CREATE TABLE IF NOT EXISTS flavor (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT NOT NULL,
   description TEXT,
-  color TEXT
+  color TEXT,
+  image TEXT
 )`);
 
-const createFlavor = ({ name, description, color }) => {
+// Try to add columns if missing (for migrations)
+const tryAddColumn = (sql) => {
+  db.run(sql, (err) => {
+    // ignore error (column exists)
+  });
+};
+
+tryAddColumn("ALTER TABLE flavor ADD COLUMN image TEXT");
+
+const createFlavor = ({ name, description, color, image }) => {
   return new Promise((resolve, reject) => {
-    const sql = 'INSERT INTO flavor (name, description, color) VALUES (?, ?, ?)';
-    db.run(sql, [name, description || null, color || null], function (err) {
+    const sql = 'INSERT INTO flavor (name, description, color, image) VALUES (?, ?, ?, ?)';
+    db.run(sql, [name, description || null, color || null, image || null], function (err) {
       if (err) return reject(err);
       db.get('SELECT * FROM flavor WHERE id = ?', [this.lastID], (err2, row) => {
         if (err2) return reject(err2);
@@ -39,10 +49,10 @@ const getFlavorById = (id) => {
   });
 };
 
-const updateFlavor = (id, { name, description, color }) => {
+const updateFlavor = (id, { name, description, color, image }) => {
   return new Promise((resolve, reject) => {
-    const sql = 'UPDATE flavor SET name = COALESCE(?, name), description = COALESCE(?, description), color = COALESCE(?, color) WHERE id = ?';
-    db.run(sql, [name || null, description || null, color || null, id], function (err) {
+    const sql = 'UPDATE flavor SET name = COALESCE(?, name), description = COALESCE(?, description), color = COALESCE(?, color), image = COALESCE(?, image) WHERE id = ?';
+    db.run(sql, [name || null, description || null, color || null, image || null, id], function (err) {
       if (err) return reject(err);
       resolve(this.changes > 0);
     });

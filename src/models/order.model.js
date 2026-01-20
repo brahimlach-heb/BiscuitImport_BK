@@ -16,9 +16,21 @@ db.run(`CREATE TABLE IF NOT EXISTS order_line (
   product_id INTEGER NOT NULL,
   quantity INTEGER DEFAULT 1,
   unit_price REAL NOT NULL,
+  discount_percent REAL DEFAULT 0,
+  final_price REAL NOT NULL,
   FOREIGN KEY (order_id) REFERENCES orders(id),
   FOREIGN KEY (product_id) REFERENCES product(id)
 )`);
+
+// Try to add columns if missing (for migrations)
+const tryAddColumn = (sql) => {
+  db.run(sql, (err) => {
+    // ignore error (column exists)
+  });
+};
+
+tryAddColumn("ALTER TABLE order_line ADD COLUMN discount_percent REAL DEFAULT 0");
+tryAddColumn("ALTER TABLE order_line ADD COLUMN final_price REAL");
 
 const createOrder = async ({ user_id, total, status = 'PENDING', lines = [] }) => {
   return new Promise((resolve, reject) => {
@@ -44,8 +56,8 @@ const createOrder = async ({ user_id, total, status = 'PENDING', lines = [] }) =
             return;
           }
           const ln = lines[i];
-          const sqlLine = 'INSERT INTO order_line (order_id, product_id, quantity, unit_price) VALUES (?, ?, ?, ?)';
-          db.run(sqlLine, [orderId, ln.product_id, ln.quantity || 1, ln.unit_price], function (err3) {
+          const sqlLine = 'INSERT INTO order_line (order_id, product_id, quantity, unit_price, discount_percent, final_price) VALUES (?, ?, ?, ?, ?, ?)';
+          db.run(sqlLine, [orderId, ln.product_id, ln.quantity || 1, ln.unit_price, ln.discount_percent || 0, ln.final_price], function (err3) {
             if (err3) {
               db.run('ROLLBACK');
               return reject(err3);

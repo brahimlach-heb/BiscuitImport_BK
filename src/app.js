@@ -6,9 +6,12 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerSpec = require("./config/swagger");
 
 // Ensure database tables are created on startup
+require('./models/role.model');
+require('./models/user.model');
 require('./models/category.model');
 require('./models/flavor.model');
 require('./models/product.model');
+require('./models/product_price_role.model');
 require('./models/order.model');
 require('./models/history.model');
 
@@ -32,6 +35,9 @@ app.use('/api/users', require('./routes/user.routes'));
 
 // Auth routes
 app.use('/auth', require('./routes/auth.routes'));
+
+// Roles routes
+app.use('/api/roles', require('./routes/role.routes'));
 
 // Product, Category, Flavor, Order routes
 app.use('/api/categories', require('./routes/category.routes'));
