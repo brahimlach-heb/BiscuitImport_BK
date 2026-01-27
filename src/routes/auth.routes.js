@@ -67,6 +67,54 @@ router.post('/register', controller.register);
  *     responses:
  *       200:
  *         description: Authenticated
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: "Authenticated"
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     token:
+ *                       type: string
+ *                       example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+ *                     user:
+ *                       type: object
+ *                       properties:
+ *                         id:
+ *                           type: integer
+ *                           example: 1
+ *                         first_name:
+ *                           type: string
+ *                           example: "John"
+ *                         last_name:
+ *                           type: string
+ *                           example: "Doe"
+ *                         email:
+ *                           type: string
+ *                           example: "john@example.com"
+ *                         phone:
+ *                           type: string
+ *                           example: "+1234567890"
+ *                         role_id:
+ *                           type: integer
+ *                           example: 1
+ *                         role_code:
+ *                           type: string
+ *                           example: "ADMIN"
+ *                           description: "Role code (e.g., ADMIN, CLIENT)"
+ *                         discount_percent:
+ *                           type: number
+ *                           example: 0
+ *                         is_active:
+ *                           type: boolean
+ *                           example: true
  *       401:
  *         description: Invalid credentials
  */

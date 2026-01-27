@@ -20,7 +20,18 @@ const createCategory = async (data, actorUserId) => {
 
 const getAllCategories = async () => {
   logger.debug('DB getAllCategories');
-  return await categoryModel.getAllCategories();
+  const categories = await categoryModel.getAllCategories();
+  
+  // Ajouter le nombre de produits pour chaque catégorie
+  const categoriesWithCount = await Promise.all(categories.map(async (category) => {
+    const product_count = await categoryModel.getProductCountByCategory(category.id);
+    return {
+      ...category,
+      product_count
+    };
+  }));
+  
+  return categoriesWithCount;
 };
 
 const getCategoryById = async (id) => {

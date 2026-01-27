@@ -5,7 +5,8 @@ const getAll = async (req, res, next) => {
   try {
     const filter = {};
     if (req.query.category_id) filter.category_id = Number(req.query.category_id);
-    const rows = await productService.getAllProducts(filter);
+    const roleId = req.user ? req.user.role_id : null;
+    const rows = await productService.getAllProducts(filter, roleId);
     const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
     logger.info(`ACTION getAllProducts count=${Array.isArray(rows) ? rows.length : 0} filter=${JSON.stringify(filter)} by=${userInfo}`);
     res.status(200).json(rows);

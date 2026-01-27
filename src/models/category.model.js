@@ -40,6 +40,15 @@ const getAllCategories = () => {
   });
 };
 
+const getProductCountByCategory = (category_id) => {
+  return new Promise((resolve, reject) => {
+    db.get('SELECT COUNT(*) as count FROM product WHERE category_id = ?', [category_id], (err, row) => {
+      if (err) return reject(err);
+      resolve(row ? row.count : 0);
+    });
+  });
+};
+
 const getCategoryById = (id) => {
   return new Promise((resolve, reject) => {
     db.get('SELECT * FROM category WHERE id = ?', [id], (err, row) => {
@@ -74,5 +83,6 @@ module.exports = {
   getAllCategories,
   getCategoryById,
   updateCategory,
-  deleteCategory
+  deleteCategory,
+  getProductCountByCategory
 };

@@ -57,18 +57,13 @@ const router = express.Router();
  * @swagger
  * /api/orders:
  *   get:
- *     summary: Get orders by user
+ *     summary: Get orders for authenticated user
  *     tags: [Orders]
  *     security:
  *       - bearerAuth: []
- *     parameters:
- *       - in: query
- *         name: user_id
- *         schema:
- *           type: integer
  *     responses:
  *       200:
- *         description: List of orders
+ *         description: List of orders for the authenticated user
  *         content:
  *           application/json:
  *             schema:
@@ -77,8 +72,127 @@ const router = express.Router();
  *                 $ref: '#/components/schemas/Order'
  */
 
+/**
+ * @swagger
+ * /api/orders/{id}/status:
+ *   patch:
+ *     summary: Update order status
+ *     tags: [Orders]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - status
+ *             properties:
+ *               status:
+ *                 type: string
+ *                 enum: [PENDING, CONFIRMED, PAID, PROCESSING, SHIPPED, DELIVERED, CANCELLED]
+ *               notes:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Order with updated status and history
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Order'
+ */
+
+/**
+ * @swagger
+ * /api/orders/{id}/payments:
+ *   post:
+ *     summary: Add payment to order
+ *     tags: [Orders]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - payment_method
+ *               - amount
+ *             properties:
+ *               bank_id:
+ *                 type: integer
+ *                 description: Bank ID (optional for cash payments)
+ *               payment_method:
+ *                 type: string
+ *                 enum: [CASH, CARD, TRANSFER, CHECK, OTHER]
+ *               amount:
+ *                 type: number
+ *                 format: double
+ *               notes:
+ *                 type: string
+ *     responses:
+ *       201:
+ *         description: Payment added
+ *   get:
+ *     summary: Get all payments for an order
+ *     tags: [Orders]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: List of payments
+ */
+
+/**
+ * @swagger
+ * /api/orders/{id}/payments/{paymentId}:
+ *   delete:
+ *     summary: Delete a payment
+ *     tags: [Orders]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *       - in: path
+ *         name: paymentId
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: Payment deleted
+ */
+
 router.post('/', authMiddleware, controller.create);
 router.get('/:id', authMiddleware, controller.getById);
 router.get('/', authMiddleware, controller.getByUser);
+router.patch('/:id/status', authMiddleware, controller.updateStatus);
+router.post('/:id/payments', authMiddleware, controller.addPayment);
+router.get('/:id/payments', authMiddleware, controller.getPayments);
+router.delete('/:id/payments/:paymentId', authMiddleware, controller.deletePayment);
 
 module.exports = router;

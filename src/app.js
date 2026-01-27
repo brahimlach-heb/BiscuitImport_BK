@@ -15,6 +15,7 @@ require('./models/product.model');
 require('./models/product_price_role.model');
 require('./models/order.model');
 require('./models/history.model');
+require('./models/bank.model');
 
 const app = express();
 
@@ -26,7 +27,8 @@ app.use(cors({
 
 // Middlewares
 app.use(loggerMiddleware);
-app.use(express.json());
+app.use(express.json({ limit: '100mb' }));
+app.use(express.urlencoded({ limit: '100mb', extended: true }));
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
 // Swagger UI
@@ -47,6 +49,7 @@ app.use('/api/products', require('./routes/product.routes'));
 app.use('/api/flavors', require('./routes/flavor.routes'));
 app.use('/api/orders', require('./routes/order.routes'));
 app.use('/api/history', require('./routes/history.routes'));
+app.use('/api/banks', require('./routes/bank.routes'));
 
 // Health check
 app.get('/', (req, res) => {

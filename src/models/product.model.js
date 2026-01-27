@@ -6,7 +6,7 @@ db.run(`CREATE TABLE IF NOT EXISTS product (
   name TEXT NOT NULL,
   description TEXT,
   ingredients TEXT,
-  allergens TEXT,
+  marque TEXT,
   price REAL NOT NULL,
   image TEXT,
   stock INTEGER DEFAULT 0,
@@ -22,7 +22,8 @@ const tryAddColumn = (sql) => {
   });
 };
 
-tryAddColumn("ALTER TABLE product ADD COLUMN allergens TEXT");
+tryAddColumn("ALTER TABLE product ADD COLUMN marque TEXT");
+tryAddColumn("ALTER TABLE product ADD COLUMN packageUnit INTEGER DEFAULT 1");
 
 // Create association table product_flavor if not exists
 db.run(`CREATE TABLE IF NOT EXISTS product_flavor (
@@ -33,10 +34,10 @@ db.run(`CREATE TABLE IF NOT EXISTS product_flavor (
   FOREIGN KEY (flavor_id) REFERENCES flavor(id)
 )`);
 
-const createProduct = ({ name, description, ingredients, allergens, price, image, stock, is_active, category_id }) => {
+const createProduct = ({ name, description, ingredients, marque, price, stock, is_active, category_id, packageUnit }) => {
   return new Promise((resolve, reject) => {
-    const sql = 'INSERT INTO product (name, description, ingredients, allergens, price, image, stock, is_active, category_id) VALUES (?, ?, ?, ?, ?, ?, ?, COALESCE(?, 1), ?)';
-    db.run(sql, [name, description || null, ingredients || null, allergens || null, price, image || null, typeof stock !== 'undefined' ? stock : 0, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, category_id || null], function (err) {
+    const sql = 'INSERT INTO product (name, description, ingredients, marque, price, stock, is_active, category_id, packageUnit) VALUES (?, ?, ?, ?, ?, ?, COALESCE(?, 1), ?, COALESCE(?, 1))';
+    db.run(sql, [name, description || null, ingredients || null, marque || null, price, typeof stock !== 'undefined' ? stock : 0, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, category_id || null, typeof packageUnit !== 'undefined' ? packageUnit : null], function (err) {
       if (err) return reject(err);
       db.get('SELECT * FROM product WHERE id = ?', [this.lastID], (err2, row) => {
         if (err2) return reject(err2);
@@ -54,6 +55,7 @@ const getAllProducts = (filter = {}) => {
       sql += ' WHERE category_id = ?';
       params.push(filter.category_id);
     }
+    sql += ' ORDER BY id DESC';
     db.all(sql, params, (err, rows) => {
       if (err) return reject(err);
       resolve(rows);
@@ -70,10 +72,10 @@ const getProductById = (id) => {
   });
 };
 
-const updateProduct = (id, { name, description, ingredients, allergens, price, image, stock, is_active, category_id }) => {
+const updateProduct = (id, { name, description, ingredients, marque, price, stock, is_active, category_id, packageUnit }) => {
   return new Promise((resolve, reject) => {
-    const sql = 'UPDATE product SET name = COALESCE(?, name), description = COALESCE(?, description), ingredients = COALESCE(?, ingredients), allergens = COALESCE(?, allergens), price = COALESCE(?, price), image = COALESCE(?, image), stock = COALESCE(?, stock), is_active = COALESCE(?, is_active), category_id = COALESCE(?, category_id) WHERE id = ?';
-    db.run(sql, [name || null, description || null, ingredients || null, allergens || null, typeof price !== 'undefined' ? price : null, image || null, typeof stock !== 'undefined' ? stock : null, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, typeof category_id !== 'undefined' ? category_id : null, id], function (err) {
+    const sql = 'UPDATE product SET name = COALESCE(?, name), description = COALESCE(?, description), ingredients = COALESCE(?, ingredients), marque = COALESCE(?, marque), price = COALESCE(?, price), stock = COALESCE(?, stock), is_active = COALESCE(?, is_active), category_id = COALESCE(?, category_id), packageUnit = COALESCE(?, packageUnit) WHERE id = ?';
+    db.run(sql, [name || null, description || null, ingredients || null, marque || null, typeof price !== 'undefined' ? price : null, typeof stock !== 'undefined' ? stock : null, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, typeof category_id !== 'undefined' ? category_id : null, typeof packageUnit !== 'undefined' ? packageUnit : null, id], function (err) {
       if (err) return reject(err);
       resolve(this.changes > 0);
     });

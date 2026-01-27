@@ -1,4 +1,6 @@
 const userModel = require('../models/user.model');
+const roleModel = require('../models/role.model');
+const orderModel = require('../models/order.model');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const validator = require('validator');
@@ -12,9 +14,10 @@ const validatePhone = (phone) => {
 };
 
 const register = async (data) => {
-  const { first_name, last_name, email, phone, password, deactivated_at } = data;
-  if (!first_name || !last_name || !email || !password) {
-    const err = new Error('Missing required fields');
+  const { first_name, last_name, email, phone, password, deactivated_at, role_id, discount_percent, is_active } = data;
+  
+  if (!first_name || !last_name || !email || !password || !role_id) {
+    const err = new Error('Missing required fields (first_name, last_name, email, password, role_id)');
     err.status = 400;
     throw err;
   }
@@ -48,12 +51,28 @@ const register = async (data) => {
     throw err;
   }
 
-  const user = await userModel.createUser({ first_name, last_name, email, phone, password, deactivated_at: deact });
-  return user;
+  const user = await userModel.createUser({ 
+    first_name, 
+    last_name, 
+    email, 
+    phone, 
+    password, 
+    role_id,
+    discount_percent,
+    is_active,
+    deactivated_at: deact 
+  });
+  
+  // Récupérer le code du rôle
+  const role = await roleModel.getRoleById(user.role_id);
+  
+  return {
+    ...user,
+    role_code: role ? role.code : null
+  };
 };
 
 const login = async (email, password) => {
-  console.log("login::::::::", email, password);
   if (!email || !password) {
     const err = new Error('Email and password are required');
     err.status = 400;
@@ -65,7 +84,19 @@ const login = async (email, password) => {
     err.status = 401;
     throw err;
   }
-  if (user.deactivated_at) {
+  
+  // Récupérer le code du rôle
+  const role = await roleModel.getRoleById(user.role_id);
+  
+  // Bloquer les utilisateurs anonymous
+  if (role && role.code === 'anonymous') {
+    const err = new Error('Anonymous users cannot login');
+    err.status = 403;
+    throw err;
+  }
+  
+  // Vérifier si la date de désactivation est dans le passé
+  if (user.deactivated_at && new Date(user.deactivated_at) < new Date()) {
     const err = new Error('Account deactivated');
     err.status = 403;
     throw err;
@@ -77,13 +108,23 @@ const login = async (email, password) => {
     throw err;
   }
   await userModel.updateLastLogin(user.id);
-  const token = jwt.sign({ id: user.id }, env.JWT_SECRET, { expiresIn: env.JWT_EXPIRES_IN });
+  
+  // Compter les commandes en attente
+  const orders = await orderModel.getOrdersByUser(user.id);
+  const pendingInvoices = orders.filter(o => o.status && o.status.toUpperCase() === 'PENDING').length;
+  
+  const token = jwt.sign({ id: user.id, role_id: user.role_id }, env.JWT_SECRET, { expiresIn: env.JWT_EXPIRES_IN });
   return { token, user: {
     id: user.id,
     first_name: user.first_name,
     last_name: user.last_name,
     email: user.email,
-    phone: user.phone
+    phone: user.phone,
+    role_id: user.role_id,
+    role_code: role ? role.code : null,
+    discount_percent: user.discount_percent,
+    is_active: user.is_active,
+    pendingInvoices: pendingInvoices
   }};
 };
 

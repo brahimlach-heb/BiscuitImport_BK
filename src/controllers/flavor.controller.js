@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const flavorService = require('../services/flavor.service');
 const logger = require('../config/logger');
+const { BASE_URL } = require('../config/env');
 
 const flavorUploadDir = path.join(process.cwd(), 'uploads', 'flavors');
 
@@ -25,7 +26,7 @@ const saveImageAndReturnUrl = (imageInput, flavorName) => {
   const buffer = Buffer.from(dataUriMatch[2], 'base64');
   const dir = ensureFlavorUploadDir();
   fs.writeFileSync(path.join(dir, fileName), buffer);
-  return `/uploads/flavors/${fileName}`;
+  return `${BASE_URL}/uploads/flavors/${fileName}`;
 };
 
 const getAll = async (req, res, next) => {

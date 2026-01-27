@@ -258,3 +258,689 @@
     at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
     at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
     at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+2026-01-20T15:20:09.342Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T15:20:09.391Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T15:20:56.208Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T15:20:56.237Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T15:48:24.967Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T15:48:24.998Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T18:35:24.001Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T18:39:06.635Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T18:39:06.702Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T18:40:03.709Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T18:40:03.730Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T18:42:08.756Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T18:42:08.802Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T18:46:15.270Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T18:46:15.299Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T19:16:54.591Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T19:16:54.615Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T19:17:47.195Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T19:17:47.217Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T19:55:56.383Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T19:55:56.423Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T20:49:29.346Z error: Error: Role not found or not updated
+    at Object.updateRole (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\role.service.js:43:13)
+    at async updateRole (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\role.controller.js:357:18)
+2026-01-20T20:49:32.102Z error: Error: Role not found or not updated
+    at Object.updateRole (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\role.service.js:43:13)
+    at async updateRole (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\role.controller.js:357:18)
+2026-01-20T20:51:29.401Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T20:51:29.439Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T20:52:12.787Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T20:52:12.816Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T20:56:21.743Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T21:09:39.593Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T21:36:49.637Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T21:36:52.623Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T21:38:43.267Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T21:38:43.281Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T21:38:48.621Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T21:55:58.622Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T21:56:56.142Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T21:56:56.198Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T22:07:58.976Z error: Error: Email already exists
+    at Object.register (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:46:17)
+    at async register (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:7:18)
+2026-01-20T22:26:03.291Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T22:31:37.812Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T22:41:06.048Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T22:41:06.410Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T22:41:11.930Z error: TypeError: userModel.deleteUser is not a function
+    at Object.deleteUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\user.service.js:34:35)
+    at remove (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\user.controller.js:66:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at param (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:600:14)
+    at param (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:610:14)
+2026-01-20T22:42:15.397Z error: TypeError: userModel.deleteUser is not a function
+    at Object.deleteUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\user.service.js:34:35)
+    at remove (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\user.controller.js:66:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at param (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:600:14)
+    at param (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:610:14)
+2026-01-20T22:51:24.724Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T22:51:25.428Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T22:51:47.179Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T22:51:50.643Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T22:53:09.911Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T22:53:10.284Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:01:55.809Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:01:57.342Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:03:51.790Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:03:52.572Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:12:59.732Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:16:55.427Z error: Error: Name and email are required
+    at Object.updateUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\user.service.js:25:17)
+    at update (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\user.controller.js:47:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at param (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:600:14)
+    at param (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:610:14)
+2026-01-20T23:17:56.847Z error: Error: Name and email are required
+    at Object.updateUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\user.service.js:25:17)
+    at update (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\user.controller.js:47:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:295:15
+    at param (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:600:14)
+    at param (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:610:14)
+2026-01-20T23:20:32.657Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:33:21.577Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:33:21.773Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:36:45.461Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:36:45.545Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:38:47.735Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:38:50.772Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:44:41.066Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:44:41.185Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:54:47.735Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:56:38.127Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:56:39.377Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:57:55.243Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:57:56.494Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:58:39.964Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-20T23:58:41.089Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T00:01:43.581Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T00:01:44.412Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T00:14:46.168Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T00:14:48.669Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T00:16:16.320Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T00:16:17.408Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T00:17:14.229Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T00:17:14.317Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T00:28:12.790Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T09:57:00.850Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T09:57:00.903Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T10:54:10.366Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T10:54:10.406Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T10:54:35.144Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T10:54:35.209Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T11:10:00.340Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T11:15:07.911Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T13:57:28.395Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T13:59:14.181Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T13:59:14.205Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:03:32.183Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:03:32.242Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:04:42.863Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:04:42.899Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:05:50.802Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:05:50.883Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:06:17.697Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:06:17.752Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:08:55.217Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:08:55.268Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:09:00.356Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:09:00.383Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:12:11.724Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:12:11.785Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:12:48.303Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:17:41.229Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:17:41.298Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T14:46:10.169Z error: PayloadTooLargeError: request entity too large
+    at readStream (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\raw-body\index.js:163:17)
+    at getRawBody (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\raw-body\index.js:116:12)
+    at read (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\body-parser\lib\read.js:113:3)
+    at jsonParser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\body-parser\lib\types\json.js:88:5)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:342:13)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:297:9
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+    at logger (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\morgan\index.js:144:5)
+2026-01-21T14:47:56.744Z error: PayloadTooLargeError: request entity too large
+    at readStream (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\raw-body\index.js:163:17)
+    at getRawBody (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\raw-body\index.js:116:12)
+    at read (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\body-parser\lib\read.js:113:3)
+    at jsonParser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\body-parser\lib\types\json.js:88:5)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:342:13)
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:297:9
+    at processParams (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:582:12)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\index.js:291:5)
+    at logger (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\morgan\index.js:144:5)
+2026-01-21T14:57:45.775Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T15:17:25.523Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T15:19:43.295Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-21T15:19:43.349Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-22T15:44:40.249Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-22T15:44:42.343Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-22T15:52:55.096Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-22T15:52:56.176Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T17:01:52.451Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T17:01:52.506Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T17:10:57.031Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T17:33:29.347Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T17:33:29.468Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T17:36:03.705Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T17:36:03.767Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T17:39:11.530Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T17:39:11.576Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T18:41:20.430Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T18:41:20.541Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T18:41:28.108Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T18:41:28.156Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T18:41:48.058Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:27:32.900Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:27:32.931Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:35:19.444Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:35:19.517Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:46:00.328Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:46:00.358Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:49:31.897Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:49:31.935Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:50:01.935Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:51:33.890Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:51:52.884Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:53:16.095Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:53:16.143Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:53:23.611Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T20:59:15.858Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:03:24.899Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:03:29.868Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:03:54.930Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:06:39.933Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:07:11.106Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:07:11.122Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:07:13.478Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:07:15.056Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:07:18.861Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:07:43.724Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:07:43.803Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:08:20.418Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:08:20.438Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:13:02.606Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:13:02.642Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:13:55.362Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:13:55.383Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T21:34:30.944Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T22:03:18.117Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T22:03:18.239Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T22:03:50.896Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T22:22:48.483Z error: ERROR createProduct: Name and price are required
+2026-01-25T22:22:48.485Z error: Error: Name and price are required
+    at Object.createProduct (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:37:17)
+    at create (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:39:36)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:17:5)
+2026-01-25T22:28:42.023Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T22:28:42.064Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T22:45:27.033Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T22:45:27.225Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T22:46:12.497Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T22:46:12.553Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T23:02:46.172Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T23:02:46.236Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T23:06:54.835Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T23:06:54.944Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T23:17:20.917Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T23:17:21.011Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T23:33:34.152Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T23:33:34.197Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T23:37:16.588Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T23:37:16.644Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T23:45:27.486Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-25T23:45:27.523Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T10:52:51.842Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T10:52:52.594Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T11:00:43.876Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T11:00:43.927Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T11:00:47.828Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T11:02:06.841Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T11:02:07.655Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T11:05:07.936Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T11:05:08.253Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T13:06:24.820Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T13:06:24.856Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T13:07:10.394Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T13:07:10.407Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T13:13:56.142Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T13:13:56.171Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T13:13:59.614Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T13:15:59.295Z error: Error: Account deactivated
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:87:17)
+    at async login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:18)
+2026-01-26T13:16:39.272Z error: Error: Account deactivated
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:87:17)
+    at async login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:18)
+2026-01-26T13:16:40.439Z error: Error: Account deactivated
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:87:17)
+    at async login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:18)
+2026-01-26T13:17:10.983Z error: Error: Account deactivated
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:87:17)
+    at async login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:18)
+2026-01-26T13:18:25.428Z error: Error: Account deactivated
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:87:17)
+    at async login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:18)
+2026-01-26T13:22:41.599Z error: Error: Account deactivated
+    at Object.login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\auth.service.js:87:17)
+    at async login (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\auth.controller.js:19:18)
+2026-01-26T13:32:40.232Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T13:32:40.292Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T14:44:19.871Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T14:44:20.662Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T14:50:59.476Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T14:51:00.921Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T15:15:36.227Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T15:15:36.647Z error: ReferenceError: logger is not defined
+    at getByUser (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:48:5)
+2026-01-26T20:14:55.351Z error: ReferenceError: logger is not defined
+    at create (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:12:5)
+2026-01-26T20:21:14.802Z error: ReferenceError: logger is not defined
+    at create (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:12:5)
+2026-01-27T23:07:13.404Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:07:13.406Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:07:14.156Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:07:14.157Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:08:21.768Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:08:21.769Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:17:07.599Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:17:07.602Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:26:31.728Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:26:31.729Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:38:56.495Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:38:56.496Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:38:56.537Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:38:56.537Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:38:56.567Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:38:56.568Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:39:10.664Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:39:10.665Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:39:10.700Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:39:10.701Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:39:10.724Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:39:10.725Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:40:10.217Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:40:10.218Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:40:10.259Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:40:10.260Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:40:10.283Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:40:10.284Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:41:33.850Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:41:33.851Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-27T23:41:41.081Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-27T23:41:41.082Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:59:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:51:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)

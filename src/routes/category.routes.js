@@ -112,8 +112,8 @@ const router = express.Router();
  *         description: Deleted
  */
 
-router.get('/', controller.getAll);
-router.get('/:id', controller.getById);
+router.get('/', authMiddleware, controller.getAll);
+router.get('/:id', authMiddleware, controller.getById);
 router.post('/', authMiddleware, controller.create);
 router.put('/:id', authMiddleware, controller.update);
 router.delete('/:id', authMiddleware, controller.remove);

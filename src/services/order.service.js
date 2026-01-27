@@ -7,8 +7,18 @@ const createOrder = async (data) => {
     err.status = 400;
     throw err;
   }
-  logger.info(`DB createOrder: user_id=${data.user_id} total=${data.total} lines=${data.lines.length}`);
-  const order = await orderModel.createOrder(data);
+  logger.info(`DB createOrder: user_id=${data.user_id} subtotal=${data.subtotal || data.total} total=${data.total} lines=${data.lines.length} customer=${data.customer_name || 'N/A'}`);
+  const order = await orderModel.createOrder({
+    user_id: data.user_id,
+    subtotal: data.subtotal,
+    total: data.total,
+    status: data.status,
+    lines: data.lines,
+    customer_name: data.customer_name,
+    customer_email: data.customer_email,
+    customer_phone: data.customer_phone,
+    customer_address: data.customer_address
+  });
   logger.info(`ORDER CREATED: id=${order.id} user=${data.user_id} total=${data.total}`);
   return order;
 };
@@ -23,8 +33,56 @@ const getOrdersByUser = async (user_id) => {
   return await orderModel.getOrdersByUser(user_id);
 };
 
+const updateOrderStatus = async (order_id, status, changed_by, notes = null) => {
+  logger.info(`DB updateOrderStatus: order_id=${order_id} new_status=${status} by=${changed_by}`);
+  const success = await orderModel.updateOrderStatus(order_id, status, changed_by, notes);
+  if (!success) {
+    const err = new Error('Failed to update order status');
+    err.status = 500;
+    throw err;
+  }
+  logger.info(`ORDER STATUS UPDATED: id=${order_id} status=${status}`);
+  return await orderModel.getOrderById(order_id);
+};
+
+const addPayment = async (order_id, paymentData, created_by) => {
+  const { bank_id, payment_method, amount, notes } = paymentData;
+  
+  if (!payment_method || !amount) {
+    const err = new Error('Payment method and amount are required');
+    err.status = 400;
+    throw err;
+  }
+  
+  logger.info(`DB addPayment: order_id=${order_id} method=${payment_method} amount=${amount} by=${created_by}`);
+  const payment = await orderModel.addPayment(order_id, { bank_id, payment_method, amount, notes, created_by });
+  logger.info(`PAYMENT ADDED: id=${payment.id} order_id=${order_id}`);
+  return payment;
+};
+
+const getPaymentsByOrder = async (order_id) => {
+  logger.debug(`DB getPaymentsByOrder: order_id=${order_id}`);
+  return await orderModel.getPaymentsByOrder(order_id);
+};
+
+const deletePayment = async (id) => {
+  logger.info(`DB deletePayment: id=${id}`);
+  const success = await orderModel.deletePayment(id);
+  if (!success) {
+    const err = new Error('Payment not found');
+    err.status = 404;
+    throw err;
+  }
+  logger.info(`PAYMENT DELETED: id=${id}`);
+  return true;
+};
+
 module.exports = {
   createOrder,
   getOrderById,
-  getOrdersByUser
+  getOrdersByUser,
+  updateOrderStatus,
+  addPayment,
+  getPaymentsByOrder,
+  deletePayment
 };

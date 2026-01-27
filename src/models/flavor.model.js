@@ -17,11 +17,12 @@ const tryAddColumn = (sql) => {
 };
 
 tryAddColumn("ALTER TABLE flavor ADD COLUMN image TEXT");
+tryAddColumn("ALTER TABLE flavor ADD COLUMN product_id INTEGER");
 
-const createFlavor = ({ name, description, color, image }) => {
+const createFlavor = ({ name, description, color, image, product_id }) => {
   return new Promise((resolve, reject) => {
-    const sql = 'INSERT INTO flavor (name, description, color, image) VALUES (?, ?, ?, ?)';
-    db.run(sql, [name, description || null, color || null, image || null], function (err) {
+    const sql = 'INSERT INTO flavor (name, description, color, image, product_id) VALUES (?, ?, ?, ?, ?)';
+    db.run(sql, [name, description || null, color || null, image || null, product_id || null], function (err) {
       if (err) return reject(err);
       db.get('SELECT * FROM flavor WHERE id = ?', [this.lastID], (err2, row) => {
         if (err2) return reject(err2);
