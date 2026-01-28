@@ -101,6 +101,18 @@ const updateRemise = async (order_id, remise) => {
   return order;
 };
 
+const deleteOrder = async (order_id) => {
+  logger.info(`DB deleteOrder: order_id=${order_id}`);
+  const success = await orderModel.deleteOrder(order_id);
+  if (!success) {
+    const err = new Error('Failed to delete order');
+    err.status = 500;
+    throw err;
+  }
+  logger.info(`ORDER DELETED: id=${order_id}`);
+  return true;
+};
+
 module.exports = {
   createOrder,
   getOrderById,
@@ -110,6 +122,6 @@ module.exports = {
   addPayment,
   getPaymentsByOrder,
   deletePayment,
-  updateRemise
-
+  updateRemise,
+  deleteOrder
 };

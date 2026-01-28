@@ -6,9 +6,10 @@ const getAll = async (req, res, next) => {
     const filter = {};
     if (req.query.category_id) filter.category_id = Number(req.query.category_id);
     const roleId = req.user.role_id;
-    const rows = await productService.getAllProducts(filter, roleId);
+    const roleCode = req.user.role_code;
+    const rows = await productService.getAllProducts(filter, roleId, roleCode);
     const userInfo = `user_id=${req.user.id}`;
-    logger.info(`ACTION getAllProducts count=${Array.isArray(rows) ? rows.length : 0} filter=${JSON.stringify(filter)} by=${userInfo}`);
+    logger.info(`ACTION getAllProducts count=${Array.isArray(rows) ? rows.length : 0} filter=${JSON.stringify(filter)} role=${roleCode} by=${userInfo}`);
     res.status(200).json(rows);
   } catch (err) {
     logger.error(`ERROR getAllProducts: ${err.message}`, { query: req.query });

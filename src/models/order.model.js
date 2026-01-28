@@ -1,4 +1,6 @@
 const db = require('../config/database');
+const productModel = require('./product.model');
+const logger = require('../config/logger');
 
 // Create table orders and order_line
 db.run(`CREATE TABLE IF NOT EXISTS orders (
@@ -71,26 +73,58 @@ tryAddColumn("ALTER TABLE orders ADD COLUMN customer_address TEXT");
 
 const createOrder = async ({ user_id, subtotal, total, remise = 0, status = 'PENDING', lines = [], customer_name, customer_email, customer_phone, customer_address }) => {
   return new Promise((resolve, reject) => {
-    db.run('BEGIN TRANSACTION', (bErr) => {
-      if (bErr) return reject(bErr);
-      const orderStatus = status.toUpperCase();
-      const sql = 'INSERT INTO orders (user_id, subtotal, total, remise, status, customer_name, customer_email, customer_phone, customer_address) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
-      db.run(sql, [user_id, subtotal || total, total, remise, orderStatus, customer_name || null, customer_email || null, customer_phone || null, customer_address || null], function (err) {
-        if (err) {
-          db.run('ROLLBACK');
+    // Vérifier le stock avant de créer la commande
+    const checkStock = (i) => {
+      if (i >= lines.length) {
+        // Tous les stocks sont OK, continuer avec la création
+        createOrderInternal();
+        return;
+      }
+      
+      const ln = lines[i];
+      db.get('SELECT id, name, stock FROM product WHERE id = ?', [ln.product_id], (errProduct, product) => {
+        if (errProduct) {
+          return reject(errProduct);
+        }
+        
+        if (!product) {
+          const err = new Error(`Product with id ${ln.product_id} not found`);
+          err.status = 404;
           return reject(err);
         }
-        const orderId = this.lastID;
-        // Insert initial status in history
-        const sqlHistory = 'INSERT INTO order_status_history (order_id, status, changed_by, notes) VALUES (?, ?, ?, ?)';
-        db.run(sqlHistory, [orderId, orderStatus, user_id, 'created'], (errHistory) => {
-          if (errHistory) {
+        
+        if (product.stock < (ln.quantity || 1)) {
+          const err = new Error(`Insufficient stock for product "${product.name}". Available: ${product.stock}, Requested: ${ln.quantity || 1}`);
+          err.status = 400;
+          logger.warn(`INSUFFICIENT STOCK: product_id=${ln.product_id} name="${product.name}" available=${product.stock} requested=${ln.quantity || 1}`);
+          return reject(err);
+        }
+        
+        checkStock(i + 1);
+      });
+    };
+    
+    const createOrderInternal = () => {
+      db.run('BEGIN TRANSACTION', (bErr) => {
+        if (bErr) return reject(bErr);
+        const orderStatus = status.toUpperCase();
+        const sql = 'INSERT INTO orders (user_id, subtotal, total, remise, status, customer_name, customer_email, customer_phone, customer_address) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+        db.run(sql, [user_id, subtotal || total, total, remise, orderStatus, customer_name || null, customer_email || null, customer_phone || null, customer_address || null], function (err) {
+          if (err) {
             db.run('ROLLBACK');
-            return reject(errHistory);
+            return reject(err);
           }
-          // insert lines sequentially
-          const insertLine = (i) => {
-          if (i >= lines.length) {
+          const orderId = this.lastID;
+          // Insert initial status in history
+          const sqlHistory = 'INSERT INTO order_status_history (order_id, status, changed_by, notes) VALUES (?, ?, ?, ?)';
+          db.run(sqlHistory, [orderId, orderStatus, user_id, 'created'], (errHistory) => {
+            if (errHistory) {
+              db.run('ROLLBACK');
+              return reject(errHistory);
+            }
+            // insert lines sequentially
+            const insertLine = (i) => {
+            if (i >= lines.length) {
             db.get('SELECT * FROM orders WHERE id = ?', [orderId], (err2, row) => {
               if (err2) {
                 db.run('ROLLBACK');
@@ -107,13 +141,26 @@ const createOrder = async ({ user_id, subtotal, total, remise = 0, status = 'PEN
               db.run('ROLLBACK');
               return reject(err3);
             }
-            insertLine(i + 1);
+            // Déduire la quantité du stock
+            const sqlUpdateStock = 'UPDATE product SET stock = stock - ? WHERE id = ?';
+            db.run(sqlUpdateStock, [ln.quantity || 1, ln.product_id], (err4) => {
+              if (err4) {
+                db.run('ROLLBACK');
+                return reject(err4);
+              }
+              logger.info(`STOCK DECREASED: product_id=${ln.product_id} quantity=-${ln.quantity || 1} order_id=${orderId}`);
+              insertLine(i + 1);
+            });
           });
         };
         insertLine(0);
         });
       });
     });
+    };
+    
+    // Commencer par vérifier le stock
+    checkStock(0);
   });
 };
 
@@ -148,9 +195,11 @@ const getOrderById = (id) => {
 const getOrdersByUser = (user_id) => {
   return new Promise((resolve, reject) => {
     db.all(`SELECT o.*, 
-            COUNT(ol.id) as total_products
+            COUNT(ol.id) as total_products,
+            COALESCE(SUM(op.amount), 0) as amount_paid
             FROM orders o
             LEFT JOIN order_line ol ON ol.order_id = o.id
+            LEFT JOIN order_payments op ON op.order_id = o.id
             WHERE o.user_id = ?
             GROUP BY o.id
             ORDER BY o.created_at DESC`, [user_id], (err, rows) => {
@@ -163,9 +212,11 @@ const getOrdersByUser = (user_id) => {
 const getAllOrders = () => {
   return new Promise((resolve, reject) => {
     db.all(`SELECT o.*, 
-            COUNT(ol.id) as total_products
+            COUNT(ol.id) as total_products,
+            COALESCE(SUM(op.amount), 0) as amount_paid
             FROM orders o
             LEFT JOIN order_line ol ON ol.order_id = o.id
+            LEFT JOIN order_payments op ON op.order_id = o.id
             GROUP BY o.id
             ORDER BY o.created_at DESC`, [], (err, rows) => {
       if (err) return reject(err);
@@ -179,22 +230,58 @@ const updateOrderStatus = (order_id, status, changed_by, notes = null) => {
     db.run('BEGIN TRANSACTION', (bErr) => {
       if (bErr) return reject(bErr);
       const orderStatus = status.toUpperCase();
-      // Update order status
-      db.run('UPDATE orders SET status = ? WHERE id = ?', [orderStatus, order_id], (err) => {
-        if (err) {
-          db.run('ROLLBACK');
-          return reject(err);
-        }
-        // Insert in history
-        db.run('INSERT INTO order_status_history (order_id, status, changed_by, notes) VALUES (?, ?, ?, ?)', 
-          [order_id, orderStatus, changed_by, notes], (err2) => {
-          if (err2) {
+      
+      // Si le statut est CANCELLED, récupérer les lignes pour remettre le stock
+      if (orderStatus === 'CANCELLED') {
+        db.all('SELECT product_id, quantity FROM order_line WHERE order_id = ?', [order_id], (errLines, lines) => {
+          if (errLines) {
             db.run('ROLLBACK');
-            return reject(err2);
+            return reject(errLines);
           }
-          db.run('COMMIT', () => resolve(true));
+          
+          // Remettre les quantités dans le stock
+          const restoreStock = (i) => {
+            if (i >= lines.length) {
+              // Continuer avec la mise à jour du statut
+              updateStatus();
+              return;
+            }
+            const line = lines[i];
+            db.run('UPDATE product SET stock = stock + ? WHERE id = ?', [line.quantity, line.product_id], (errStock) => {
+              if (errStock) {
+                db.run('ROLLBACK');
+                return reject(errStock);
+              }
+              logger.info(`STOCK RESTORED: product_id=${line.product_id} quantity=+${line.quantity} order_id=${order_id} reason=CANCELLED`);
+              restoreStock(i + 1);
+            });
+          };
+          
+          restoreStock(0);
         });
-      });
+      } else {
+        // Pas d'annulation, continuer normalement
+        updateStatus();
+      }
+      
+      function updateStatus() {
+        // Update order status
+        db.run('UPDATE orders SET status = ? WHERE id = ?', [orderStatus, order_id], (err) => {
+          if (err) {
+            db.run('ROLLBACK');
+            return reject(err);
+          }
+          // Insert in history
+          db.run('INSERT INTO order_status_history (order_id, status, changed_by, notes) VALUES (?, ?, ?, ?)', 
+            [order_id, orderStatus, changed_by, notes], (err2) => {
+            if (err2) {
+              db.run('ROLLBACK');
+              return reject(err2);
+            }
+            db.run('COMMIT', () => resolve(true));
+          });
+        });
+      }
     });
   });
 };
@@ -247,6 +334,96 @@ const updateRemise = (order_id, remise) => {
   });
 };
 
+const deleteOrder = (order_id) => {
+  return new Promise((resolve, reject) => {
+    db.run('BEGIN TRANSACTION', (bErr) => {
+      if (bErr) return reject(bErr);
+      
+      // Vérifier que la commande est en attente
+      db.get('SELECT status FROM orders WHERE id = ?', [order_id], (errGet, order) => {
+        if (errGet) {
+          db.run('ROLLBACK');
+          return reject(errGet);
+        }
+        
+        if (!order) {
+          db.run('ROLLBACK');
+          const err = new Error('Order not found');
+          err.status = 404;
+          return reject(err);
+        }
+        
+        if (order.status !== 'PENDING') {
+          db.run('ROLLBACK');
+          const err = new Error('Only pending orders can be deleted');
+          err.status = 403;
+          return reject(err);
+        }
+        
+        // Récupérer les lignes pour restaurer le stock
+        db.all('SELECT product_id, quantity FROM order_line WHERE order_id = ?', [order_id], (errLines, lines) => {
+          if (errLines) {
+            db.run('ROLLBACK');
+            return reject(errLines);
+          }
+          
+          // Restaurer le stock
+          const restoreStock = (i) => {
+            if (i >= lines.length) {
+              // Supprimer les lignes de commande
+              db.run('DELETE FROM order_line WHERE order_id = ?', [order_id], (errDelLines) => {
+                if (errDelLines) {
+                  db.run('ROLLBACK');
+                  return reject(errDelLines);
+                }
+                
+                // Supprimer l'historique de statut
+                db.run('DELETE FROM order_status_history WHERE order_id = ?', [order_id], (errDelHistory) => {
+                  if (errDelHistory) {
+                    db.run('ROLLBACK');
+                    return reject(errDelHistory);
+                  }
+                  
+                  // Supprimer les paiements
+                  db.run('DELETE FROM order_payments WHERE order_id = ?', [order_id], (errDelPayments) => {
+                    if (errDelPayments) {
+                      db.run('ROLLBACK');
+                      return reject(errDelPayments);
+                    }
+                    
+                    // Supprimer la commande
+                    db.run('DELETE FROM orders WHERE id = ?', [order_id], (errDelOrder) => {
+                      if (errDelOrder) {
+                        db.run('ROLLBACK');
+                        return reject(errDelOrder);
+                      }
+                      
+                      db.run('COMMIT', () => resolve(true));
+                    });
+                  });
+                });
+              });
+              return;
+            }
+            
+            const line = lines[i];
+            db.run('UPDATE product SET stock = stock + ? WHERE id = ?', [line.quantity, line.product_id], (errStock) => {
+              if (errStock) {
+                db.run('ROLLBACK');
+                return reject(errStock);
+              }
+              logger.info(`STOCK RESTORED: product_id=${line.product_id} quantity=+${line.quantity} order_id=${order_id} reason=DELETED`);
+              restoreStock(i + 1);
+            });
+          };
+          
+          restoreStock(0);
+        });
+      });
+    });
+  });
+};
+
 module.exports = {
   createOrder,
   getOrderById,
@@ -256,5 +433,6 @@ module.exports = {
   addPayment,
   getPaymentsByOrder,
   deletePayment,
-  updateRemise
+  updateRemise,
+  deleteOrder
 };

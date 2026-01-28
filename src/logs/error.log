@@ -1038,3 +1038,8 @@
     at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
     at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
     at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-01-28T14:33:34.821Z error: ERROR deleteOrder order_id=15: Only pending orders can be deleted
+2026-01-28T14:33:34.824Z error: Error: Only pending orders can be deleted
+    at Statement.<anonymous> (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\order.model.js:315:23)
+    at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)
+    at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)

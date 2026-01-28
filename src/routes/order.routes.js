@@ -257,12 +257,37 @@ const router = express.Router();
  *         description: Order or devis file not found
  */
 
+/**
+ * @swagger
+ * /api/orders/{id}:
+ *   delete:
+ *     summary: Delete an order (only if status is PENDING)
+ *     tags: [Orders]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: Order ID
+ *     responses:
+ *       200:
+ *         description: Order deleted successfully
+ *       403:
+ *         description: Only pending orders can be deleted
+ *       404:
+ *         description: Order not found
+ */
+
 router.post('/', authMiddleware, controller.create);
 router.get('/:id', authMiddleware, controller.getById);
 router.get('/', authMiddleware, controller.getByUser);
 router.get('/:id/devis', authMiddleware, controller.downloadDevis);
 router.patch('/:id/status', authMiddleware, controller.updateStatus);
 router.patch('/:id/remise', authMiddleware, controller.updateRemise);
+router.delete('/:id', authMiddleware, controller.deleteOrder);
 router.post('/:id/payments', authMiddleware, controller.addPayment);
 router.get('/:id/payments', authMiddleware, controller.getPayments);
 router.delete('/:id/payments/:paymentId', authMiddleware, controller.deletePayment);

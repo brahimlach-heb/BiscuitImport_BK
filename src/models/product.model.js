@@ -53,10 +53,22 @@ const getAllProducts = (filter = {}) => {
   return new Promise((resolve, reject) => {
     const params = [];
     let sql = 'SELECT * FROM product';
+    const conditions = [];
+    
     if (filter.category_id) {
-      sql += ' WHERE category_id = ?';
+      conditions.push('category_id = ?');
       params.push(filter.category_id);
     }
+    
+    // Filtrer par is_active sauf pour ADMIN et MANAGER
+    if (filter.includeInactive !== true) {
+      conditions.push('is_active = 1');
+    }
+    
+    if (conditions.length > 0) {
+      sql += ' WHERE ' + conditions.join(' AND ');
+    }
+    
     sql += ' ORDER BY id DESC';
     db.all(sql, params, (err, rows) => {
       if (err) return reject(err);
@@ -125,6 +137,22 @@ const getFlavorsForProduct = (product_id) => {
   });
 };
 
+const updateStock = (product_id, quantity_change) => {
+  return new Promise((resolve, reject) => {
+    const sql = 'UPDATE product SET stock = stock + ? WHERE id = ?';
+    db.run(sql, [quantity_change, product_id], function (err) {
+      if (err) return reject(err);
+      if (this.changes === 0) {
+        return reject(new Error(`Product with id ${product_id} not found`));
+      }
+      db.get('SELECT * FROM product WHERE id = ?', [product_id], (err2, row) => {
+        if (err2) return reject(err2);
+        resolve(row);
+      });
+    });
+  });
+};
+
 module.exports = {
   createProduct,
   getAllProducts,
@@ -133,5 +161,6 @@ module.exports = {
   deleteProduct,
   addFlavorToProduct,
   removeFlavorFromProduct,
-  getFlavorsForProduct
+  getFlavorsForProduct,
+  updateStock
 };

@@ -82,9 +82,14 @@ const createProduct = async (data, actorUserId) => {
   return prod;
 };
 
-const getAllProducts = async (filter, roleId) => {
-  logger.info(`DB getAllProducts: filter=${JSON.stringify(filter)} roleId=${roleId}`);
-  const products = await productModel.getAllProducts(filter);
+const getAllProducts = async (filter, roleId, roleCode) => {
+  logger.info(`DB getAllProducts: filter=${JSON.stringify(filter)} roleId=${roleId} roleCode=${roleCode}`);
+  
+  // ADMIN et MANAGER peuvent voir tous les produits, sinon seulement les actifs
+  const isAdminOrManager = roleCode && (roleCode.toUpperCase() === 'ADMIN' || roleCode.toUpperCase() === 'MANAGER');
+  const filterWithActive = { ...filter, includeInactive: isAdminOrManager };
+  
+  const products = await productModel.getAllProducts(filterWithActive);
   
   if (products && Array.isArray(products)) {
     for (const product of products) {
