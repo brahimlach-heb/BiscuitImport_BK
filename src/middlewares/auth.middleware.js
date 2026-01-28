@@ -27,7 +27,7 @@ module.exports = async (req, res, next) => {
       return res.status(403).json({ success: false, message: 'Account deactivated' });
     }
     
-    req.user = { id: user.id, role_id: user.role_id, email: user.email };
+    req.user = { id: user.id, role_id: user.role_id, email: user.email, role_code: role ? role.code : null };
     next();
   } catch (err) {
     return res.status(401).json({ success: false, message: 'Invalid token' });

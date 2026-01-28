@@ -158,6 +158,20 @@ const getOrdersByUser = (user_id) => {
   });
 };
 
+const getAllOrders = () => {
+  return new Promise((resolve, reject) => {
+    db.all(`SELECT o.*, 
+            COUNT(ol.id) as total_products
+            FROM orders o
+            LEFT JOIN order_line ol ON ol.order_id = o.id
+            GROUP BY o.id
+            ORDER BY o.created_at DESC`, [], (err, rows) => {
+      if (err) return reject(err);
+      resolve(rows);
+    });
+  });
+};
+
 const updateOrderStatus = (order_id, status, changed_by, notes = null) => {
   return new Promise((resolve, reject) => {
     db.run('BEGIN TRANSACTION', (bErr) => {
@@ -222,6 +236,7 @@ module.exports = {
   createOrder,
   getOrderById,
   getOrdersByUser,
+  getAllOrders,
   updateOrderStatus,
   addPayment,
   getPaymentsByOrder,

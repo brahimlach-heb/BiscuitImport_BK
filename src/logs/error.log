@@ -944,3 +944,69 @@
     at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
     at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
     at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-28T00:06:17.600Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-28T00:06:17.601Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:61:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:53:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-28T00:06:17.657Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-28T00:06:17.658Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:61:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:53:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-28T00:06:17.683Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-28T00:06:17.686Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:61:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:53:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-28T00:07:09.299Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-28T00:07:09.305Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY created_at DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:61:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:53:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-28T00:10:16.669Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-28T00:10:16.672Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY COALESCE(created_at, datetime(id, "unixepoch")) DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:61:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:53:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-28T00:11:35.910Z error: ERROR getAllProducts: SQLITE_ERROR: no such column: created_at
+2026-01-28T00:11:35.913Z error: Error: SQLITE_ERROR: no such column: created_at
+--> in Database#all('SELECT * FROM product ORDER BY COALESCE(created_at, datetime(id, "unixepoch")) DESC', [], [Function (anonymous)])
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:61:8
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:53:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:87:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:9:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)

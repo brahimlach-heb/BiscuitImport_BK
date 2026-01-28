@@ -33,6 +33,11 @@ const getOrdersByUser = async (user_id) => {
   return await orderModel.getOrdersByUser(user_id);
 };
 
+const getAllOrders = async () => {
+  logger.debug(`DB getAllOrders`);
+  return await orderModel.getAllOrders();
+};
+
 const updateOrderStatus = async (order_id, status, changed_by, notes = null) => {
   logger.info(`DB updateOrderStatus: order_id=${order_id} new_status=${status} by=${changed_by}`);
   const success = await orderModel.updateOrderStatus(order_id, status, changed_by, notes);
@@ -81,6 +86,7 @@ module.exports = {
   createOrder,
   getOrderById,
   getOrdersByUser,
+  getAllOrders,
   updateOrderStatus,
   addPayment,
   getPaymentsByOrder,

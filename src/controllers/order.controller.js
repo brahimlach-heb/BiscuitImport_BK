@@ -39,9 +39,17 @@ const getByUser = async (req, res, next) => {
       logger.warn(`ACTION getOrdersByUser_unauthorized`);
       return res.status(401).json({ error: 'Authentication required' });
     }
-    const user_id = req.user.id;
-    const rows = await orderService.getOrdersByUser(user_id);
-    logger.info(`ACTION getOrdersByUser user_id=${user_id} count=${Array.isArray(rows) ? rows.length : 0}`);
+    
+    // Vérifier si l'utilisateur est MANAGER ou ADMIN
+    const allowedRoles = ['MANAGER', 'ADMIN'];
+    if (!req.user.role_code || !allowedRoles.includes(req.user.role_code.toUpperCase())) {
+      logger.warn(`ACTION getOrdersByUser_forbidden user_id=${req.user.id} role=${req.user.role_code}`);
+      return res.status(403).json({ error: 'Access forbidden: Only MANAGER and ADMIN can access orders' });
+    }
+    
+    // MANAGER et ADMIN voient toutes les commandes
+    const rows = await orderService.getAllOrders();
+    logger.info(`ACTION getAllOrders count=${Array.isArray(rows) ? rows.length : 0} by=${req.user.id}`);
     res.status(200).json(rows);
   } catch (err) {
     const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';

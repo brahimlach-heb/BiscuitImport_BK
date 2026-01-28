@@ -12,6 +12,7 @@ db.run(`CREATE TABLE IF NOT EXISTS product (
   stock INTEGER DEFAULT 0,
   is_active INTEGER DEFAULT 1,
   category_id INTEGER,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (category_id) REFERENCES category(id)
 )`);
 
@@ -24,6 +25,7 @@ const tryAddColumn = (sql) => {
 
 tryAddColumn("ALTER TABLE product ADD COLUMN marque TEXT");
 tryAddColumn("ALTER TABLE product ADD COLUMN packageUnit INTEGER DEFAULT 1");
+tryAddColumn("ALTER TABLE product ADD COLUMN created_at DATETIME DEFAULT CURRENT_TIMESTAMP");
 
 // Create association table product_flavor if not exists
 db.run(`CREATE TABLE IF NOT EXISTS product_flavor (
