@@ -10648,3 +10648,1256 @@
 2026-01-28T00:20:41.515Z info: GET /api/orders 304 10.309 ms -
 2026-01-28T00:20:41.518Z info: ACTION getAllCategories count=4 by=user_id=18
 2026-01-28T00:20:41.520Z info: GET /api/categories 304 18.499 ms -
+2026-01-28T00:21:25.427Z info: Server listening on port 3000
+2026-01-28T00:21:25.435Z info: Base SQLite connectée avec succès
+2026-01-28T00:21:48.405Z info: DB updateOrderStatus: order_id=18 new_status=SHIPPED by=18
+2026-01-28T00:21:48.473Z info: ORDER STATUS UPDATED: id=18 status=SHIPPED
+2026-01-28T00:21:48.491Z info: ACTION updateOrderStatus id=18 status=SHIPPED by=18
+2026-01-28T00:21:48.544Z info: PATCH /api/orders/18/status 200 272.110 ms {"status":"SHIPPED","notes":"sxse"}
+2026-01-28T00:21:48.563Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:21:48.565Z info: GET /api/orders 200 6.942 ms -
+2026-01-28T00:21:51.824Z info: ACTION getAllBanks count=1 by=user_id=18
+2026-01-28T00:21:51.827Z info: GET /api/banks 200 18.672 ms -
+2026-01-28T00:21:51.828Z info: ACTION getPayments order_id=24 count=1 by=user_id=18
+2026-01-28T00:21:51.831Z info: GET /api/orders/24/payments 200 16.171 ms -
+2026-01-28T00:22:33.228Z info: DB addPayment: order_id=24 method=CASH amount=0.41 by=18
+2026-01-28T00:22:33.285Z info: PAYMENT ADDED: id=3 order_id=24
+2026-01-28T00:22:33.289Z info: ACTION addPayment order_id=24 payment_id=3 by=18
+2026-01-28T00:22:33.307Z info: POST /api/orders/24/payments 201 90.529 ms {"bank_id":3,"payment_method":"CASH","amount":0.41,"payment_date":"2026-01-24","notes":"xs ccddd"}
+2026-01-28T00:22:33.341Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:22:33.352Z info: GET /api/orders 304 14.519 ms -
+2026-01-28T00:22:46.820Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:22:46.826Z info: No roleId provided, using default prices
+2026-01-28T00:22:46.827Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:22:46.830Z info: GET /api/orders 304 14.221 ms -
+2026-01-28T00:22:46.839Z info: No roleId provided, using default prices
+2026-01-28T00:22:46.843Z info: No roleId provided, using default prices
+2026-01-28T00:22:46.846Z info: No roleId provided, using default prices
+2026-01-28T00:22:46.847Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:22:46.849Z info: GET /api/products 304 37.395 ms -
+2026-01-28T00:23:05.141Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:23:05.144Z info: No roleId provided, using default prices
+2026-01-28T00:23:05.145Z info: No roleId provided, using default prices
+2026-01-28T00:23:05.147Z info: No roleId provided, using default prices
+2026-01-28T00:23:05.148Z info: No roleId provided, using default prices
+2026-01-28T00:23:05.152Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:23:05.156Z info: GET /api/products 304 19.097 ms -
+2026-01-28T00:23:08.459Z info: ACTION getProductById id=17 name=aaa flavors=1 by=user_id=18
+2026-01-28T00:23:08.460Z info: GET /api/products/17 200 9.873 ms -
+2026-01-28T00:23:20.313Z info: DB updateProduct: id=17 actor=18
+2026-01-28T00:23:20.530Z info: AUDIT UPDATE_PRODUCT: id=17 user=18
+2026-01-28T00:23:20.531Z info: ACTION updateProduct id=17 by=user_id=18
+2026-01-28T00:23:20.540Z info: PUT /api/products/17 200 234.607 ms {"name":"aaa","category_id":14,"marque":"aaa","price":220,"stock":1000,"packageUnit":26,"description":"PPPP","ingredients":"SSSSS","is_active":1,"flavors":[{"id":35,"name":"SSSSSSSSSSSSSSSS","color":"#d43592","image":"https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"}],"price_roles":[{"id":31,"product_id":17,"role_id":6,"price":11111,"code":"C_PREMIUM","label":"PREMIUM"},{"role_id":"7","price":"1"}]}
+2026-01-28T00:23:20.648Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:23:20.650Z info: No roleId provided, using default prices
+2026-01-28T00:23:20.651Z info: No roleId provided, using default prices
+2026-01-28T00:23:20.653Z info: No roleId provided, using default prices
+2026-01-28T00:23:20.654Z info: No roleId provided, using default prices
+2026-01-28T00:23:20.654Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:23:20.655Z info: GET /api/products 200 10.693 ms -
+2026-01-28T00:23:23.151Z info: GET /api/categories 401 0.970 ms -
+2026-01-28T00:23:24.109Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 6.711 ms -
+2026-01-28T00:23:40.364Z info: ACTION login email=rrr@gmail.com userId=18
+2026-01-28T00:23:40.365Z info: POST /auth/login 200 148.556 ms {"email":"rrr@gmail.com","password":"rrr@gmail.com"}
+2026-01-28T00:23:41.412Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 1.236 ms -
+2026-01-28T00:23:41.471Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:23:41.479Z info: ACTION getProfile userId=18
+2026-01-28T00:23:41.483Z info: GET /auth/profile 200 29.069 ms -
+2026-01-28T00:23:41.487Z info: GET /api/roles 304 22.183 ms -
+2026-01-28T00:23:41.493Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.502Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.510Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:23:41.512Z info: GET /api/categories 304 52.246 ms -
+2026-01-28T00:23:41.514Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.520Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.521Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:23:41.524Z info: GET /api/products 304 66.917 ms -
+2026-01-28T00:23:41.528Z info: GET /api/roles 304 29.002 ms -
+2026-01-28T00:23:41.533Z info: ACTION getProfile userId=18
+2026-01-28T00:23:41.535Z info: GET /auth/profile 304 28.929 ms -
+2026-01-28T00:23:41.537Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:23:41.541Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.543Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:23:41.545Z info: GET /api/categories 304 27.083 ms -
+2026-01-28T00:23:41.548Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.550Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.552Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.553Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:23:41.556Z info: GET /api/products 304 23.210 ms -
+2026-01-28T00:23:41.565Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:23:41.567Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.569Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.570Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.573Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.574Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:23:41.577Z info: GET /api/products 304 14.921 ms -
+2026-01-28T00:23:41.582Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:23:41.584Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.585Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.587Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.589Z info: No roleId provided, using default prices
+2026-01-28T00:23:41.589Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:23:41.592Z info: GET /api/products 304 10.719 ms -
+2026-01-28T00:24:03.418Z info: GET /api/roles/7 304 11.211 ms -
+2026-01-28T00:24:03.419Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:24:03.420Z info: GET /api/orders 304 10.427 ms -
+2026-01-28T00:24:03.429Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:24:03.431Z info: GET /api/categories 304 18.255 ms -
+2026-01-28T00:24:03.434Z info: GET /api/roles/7 304 12.279 ms -
+2026-01-28T00:24:03.439Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:24:03.442Z info: GET /api/orders 304 15.871 ms -
+2026-01-28T00:24:03.444Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:24:03.445Z info: GET /api/categories 304 9.681 ms -
+2026-01-28T00:24:03.545Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:24:03.546Z info: GET /api/orders 304 9.457 ms -
+2026-01-28T00:24:03.548Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:24:03.550Z info: GET /api/categories 304 15.511 ms -
+2026-01-28T00:24:03.698Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:24:03.699Z info: GET /api/orders 304 8.187 ms -
+2026-01-28T00:24:03.700Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:24:03.700Z info: GET /api/categories 304 6.477 ms -
+2026-01-28T00:24:05.444Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:24:05.447Z info: No roleId provided, using default prices
+2026-01-28T00:24:05.449Z info: No roleId provided, using default prices
+2026-01-28T00:24:05.451Z info: No roleId provided, using default prices
+2026-01-28T00:24:05.454Z info: No roleId provided, using default prices
+2026-01-28T00:24:05.455Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:24:05.457Z info: GET /api/products 304 14.791 ms -
+2026-01-28T00:24:07.999Z info: ACTION getProductById id=17 name=aaa flavors=1 by=user_id=18
+2026-01-28T00:24:08.001Z info: GET /api/products/17 200 9.035 ms -
+2026-01-28T00:24:24.989Z info: GET /api/roles/7 304 12.697 ms -
+2026-01-28T00:24:24.991Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:24:24.993Z info: GET /api/orders 304 9.067 ms -
+2026-01-28T00:24:24.997Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:24:24.998Z info: GET /api/categories 304 18.203 ms -
+2026-01-28T00:24:25.011Z info: GET /api/roles/7 304 16.008 ms -
+2026-01-28T00:24:25.012Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:24:25.014Z info: GET /api/orders 304 13.456 ms -
+2026-01-28T00:24:25.016Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:24:25.018Z info: GET /api/categories 304 11.454 ms -
+2026-01-28T00:24:25.201Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:24:25.203Z info: GET /api/orders 304 8.115 ms -
+2026-01-28T00:24:25.207Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:24:25.209Z info: GET /api/categories 304 19.238 ms -
+2026-01-28T00:24:25.417Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:24:25.419Z info: GET /api/orders 304 8.069 ms -
+2026-01-28T00:24:25.424Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:24:25.426Z info: GET /api/categories 304 19.688 ms -
+2026-01-28T00:24:28.061Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:24:28.063Z info: No roleId provided, using default prices
+2026-01-28T00:24:28.065Z info: No roleId provided, using default prices
+2026-01-28T00:24:28.066Z info: No roleId provided, using default prices
+2026-01-28T00:24:28.067Z info: No roleId provided, using default prices
+2026-01-28T00:24:28.068Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:24:28.070Z info: GET /api/products 304 12.660 ms -
+2026-01-28T00:24:29.621Z info: ACTION getProductById id=17 name=aaa flavors=1 by=user_id=18
+2026-01-28T00:24:29.623Z info: GET /api/products/17 304 7.659 ms -
+2026-01-28T00:24:36.266Z info: DB updateProduct: id=17 actor=18
+2026-01-28T00:24:36.474Z info: AUDIT UPDATE_PRODUCT: id=17 user=18
+2026-01-28T00:24:36.477Z info: ACTION updateProduct id=17 by=user_id=18
+2026-01-28T00:24:36.481Z info: PUT /api/products/17 200 224.304 ms {"name":"aaa","category_id":14,"marque":"aaa","price":220,"stock":1000,"packageUnit":26,"description":"PPPP","ingredients":"SSSSS","is_active":1,"flavors":[{"id":36,"name":"SSSSSSSSSSSSSSSS","color":"#d43592","image":"https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"}],"price_roles":[{"id":32,"product_id":17,"role_id":"4","price":11111,"code":"C_PREMIUM","label":"PREMIUM"},{"id":33,"product_id":17,"role_id":7,"price":1,"code":"MANAGER","label":"Manager"}]}
+2026-01-28T00:24:36.572Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:24:36.574Z info: No roleId provided, using default prices
+2026-01-28T00:24:36.575Z info: No roleId provided, using default prices
+2026-01-28T00:24:36.576Z info: No roleId provided, using default prices
+2026-01-28T00:24:36.578Z info: No roleId provided, using default prices
+2026-01-28T00:24:36.578Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:24:36.579Z info: GET /api/products 200 8.982 ms -
+2026-01-28T00:24:43.902Z info: GET /api/categories 401 0.822 ms -
+2026-01-28T00:24:44.844Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 0.837 ms -
+2026-01-28T00:25:02.853Z info: ACTION getProductById id=16 name=titre produit flavors=1 by=user_id=18
+2026-01-28T00:25:02.854Z info: GET /api/products/16 200 6.103 ms -
+2026-01-28T00:25:14.299Z info: ACTION login email=b@gmail.com userId=1
+2026-01-28T00:25:14.301Z info: POST /auth/login 200 126.594 ms {"email":"b@gmail.com","password":"string"}
+2026-01-28T00:25:15.380Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T00:25:15.384Z info: ACTION getProfile userId=1
+2026-01-28T00:25:15.386Z info: GET /auth/profile 200 16.606 ms -
+2026-01-28T00:25:15.388Z info: Checking price for product 17 with roleId 4
+2026-01-28T00:25:15.393Z info: GET /api/roles 200 14.533 ms -
+2026-01-28T00:25:15.397Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T00:25:15.398Z info: Price updated for product 17: 11111
+2026-01-28T00:25:15.402Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:25:15.408Z info: GET /api/categories 304 31.514 ms -
+2026-01-28T00:25:15.416Z info: Checking price for product 16 with roleId 4
+2026-01-28T00:25:15.432Z info: Product 16 - rolePrice: {"id":26,"product_id":16,"role_id":4,"price":1}
+2026-01-28T00:25:15.433Z info: Price updated for product 16: 1
+2026-01-28T00:25:15.439Z info: Checking price for product 15 with roleId 4
+2026-01-28T00:25:15.442Z info: ACTION getProfile userId=1
+2026-01-28T00:25:15.445Z info: GET /auth/profile 304 32.583 ms -
+2026-01-28T00:25:15.446Z info: Product 15 - rolePrice: {"id":13,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T00:25:15.447Z info: Price updated for product 15: 0.25
+2026-01-28T00:25:15.451Z info: GET /api/roles 304 30.067 ms -
+2026-01-28T00:25:15.457Z info: Checking price for product 14 with roleId 4
+2026-01-28T00:25:15.459Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:25:15.461Z info: GET /api/categories 304 32.690 ms -
+2026-01-28T00:25:15.463Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T00:25:15.464Z info: Price updated for product 14: 0.36
+2026-01-28T00:25:15.465Z info: ACTION getAllProducts count=4 filter={} by=user_id=1
+2026-01-28T00:25:15.470Z info: GET /api/products 200 96.177 ms -
+2026-01-28T00:25:15.487Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T00:25:15.490Z info: Checking price for product 17 with roleId 4
+2026-01-28T00:25:15.492Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T00:25:15.492Z info: Price updated for product 17: 11111
+2026-01-28T00:25:15.493Z info: Checking price for product 16 with roleId 4
+2026-01-28T00:25:15.494Z info: Product 16 - rolePrice: {"id":26,"product_id":16,"role_id":4,"price":1}
+2026-01-28T00:25:15.494Z info: Price updated for product 16: 1
+2026-01-28T00:25:15.495Z info: Checking price for product 15 with roleId 4
+2026-01-28T00:25:15.496Z info: Product 15 - rolePrice: {"id":13,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T00:25:15.496Z info: Price updated for product 15: 0.25
+2026-01-28T00:25:15.498Z info: Checking price for product 14 with roleId 4
+2026-01-28T00:25:15.499Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T00:25:15.499Z info: Price updated for product 14: 0.36
+2026-01-28T00:25:15.500Z info: ACTION getAllProducts count=4 filter={} by=user_id=1
+2026-01-28T00:25:15.501Z info: GET /api/products 304 17.906 ms -
+2026-01-28T00:25:15.511Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T00:25:15.513Z info: Checking price for product 17 with roleId 4
+2026-01-28T00:25:15.514Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T00:25:15.515Z info: Price updated for product 17: 11111
+2026-01-28T00:25:15.516Z info: Checking price for product 16 with roleId 4
+2026-01-28T00:25:15.518Z info: Product 16 - rolePrice: {"id":26,"product_id":16,"role_id":4,"price":1}
+2026-01-28T00:25:15.518Z info: Price updated for product 16: 1
+2026-01-28T00:25:15.520Z info: Checking price for product 15 with roleId 4
+2026-01-28T00:25:15.523Z info: Product 15 - rolePrice: {"id":13,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T00:25:15.523Z info: Price updated for product 15: 0.25
+2026-01-28T00:25:15.525Z info: Checking price for product 14 with roleId 4
+2026-01-28T00:25:15.526Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T00:25:15.526Z info: Price updated for product 14: 0.36
+2026-01-28T00:25:15.526Z info: ACTION getAllProducts count=4 filter={} by=user_id=1
+2026-01-28T00:25:15.528Z info: GET /api/products 304 20.092 ms -
+2026-01-28T00:25:15.530Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 0.748 ms -
+2026-01-28T00:25:25.670Z info: GET /api/roles/4 304 11.338 ms -
+2026-01-28T00:25:25.674Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T00:25:25.676Z info: GET /api/orders 200 13.521 ms -
+2026-01-28T00:25:25.678Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:25:25.680Z info: GET /api/categories 304 26.049 ms -
+2026-01-28T00:25:25.704Z info: GET /api/roles/4 304 20.175 ms -
+2026-01-28T00:25:25.707Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T00:25:25.710Z info: GET /api/orders 304 14.436 ms -
+2026-01-28T00:25:25.711Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:25:25.714Z info: GET /api/categories 304 23.670 ms -
+2026-01-28T00:25:25.765Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T00:25:25.769Z info: GET /api/orders 304 28.545 ms -
+2026-01-28T00:25:25.774Z info: GET /api/roles 304 24.578 ms -
+2026-01-28T00:25:25.775Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:25:25.777Z info: GET /api/categories 304 49.646 ms -
+2026-01-28T00:25:25.778Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-28T00:25:25.780Z info: GET /api/banks 304 20.680 ms -
+2026-01-28T00:25:25.976Z info: GET /api/roles 304 19.458 ms -
+2026-01-28T00:25:25.979Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-28T00:25:25.981Z info: GET /api/banks 304 19.874 ms -
+2026-01-28T00:25:25.984Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T00:25:25.988Z info: GET /api/orders 304 22.639 ms -
+2026-01-28T00:25:25.989Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:25:25.992Z info: GET /api/categories 304 41.125 ms -
+2026-01-28T00:25:29.421Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T00:25:29.423Z info: Checking price for product 17 with roleId 4
+2026-01-28T00:25:29.424Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T00:25:29.425Z info: Price updated for product 17: 11111
+2026-01-28T00:25:29.426Z info: Checking price for product 16 with roleId 4
+2026-01-28T00:25:29.427Z info: Product 16 - rolePrice: {"id":26,"product_id":16,"role_id":4,"price":1}
+2026-01-28T00:25:29.427Z info: Price updated for product 16: 1
+2026-01-28T00:25:29.428Z info: Checking price for product 15 with roleId 4
+2026-01-28T00:25:29.429Z info: Product 15 - rolePrice: {"id":13,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T00:25:29.429Z info: Price updated for product 15: 0.25
+2026-01-28T00:25:29.430Z info: Checking price for product 14 with roleId 4
+2026-01-28T00:25:29.432Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T00:25:29.432Z info: Price updated for product 14: 0.36
+2026-01-28T00:25:29.433Z info: ACTION getAllProducts count=4 filter={} by=user_id=1
+2026-01-28T00:25:29.435Z info: GET /api/products 304 14.849 ms -
+2026-01-28T00:25:34.961Z info: ACTION getProductById id=17 name=aaa flavors=1 by=user_id=1
+2026-01-28T00:25:34.963Z info: GET /api/products/17 200 8.055 ms -
+2026-01-28T00:26:05.523Z info: ACTION login email=rrr@gmail.com userId=18
+2026-01-28T00:26:05.526Z info: POST /auth/login 200 167.085 ms {"email":"rrr@gmail.com","password":"rrr@gmail.com"}
+2026-01-28T00:26:06.688Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:26:06.692Z info: ACTION getProfile userId=18
+2026-01-28T00:26:06.694Z info: GET /auth/profile 200 17.112 ms -
+2026-01-28T00:26:06.694Z info: No roleId provided, using default prices
+2026-01-28T00:26:06.701Z info: GET /api/roles 200 11.963 ms -
+2026-01-28T00:26:06.704Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:26:06.707Z info: GET /api/categories 200 22.207 ms -
+2026-01-28T00:26:06.709Z info: No roleId provided, using default prices
+2026-01-28T00:26:06.722Z info: No roleId provided, using default prices
+2026-01-28T00:26:06.729Z info: No roleId provided, using default prices
+2026-01-28T00:26:06.729Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:26:06.731Z info: GET /api/products 200 49.273 ms -
+2026-01-28T00:26:06.734Z info: ACTION getProfile userId=18
+2026-01-28T00:26:06.738Z info: GET /auth/profile 304 24.628 ms -
+2026-01-28T00:26:06.742Z info: GET /api/roles 304 24.515 ms -
+2026-01-28T00:26:06.749Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:26:06.752Z info: GET /api/categories 304 27.619 ms -
+2026-01-28T00:26:06.753Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:26:06.755Z info: No roleId provided, using default prices
+2026-01-28T00:26:06.757Z info: No roleId provided, using default prices
+2026-01-28T00:26:06.758Z info: No roleId provided, using default prices
+2026-01-28T00:26:06.759Z info: No roleId provided, using default prices
+2026-01-28T00:26:06.760Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:26:06.761Z info: GET /api/products 304 16.066 ms -
+2026-01-28T00:26:06.770Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:26:06.772Z info: No roleId provided, using default prices
+2026-01-28T00:26:06.773Z info: No roleId provided, using default prices
+2026-01-28T00:26:06.774Z info: No roleId provided, using default prices
+2026-01-28T00:26:06.775Z info: No roleId provided, using default prices
+2026-01-28T00:26:06.775Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:26:06.776Z info: GET /api/products 304 10.382 ms -
+2026-01-28T00:26:06.827Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 200 9.865 ms -
+2026-01-28T00:27:51.871Z info: GET /api/categories 401 0.802 ms -
+2026-01-28T00:27:52.807Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 1.558 ms -
+2026-01-28T00:30:05.737Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:30:05.752Z info: GET /api/orders 200 63.909 ms -
+2026-01-28T00:30:05.764Z info: GET /api/roles/7 200 87.160 ms -
+2026-01-28T00:30:05.791Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:30:05.830Z info: GET /api/categories 304 125.219 ms -
+2026-01-28T00:30:05.890Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:30:05.893Z info: GET /api/orders 304 23.205 ms -
+2026-01-28T00:30:05.903Z info: GET /api/roles/7 304 28.683 ms -
+2026-01-28T00:30:05.917Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:30:05.921Z info: GET /api/categories 304 43.876 ms -
+2026-01-28T00:30:06.050Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:30:06.052Z info: GET /api/orders 304 15.293 ms -
+2026-01-28T00:30:06.058Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:30:06.062Z info: GET /api/categories 304 25.070 ms -
+2026-01-28T00:30:06.300Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:30:06.303Z info: GET /api/orders 304 14.508 ms -
+2026-01-28T00:30:06.308Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:30:06.313Z info: GET /api/categories 304 28.836 ms -
+2026-01-28T00:30:07.848Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:30:07.850Z info: No roleId provided, using default prices
+2026-01-28T00:30:07.852Z info: No roleId provided, using default prices
+2026-01-28T00:30:07.853Z info: No roleId provided, using default prices
+2026-01-28T00:30:07.855Z info: No roleId provided, using default prices
+2026-01-28T00:30:07.856Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:30:07.858Z info: GET /api/products 304 12.663 ms -
+2026-01-28T00:30:10.530Z info: ACTION getProductById id=15 name=ce flavors=1 by=user_id=18
+2026-01-28T00:30:10.531Z info: GET /api/products/15 200 6.522 ms -
+2026-01-28T00:30:23.841Z info: DB updateProduct: id=15 actor=18
+2026-01-28T00:30:24.220Z info: AUDIT UPDATE_PRODUCT: id=15 user=18
+2026-01-28T00:30:24.223Z info: ACTION updateProduct id=15 by=user_id=18
+2026-01-28T00:30:24.236Z info: PUT /api/products/15 200 390.724 ms {"name":"ce","category_id":14,"marque":"ee","price":0.09,"stock":13,"packageUnit":1,"description":"ced","ingredients":"cdz","is_active":0,"flavors":[{"id":17,"name":"cdcd","color":"#4035d4","image":"https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png"}],"price_roles":[{"id":13,"product_id":15,"role_id":4,"price":0.25,"code":"ADMIN","label":"Administration"},{"role_id":"7","price":"1"}]}
+2026-01-28T00:30:24.367Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:30:24.373Z info: No roleId provided, using default prices
+2026-01-28T00:30:24.386Z info: No roleId provided, using default prices
+2026-01-28T00:30:24.392Z info: No roleId provided, using default prices
+2026-01-28T00:30:24.400Z info: No roleId provided, using default prices
+2026-01-28T00:30:24.404Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:30:24.408Z info: GET /api/products 200 43.029 ms -
+2026-01-28T00:30:26.776Z info: ACTION getProductById id=15 name=ce flavors=1 by=user_id=18
+2026-01-28T00:30:26.779Z info: GET /api/products/15 200 11.043 ms -
+2026-01-28T00:30:32.124Z info: ACTION getProductById id=16 name=titre produit flavors=1 by=user_id=18
+2026-01-28T00:30:32.127Z info: GET /api/products/16 200 10.129 ms -
+2026-01-28T00:30:42.354Z info: DB updateProduct: id=16 actor=18
+2026-01-28T00:30:42.531Z info: AUDIT UPDATE_PRODUCT: id=16 user=18
+2026-01-28T00:30:42.534Z info: ACTION updateProduct id=16 by=user_id=18
+2026-01-28T00:30:42.538Z info: PUT /api/products/16 200 195.594 ms {"name":"titre produit","category_id":15,"marque":"marque","price":21,"stock":11,"packageUnit":25,"description":"KEY,value/","ingredients":"cfdff","is_active":1,"flavors":[{"id":30,"name":"frfrf","color":"#d4af37","image":"https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-cloudy-background-beautiful-natural-streaks-of-sky-and-clouds-red-image_15684333.jpg"}],"price_roles":[{"id":26,"product_id":16,"role_id":4,"price":1,"code":"ADMIN","label":"Administration"},{"role_id":"7","price":"1"}]}
+2026-01-28T00:30:42.627Z info: DB getAllProducts: filter={} roleId=null
+2026-01-28T00:30:42.628Z info: No roleId provided, using default prices
+2026-01-28T00:30:42.629Z info: No roleId provided, using default prices
+2026-01-28T00:30:42.629Z info: No roleId provided, using default prices
+2026-01-28T00:30:42.630Z info: No roleId provided, using default prices
+2026-01-28T00:30:42.630Z info: ACTION getAllProducts count=4 filter={} by=anonymous
+2026-01-28T00:30:42.631Z info: GET /api/products 200 6.262 ms -
+2026-01-28T00:30:49.417Z info: Server listening on port 3000
+2026-01-28T00:30:49.436Z info: Base SQLite connectée avec succès
+2026-01-28T00:32:40.858Z info: GET /api/categories 401 6.834 ms -
+2026-01-28T00:32:41.823Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 7.867 ms -
+2026-01-28T00:33:08.478Z info: Server listening on port 3000
+2026-01-28T00:33:08.488Z info: Base SQLite connectée avec succès
+2026-01-28T00:33:11.569Z info: GET /api/categories 401 10.160 ms -
+2026-01-28T00:33:33.149Z info: ACTION login email=rrr@gmail.com userId=18
+2026-01-28T00:33:33.151Z info: POST /auth/login 200 120.265 ms {"email":"rrr@gmail.com","password":"rrr@gmail.com"}
+2026-01-28T00:33:34.212Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 5.003 ms -
+2026-01-28T00:33:34.273Z info: DB getAllProducts: filter={} roleId=7
+2026-01-28T00:33:34.278Z info: GET /api/roles 304 12.137 ms -
+2026-01-28T00:33:34.280Z info: ACTION getProfile userId=18
+2026-01-28T00:33:34.282Z info: GET /auth/profile 200 29.037 ms -
+2026-01-28T00:33:34.288Z info: Checking price for product 17 with roleId 7
+2026-01-28T00:33:34.290Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:33:34.292Z info: GET /api/categories 304 29.016 ms -
+2026-01-28T00:33:34.302Z info: Product 17 - rolePrice: {"id":35,"product_id":17,"role_id":7,"price":1}
+2026-01-28T00:33:34.303Z info: Price updated for product 17: 1
+2026-01-28T00:33:34.304Z info: Checking price for product 16 with roleId 7
+2026-01-28T00:33:34.308Z info: GET /api/roles 304 23.059 ms -
+2026-01-28T00:33:34.311Z info: Product 16 - rolePrice: {"id":39,"product_id":16,"role_id":7,"price":1}
+2026-01-28T00:33:34.312Z info: Price updated for product 16: 1
+2026-01-28T00:33:34.313Z info: ACTION getProfile userId=18
+2026-01-28T00:33:34.315Z info: GET /auth/profile 304 17.976 ms -
+2026-01-28T00:33:34.317Z info: Checking price for product 15 with roleId 7
+2026-01-28T00:33:34.319Z info: Product 15 - rolePrice: {"id":37,"product_id":15,"role_id":7,"price":1}
+2026-01-28T00:33:34.319Z info: Price updated for product 15: 1
+2026-01-28T00:33:34.320Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:33:34.322Z info: GET /api/categories 304 20.945 ms -
+2026-01-28T00:33:34.323Z info: Checking price for product 14 with roleId 7
+2026-01-28T00:33:34.325Z info: Product 14 - rolePrice: null
+2026-01-28T00:33:34.329Z info: No role price found for product 14, keeping default price: 0.11
+2026-01-28T00:33:34.330Z info: ACTION getAllProducts count=4 filter={} by=user_id=18
+2026-01-28T00:33:34.333Z info: GET /api/products 200 75.031 ms -
+2026-01-28T00:33:34.347Z info: DB getAllProducts: filter={} roleId=7
+2026-01-28T00:33:34.350Z info: Checking price for product 17 with roleId 7
+2026-01-28T00:33:34.351Z info: Product 17 - rolePrice: {"id":35,"product_id":17,"role_id":7,"price":1}
+2026-01-28T00:33:34.351Z info: Price updated for product 17: 1
+2026-01-28T00:33:34.353Z info: Checking price for product 16 with roleId 7
+2026-01-28T00:33:34.354Z info: Product 16 - rolePrice: {"id":39,"product_id":16,"role_id":7,"price":1}
+2026-01-28T00:33:34.354Z info: Price updated for product 16: 1
+2026-01-28T00:33:34.356Z info: Checking price for product 15 with roleId 7
+2026-01-28T00:33:34.357Z info: Product 15 - rolePrice: {"id":37,"product_id":15,"role_id":7,"price":1}
+2026-01-28T00:33:34.360Z info: Price updated for product 15: 1
+2026-01-28T00:33:34.364Z info: Checking price for product 14 with roleId 7
+2026-01-28T00:33:34.365Z info: Product 14 - rolePrice: null
+2026-01-28T00:33:34.365Z info: No role price found for product 14, keeping default price: 0.11
+2026-01-28T00:33:34.365Z info: ACTION getAllProducts count=4 filter={} by=user_id=18
+2026-01-28T00:33:34.367Z info: GET /api/products 304 24.683 ms -
+2026-01-28T00:33:34.375Z info: DB getAllProducts: filter={} roleId=7
+2026-01-28T00:33:34.378Z info: Checking price for product 17 with roleId 7
+2026-01-28T00:33:34.380Z info: Product 17 - rolePrice: {"id":35,"product_id":17,"role_id":7,"price":1}
+2026-01-28T00:33:34.380Z info: Price updated for product 17: 1
+2026-01-28T00:33:34.381Z info: Checking price for product 16 with roleId 7
+2026-01-28T00:33:34.383Z info: Product 16 - rolePrice: {"id":39,"product_id":16,"role_id":7,"price":1}
+2026-01-28T00:33:34.385Z info: Price updated for product 16: 1
+2026-01-28T00:33:34.390Z info: Checking price for product 15 with roleId 7
+2026-01-28T00:33:34.394Z info: Product 15 - rolePrice: {"id":37,"product_id":15,"role_id":7,"price":1}
+2026-01-28T00:33:34.395Z info: Price updated for product 15: 1
+2026-01-28T00:33:34.401Z info: Checking price for product 14 with roleId 7
+2026-01-28T00:33:34.403Z info: Product 14 - rolePrice: null
+2026-01-28T00:33:34.404Z info: No role price found for product 14, keeping default price: 0.11
+2026-01-28T00:33:34.404Z info: ACTION getAllProducts count=4 filter={} by=user_id=18
+2026-01-28T00:33:34.405Z info: GET /api/products 304 35.061 ms -
+2026-01-28T00:33:34.417Z info: DB getAllProducts: filter={} roleId=7
+2026-01-28T00:33:34.419Z info: Checking price for product 17 with roleId 7
+2026-01-28T00:33:34.420Z info: Product 17 - rolePrice: {"id":35,"product_id":17,"role_id":7,"price":1}
+2026-01-28T00:33:34.420Z info: Price updated for product 17: 1
+2026-01-28T00:33:34.422Z info: Checking price for product 16 with roleId 7
+2026-01-28T00:33:34.422Z info: Product 16 - rolePrice: {"id":39,"product_id":16,"role_id":7,"price":1}
+2026-01-28T00:33:34.422Z info: Price updated for product 16: 1
+2026-01-28T00:33:34.423Z info: Checking price for product 15 with roleId 7
+2026-01-28T00:33:34.424Z info: Product 15 - rolePrice: {"id":37,"product_id":15,"role_id":7,"price":1}
+2026-01-28T00:33:34.425Z info: Price updated for product 15: 1
+2026-01-28T00:33:34.426Z info: Checking price for product 14 with roleId 7
+2026-01-28T00:33:34.428Z info: Product 14 - rolePrice: null
+2026-01-28T00:33:34.429Z info: No role price found for product 14, keeping default price: 0.11
+2026-01-28T00:33:34.429Z info: ACTION getAllProducts count=4 filter={} by=user_id=18
+2026-01-28T00:33:34.432Z info: GET /api/products 304 18.488 ms -
+2026-01-28T00:34:07.235Z info: Server listening on port 3000
+2026-01-28T00:34:07.251Z info: Base SQLite connectée avec succès
+2026-01-28T00:35:00.316Z info: Server listening on port 3000
+2026-01-28T00:35:00.329Z info: Base SQLite connectée avec succès
+2026-01-28T00:35:11.013Z info: Server listening on port 3000
+2026-01-28T00:35:11.023Z info: Base SQLite connectée avec succès
+2026-01-28T00:35:37.310Z info: GET /api/categories 401 7.426 ms -
+2026-01-28T00:35:41.804Z info: GET /api/roles/7 200 17.924 ms -
+2026-01-28T00:35:41.806Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:35:41.810Z info: GET /api/orders 304 19.246 ms -
+2026-01-28T00:35:41.815Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:35:41.824Z info: GET /api/categories 304 45.202 ms -
+2026-01-28T00:35:41.859Z info: GET /api/roles/7 304 29.297 ms -
+2026-01-28T00:35:41.861Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:35:41.864Z info: GET /api/orders 304 27.918 ms -
+2026-01-28T00:35:41.872Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:35:41.876Z info: GET /api/categories 304 33.558 ms -
+2026-01-28T00:35:41.983Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:35:41.987Z info: GET /api/orders 304 9.913 ms -
+2026-01-28T00:35:41.989Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:35:41.990Z info: GET /api/categories 304 17.826 ms -
+2026-01-28T00:35:42.100Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:35:42.103Z info: GET /api/orders 304 12.690 ms -
+2026-01-28T00:35:42.107Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:35:42.110Z info: GET /api/categories 304 12.812 ms -
+2026-01-28T00:35:43.696Z info: DB getAllProducts: filter={} roleId=7
+2026-01-28T00:35:43.700Z info: Checking price for product 17 with roleId 7
+2026-01-28T00:35:43.705Z info: Product 17 - rolePrice: {"id":35,"product_id":17,"role_id":7,"price":1}
+2026-01-28T00:35:43.706Z info: Price updated for product 17: 1
+2026-01-28T00:35:43.710Z info: Checking price for product 16 with roleId 7
+2026-01-28T00:35:43.714Z info: Product 16 - rolePrice: {"id":39,"product_id":16,"role_id":7,"price":1}
+2026-01-28T00:35:43.715Z info: Price updated for product 16: 1
+2026-01-28T00:35:43.717Z info: Checking price for product 15 with roleId 7
+2026-01-28T00:35:43.720Z info: Product 15 - rolePrice: {"id":37,"product_id":15,"role_id":7,"price":1}
+2026-01-28T00:35:43.721Z info: Price updated for product 15: 1
+2026-01-28T00:35:43.725Z info: Checking price for product 14 with roleId 7
+2026-01-28T00:35:43.728Z info: Product 14 - rolePrice: null
+2026-01-28T00:35:43.729Z info: No role price found for product 14, keeping default price: 0.11
+2026-01-28T00:35:43.729Z info: ACTION getAllProducts count=4 filter={} by=user_id=18
+2026-01-28T00:35:43.733Z info: GET /api/products 304 42.448 ms -
+2026-01-28T00:36:21.713Z info: Server listening on port 3000
+2026-01-28T00:36:21.722Z info: Base SQLite connectée avec succès
+2026-01-28T00:37:47.834Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:37:47.838Z info: GET /api/orders 304 16.005 ms -
+2026-01-28T00:41:46.620Z info: Server listening on port 3000
+2026-01-28T00:41:46.635Z info: Base SQLite connectée avec succès
+2026-01-28T00:41:56.759Z info: Server listening on port 3000
+2026-01-28T00:41:56.777Z info: Base SQLite connectée avec succès
+2026-01-28T00:42:12.602Z info: Server listening on port 3000
+2026-01-28T00:42:12.612Z info: Base SQLite connectée avec succès
+2026-01-28T00:43:05.818Z info: Server listening on port 3000
+2026-01-28T00:43:05.827Z info: Base SQLite connectée avec succès
+2026-01-28T00:43:22.673Z info: Server listening on port 3000
+2026-01-28T00:43:22.685Z info: Base SQLite connectée avec succès
+2026-01-28T00:43:33.726Z info: Server listening on port 3000
+2026-01-28T00:43:33.740Z info: Base SQLite connectée avec succès
+2026-01-28T00:44:25.209Z info: Server listening on port 3000
+2026-01-28T00:44:25.219Z info: Base SQLite connectée avec succès
+2026-01-28T00:44:46.996Z info: Server listening on port 3000
+2026-01-28T00:44:47.006Z info: Base SQLite connectée avec succès
+2026-01-28T00:47:37.731Z info: DB getAllProducts: filter={} roleId=7
+2026-01-28T00:47:37.741Z info: Checking price for product 17 with roleId 7
+2026-01-28T00:47:37.746Z info: Product 17 - rolePrice: {"id":35,"product_id":17,"role_id":7,"price":1}
+2026-01-28T00:47:37.747Z info: Price updated for product 17: 1
+2026-01-28T00:47:37.755Z info: Checking price for product 16 with roleId 7
+2026-01-28T00:47:37.760Z info: Product 16 - rolePrice: {"id":39,"product_id":16,"role_id":7,"price":1}
+2026-01-28T00:47:37.762Z info: Price updated for product 16: 1
+2026-01-28T00:47:37.771Z info: Checking price for product 15 with roleId 7
+2026-01-28T00:47:37.775Z info: Product 15 - rolePrice: {"id":37,"product_id":15,"role_id":7,"price":1}
+2026-01-28T00:47:37.777Z info: Price updated for product 15: 1
+2026-01-28T00:47:37.781Z info: Checking price for product 14 with roleId 7
+2026-01-28T00:47:37.788Z info: Product 14 - rolePrice: null
+2026-01-28T00:47:37.789Z info: No role price found for product 14, keeping default price: 0.11
+2026-01-28T00:47:37.790Z info: ACTION getAllProducts count=4 filter={} by=user_id=18
+2026-01-28T00:47:37.810Z info: GET /api/products 304 98.606 ms -
+2026-01-28T00:48:41.579Z info: DB createProduct: name=svfv price=0.08 actor=18
+2026-01-28T00:48:41.745Z info: AUDIT ADD_PRODUCT: id=18 user=18
+2026-01-28T00:48:41.747Z info: ACTION createProduct id=18 name=svfv price=0.08 category=14 by=user_id=18
+2026-01-28T00:48:41.760Z info: POST /api/products 201 254.118 ms {"name":"svfv","category_id":14,"marque":"dvdfv","price":0.08,"stock":11,"packageUnit":9,"description":"dvcv","ingredients":"dv cv ","is_active":true,"flavors":[{"name":"dvdv","description":"vdvd","color":"#625732","image":"data:image/jpeg;base64,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"}],"price_roles":[{"role_id":"7","price":"1.1"}]}
+2026-01-28T00:48:49.739Z info: ACTION getProductById id=18 name=svfv flavors=1 by=user_id=18
+2026-01-28T00:48:49.741Z info: GET /api/products/18 200 11.253 ms -
+2026-01-28T00:49:00.772Z info: GET /api/categories 401 1.362 ms -
+2026-01-28T00:49:01.702Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 3.981 ms -
+2026-01-28T00:49:47.362Z info: GET /api/roles/7 304 16.535 ms -
+2026-01-28T00:49:47.365Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:49:47.366Z info: GET /api/orders 200 10.913 ms -
+2026-01-28T00:49:47.373Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:49:47.376Z info: GET /api/categories 200 23.769 ms -
+2026-01-28T00:49:47.394Z info: GET /api/roles/7 304 25.718 ms -
+2026-01-28T00:49:47.398Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:49:47.400Z info: GET /api/orders 304 15.251 ms -
+2026-01-28T00:49:47.404Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:49:47.407Z info: GET /api/categories 304 14.799 ms -
+2026-01-28T00:49:47.527Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:49:47.529Z info: GET /api/orders 304 6.860 ms -
+2026-01-28T00:49:47.531Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:49:47.534Z info: GET /api/categories 304 14.032 ms -
+2026-01-28T00:49:47.718Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:49:47.720Z info: GET /api/orders 304 13.973 ms -
+2026-01-28T00:49:47.722Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:49:47.726Z info: GET /api/categories 304 28.435 ms -
+2026-01-28T00:49:49.064Z info: DB getAllProducts: filter={} roleId=7
+2026-01-28T00:49:49.066Z info: Checking price for product 18 with roleId 7
+2026-01-28T00:49:49.067Z info: Product 18 - rolePrice: {"id":40,"product_id":18,"role_id":7,"price":1.1}
+2026-01-28T00:49:49.068Z info: Price updated for product 18: 1.1
+2026-01-28T00:49:49.069Z info: Checking price for product 17 with roleId 7
+2026-01-28T00:49:49.071Z info: Product 17 - rolePrice: {"id":35,"product_id":17,"role_id":7,"price":1}
+2026-01-28T00:49:49.071Z info: Price updated for product 17: 1
+2026-01-28T00:49:49.072Z info: Checking price for product 16 with roleId 7
+2026-01-28T00:49:49.074Z info: Product 16 - rolePrice: {"id":39,"product_id":16,"role_id":7,"price":1}
+2026-01-28T00:49:49.075Z info: Price updated for product 16: 1
+2026-01-28T00:49:49.078Z info: Checking price for product 15 with roleId 7
+2026-01-28T00:49:49.080Z info: Product 15 - rolePrice: {"id":37,"product_id":15,"role_id":7,"price":1}
+2026-01-28T00:49:49.082Z info: Price updated for product 15: 1
+2026-01-28T00:49:49.085Z info: Checking price for product 14 with roleId 7
+2026-01-28T00:49:49.088Z info: Product 14 - rolePrice: null
+2026-01-28T00:49:49.089Z info: No role price found for product 14, keeping default price: 0.11
+2026-01-28T00:49:49.089Z info: ACTION getAllProducts count=5 filter={} by=user_id=18
+2026-01-28T00:49:49.093Z info: GET /api/products 200 31.272 ms -
+2026-01-28T00:49:54.066Z info: GET /api/categories 401 1.801 ms -
+2026-01-28T00:49:55.019Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 1.942 ms -
+2026-01-28T00:49:55.026Z info: GET /uploads/flavors/1769561321625-dvdv.jpeg 200 14.805 ms -
+2026-01-28T00:50:11.368Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:50:11.369Z info: GET /api/orders 304 10.012 ms -
+2026-01-28T00:50:11.371Z info: GET /api/roles/7 304 8.355 ms -
+2026-01-28T00:50:11.377Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:50:11.378Z info: GET /api/categories 304 13.355 ms -
+2026-01-28T00:50:11.380Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:50:11.381Z info: GET /api/orders 304 7.260 ms -
+2026-01-28T00:50:11.383Z info: GET /api/roles/7 304 7.586 ms -
+2026-01-28T00:50:11.385Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:50:11.386Z info: GET /api/categories 304 4.348 ms -
+2026-01-28T00:50:11.556Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:50:11.557Z info: GET /api/orders 304 8.313 ms -
+2026-01-28T00:50:11.558Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:50:11.559Z info: GET /api/categories 304 15.302 ms -
+2026-01-28T00:50:11.703Z info: ACTION getAllOrders count=13 by=18
+2026-01-28T00:50:11.705Z info: GET /api/orders 304 13.434 ms -
+2026-01-28T00:50:11.707Z info: ACTION getAllCategories count=4 by=user_id=18
+2026-01-28T00:50:11.713Z info: GET /api/categories 304 16.277 ms -
+2026-01-28T00:50:13.021Z info: DB getAllProducts: filter={} roleId=7
+2026-01-28T00:50:13.024Z info: Checking price for product 18 with roleId 7
+2026-01-28T00:50:13.025Z info: Product 18 - rolePrice: {"id":40,"product_id":18,"role_id":7,"price":1.1}
+2026-01-28T00:50:13.025Z info: Price updated for product 18: 1.1
+2026-01-28T00:50:13.026Z info: Checking price for product 17 with roleId 7
+2026-01-28T00:50:13.028Z info: Product 17 - rolePrice: {"id":35,"product_id":17,"role_id":7,"price":1}
+2026-01-28T00:50:13.029Z info: Price updated for product 17: 1
+2026-01-28T00:50:13.031Z info: Checking price for product 16 with roleId 7
+2026-01-28T00:50:13.033Z info: Product 16 - rolePrice: {"id":39,"product_id":16,"role_id":7,"price":1}
+2026-01-28T00:50:13.034Z info: Price updated for product 16: 1
+2026-01-28T00:50:13.035Z info: Checking price for product 15 with roleId 7
+2026-01-28T00:50:13.036Z info: Product 15 - rolePrice: {"id":37,"product_id":15,"role_id":7,"price":1}
+2026-01-28T00:50:13.036Z info: Price updated for product 15: 1
+2026-01-28T00:50:13.038Z info: Checking price for product 14 with roleId 7
+2026-01-28T00:50:13.039Z info: Product 14 - rolePrice: null
+2026-01-28T00:50:13.039Z info: No role price found for product 14, keeping default price: 0.11
+2026-01-28T00:50:13.040Z info: ACTION getAllProducts count=5 filter={} by=user_id=18
+2026-01-28T00:50:13.041Z info: GET /api/products 304 22.234 ms -
+2026-01-28T00:50:20.061Z info: ACTION getProductById id=18 name=svfv flavors=1 by=user_id=18
+2026-01-28T00:50:20.064Z info: GET /api/products/18 304 12.078 ms -
+2026-01-28T00:50:30.455Z info: ACTION login email=b@gmail.com userId=1
+2026-01-28T00:50:30.458Z info: POST /auth/login 200 167.840 ms {"email":"b@gmail.com","password":"string"}
+2026-01-28T00:50:31.597Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T00:50:31.601Z info: ACTION getProfile userId=1
+2026-01-28T00:50:31.602Z info: GET /auth/profile 200 19.786 ms -
+2026-01-28T00:50:31.605Z info: GET /api/roles 304 11.568 ms -
+2026-01-28T00:50:31.606Z info: Checking price for product 18 with roleId 4
+2026-01-28T00:50:31.608Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:50:31.612Z info: GET /api/categories 304 21.517 ms -
+2026-01-28T00:50:31.621Z info: Product 18 - rolePrice: null
+2026-01-28T00:50:31.622Z info: No role price found for product 18, keeping default price: 0.08
+2026-01-28T00:50:31.631Z info: Checking price for product 17 with roleId 4
+2026-01-28T00:50:31.634Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T00:50:31.635Z info: Price updated for product 17: 11111
+2026-01-28T00:50:31.638Z info: GET /api/roles 304 20.275 ms -
+2026-01-28T00:50:31.640Z info: Checking price for product 16 with roleId 4
+2026-01-28T00:50:31.642Z info: ACTION getProfile userId=1
+2026-01-28T00:50:31.644Z info: GET /auth/profile 304 19.186 ms -
+2026-01-28T00:50:31.645Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T00:50:31.646Z info: Price updated for product 16: 1
+2026-01-28T00:50:31.648Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:50:31.650Z info: GET /api/categories 304 23.072 ms -
+2026-01-28T00:50:31.652Z info: Checking price for product 15 with roleId 4
+2026-01-28T00:50:31.653Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T00:50:31.654Z info: Price updated for product 15: 0.25
+2026-01-28T00:50:31.655Z info: Checking price for product 14 with roleId 4
+2026-01-28T00:50:31.657Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T00:50:31.657Z info: Price updated for product 14: 0.36
+2026-01-28T00:50:31.658Z info: ACTION getAllProducts count=5 filter={} by=user_id=1
+2026-01-28T00:50:31.661Z info: GET /api/products 200 72.795 ms -
+2026-01-28T00:50:31.675Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T00:50:31.679Z info: Checking price for product 18 with roleId 4
+2026-01-28T00:50:31.682Z info: Product 18 - rolePrice: null
+2026-01-28T00:50:31.683Z info: No role price found for product 18, keeping default price: 0.08
+2026-01-28T00:50:31.685Z info: Checking price for product 17 with roleId 4
+2026-01-28T00:50:31.687Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T00:50:31.688Z info: Price updated for product 17: 11111
+2026-01-28T00:50:31.689Z info: Checking price for product 16 with roleId 4
+2026-01-28T00:50:31.690Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T00:50:31.691Z info: Price updated for product 16: 1
+2026-01-28T00:50:31.692Z info: Checking price for product 15 with roleId 4
+2026-01-28T00:50:31.694Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T00:50:31.695Z info: Price updated for product 15: 0.25
+2026-01-28T00:50:31.699Z info: Checking price for product 14 with roleId 4
+2026-01-28T00:50:31.702Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T00:50:31.702Z info: Price updated for product 14: 0.36
+2026-01-28T00:50:31.703Z info: ACTION getAllProducts count=5 filter={} by=user_id=1
+2026-01-28T00:50:31.705Z info: GET /api/products 304 31.760 ms -
+2026-01-28T00:50:31.718Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T00:50:31.723Z info: Checking price for product 18 with roleId 4
+2026-01-28T00:50:31.726Z info: GET /uploads/flavors/1769561321625-dvdv.jpeg 304 3.091 ms -
+2026-01-28T00:50:31.728Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 3.097 ms -
+2026-01-28T00:50:31.731Z info: Product 18 - rolePrice: null
+2026-01-28T00:50:31.733Z info: No role price found for product 18, keeping default price: 0.08
+2026-01-28T00:50:31.735Z info: Checking price for product 17 with roleId 4
+2026-01-28T00:50:31.737Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T00:50:31.737Z info: Price updated for product 17: 11111
+2026-01-28T00:50:31.738Z info: Checking price for product 16 with roleId 4
+2026-01-28T00:50:31.740Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T00:50:31.740Z info: Price updated for product 16: 1
+2026-01-28T00:50:31.742Z info: Checking price for product 15 with roleId 4
+2026-01-28T00:50:31.744Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T00:50:31.745Z info: Price updated for product 15: 0.25
+2026-01-28T00:50:31.749Z info: Checking price for product 14 with roleId 4
+2026-01-28T00:50:31.751Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T00:50:31.752Z info: Price updated for product 14: 0.36
+2026-01-28T00:50:31.753Z info: ACTION getAllProducts count=5 filter={} by=user_id=1
+2026-01-28T00:50:31.755Z info: GET /api/products 304 43.282 ms -
+2026-01-28T00:50:58.690Z info: GET /api-docs/ 304 5.108 ms -
+2026-01-28T00:50:58.755Z info: GET /api-docs/swagger-ui.css 304 2.077 ms -
+2026-01-28T00:50:58.764Z info: GET /api-docs/swagger-ui-bundle.js 304 4.666 ms -
+2026-01-28T00:50:58.769Z info: GET /api-docs/swagger-ui-standalone-preset.js 304 1.886 ms -
+2026-01-28T00:50:58.774Z info: GET /api-docs/swagger-ui-init.js 200 1.289 ms -
+2026-01-28T00:50:59.072Z info: GET /api-docs/favicon-32x32.png 304 1.029 ms -
+2026-01-28T00:52:13.252Z info: GET /api-docs/ 200 0.887 ms -
+2026-01-28T00:52:13.410Z info: GET /api-docs/swagger-ui-init.js 200 0.499 ms -
+2026-01-28T00:52:13.415Z info: GET /api-docs/swagger-ui.css 200 8.404 ms -
+2026-01-28T00:52:13.419Z info: GET /api-docs/swagger-ui-standalone-preset.js 200 8.609 ms -
+2026-01-28T00:52:13.431Z info: GET /api-docs/swagger-ui-bundle.js 200 7.593 ms -
+2026-01-28T00:54:21.990Z info: ACTION login email=b@gmail.com userId=1
+2026-01-28T00:54:21.993Z info: POST /auth/login 200 126.334 ms {"email":"b@gmail.com","password":"string"}
+2026-01-28T00:54:23.113Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T00:54:23.118Z info: ACTION getProfile userId=1
+2026-01-28T00:54:23.119Z info: GET /auth/profile 200 25.245 ms -
+2026-01-28T00:54:23.125Z info: GET /api/roles 304 19.933 ms -
+2026-01-28T00:54:23.127Z info: Checking price for product 18 with roleId 4
+2026-01-28T00:54:23.130Z info: Product 18 - rolePrice: null
+2026-01-28T00:54:23.131Z info: No role price found for product 18, keeping default price: 0.08
+2026-01-28T00:54:23.133Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:54:23.135Z info: GET /api/categories 304 33.835 ms -
+2026-01-28T00:54:23.150Z info: Checking price for product 17 with roleId 4
+2026-01-28T00:54:23.161Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T00:54:23.162Z info: Price updated for product 17: 11111
+2026-01-28T00:54:23.164Z info: Checking price for product 16 with roleId 4
+2026-01-28T00:54:23.166Z info: GET /api/roles 304 24.391 ms -
+2026-01-28T00:54:23.166Z info: ACTION getProfile userId=1
+2026-01-28T00:54:23.168Z info: GET /auth/profile 304 19.472 ms -
+2026-01-28T00:54:23.168Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T00:54:23.169Z info: Price updated for product 16: 1
+2026-01-28T00:54:23.177Z info: Checking price for product 15 with roleId 4
+2026-01-28T00:54:23.178Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:54:23.180Z info: GET /api/categories 304 27.726 ms -
+2026-01-28T00:54:23.182Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T00:54:23.182Z info: Price updated for product 15: 0.25
+2026-01-28T00:54:23.184Z info: Checking price for product 14 with roleId 4
+2026-01-28T00:54:23.185Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T00:54:23.186Z info: Price updated for product 14: 0.36
+2026-01-28T00:54:23.187Z info: ACTION getAllProducts count=5 filter={} by=user_id=1
+2026-01-28T00:54:23.189Z info: GET /api/products 304 90.432 ms -
+2026-01-28T00:54:23.200Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T00:54:23.201Z info: Checking price for product 18 with roleId 4
+2026-01-28T00:54:23.203Z info: Product 18 - rolePrice: null
+2026-01-28T00:54:23.204Z info: No role price found for product 18, keeping default price: 0.08
+2026-01-28T00:54:23.206Z info: Checking price for product 17 with roleId 4
+2026-01-28T00:54:23.208Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T00:54:23.209Z info: Price updated for product 17: 11111
+2026-01-28T00:54:23.210Z info: Checking price for product 16 with roleId 4
+2026-01-28T00:54:23.211Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T00:54:23.211Z info: Price updated for product 16: 1
+2026-01-28T00:54:23.212Z info: Checking price for product 15 with roleId 4
+2026-01-28T00:54:23.213Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T00:54:23.213Z info: Price updated for product 15: 0.25
+2026-01-28T00:54:23.214Z info: Checking price for product 14 with roleId 4
+2026-01-28T00:54:23.215Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T00:54:23.216Z info: Price updated for product 14: 0.36
+2026-01-28T00:54:23.216Z info: ACTION getAllProducts count=5 filter={} by=user_id=1
+2026-01-28T00:54:23.217Z info: GET /api/products 304 20.954 ms -
+2026-01-28T00:54:23.227Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T00:54:23.229Z info: Checking price for product 18 with roleId 4
+2026-01-28T00:54:23.231Z info: Product 18 - rolePrice: null
+2026-01-28T00:54:23.231Z info: No role price found for product 18, keeping default price: 0.08
+2026-01-28T00:54:23.233Z info: Checking price for product 17 with roleId 4
+2026-01-28T00:54:23.234Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T00:54:23.235Z info: Price updated for product 17: 11111
+2026-01-28T00:54:23.235Z info: Checking price for product 16 with roleId 4
+2026-01-28T00:54:23.237Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T00:54:23.237Z info: Price updated for product 16: 1
+2026-01-28T00:54:23.241Z info: Checking price for product 15 with roleId 4
+2026-01-28T00:54:23.244Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T00:54:23.245Z info: Price updated for product 15: 0.25
+2026-01-28T00:54:23.248Z info: Checking price for product 14 with roleId 4
+2026-01-28T00:54:23.250Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T00:54:23.250Z info: Price updated for product 14: 0.36
+2026-01-28T00:54:23.250Z info: ACTION getAllProducts count=5 filter={} by=user_id=1
+2026-01-28T00:54:23.251Z info: GET /api/products 304 29.105 ms -
+2026-01-28T00:54:23.265Z info: GET /uploads/flavors/1769561321625-dvdv.jpeg 304 1.395 ms -
+2026-01-28T00:54:23.268Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 1.358 ms -
+2026-01-28T00:54:27.771Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:54:27.773Z info: GET /api/categories 304 6.997 ms -
+2026-01-28T00:54:27.779Z info: GET /api/roles/4 304 4.738 ms -
+2026-01-28T00:54:27.792Z info: GET /api/roles/4 304 7.745 ms -
+2026-01-28T00:54:27.793Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:54:27.795Z info: GET /api/categories 304 13.932 ms -
+2026-01-28T00:55:34.654Z info: ACTION login email=b@gmail.com userId=1
+2026-01-28T00:55:34.657Z info: POST /auth/login 200 176.078 ms {"email":"b@gmail.com","password":"string"}
+2026-01-28T00:55:35.762Z info: ACTION getProfile userId=1
+2026-01-28T00:55:35.764Z info: GET /auth/profile 200 19.517 ms -
+2026-01-28T00:55:35.764Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T00:55:35.771Z info: GET /api/roles 304 14.292 ms -
+2026-01-28T00:55:35.774Z info: Checking price for product 18 with roleId 4
+2026-01-28T00:55:35.778Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:55:35.780Z info: GET /api/categories 304 26.904 ms -
+2026-01-28T00:55:35.789Z info: Product 18 - rolePrice: null
+2026-01-28T00:55:35.790Z info: No role price found for product 18, keeping default price: 0.08
+2026-01-28T00:55:35.796Z info: Checking price for product 17 with roleId 4
+2026-01-28T00:55:35.797Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T00:55:35.797Z info: Price updated for product 17: 11111
+2026-01-28T00:55:35.799Z info: GET /api/roles 304 12.484 ms -
+2026-01-28T00:55:35.799Z info: ACTION getProfile userId=1
+2026-01-28T00:55:35.801Z info: GET /auth/profile 304 18.508 ms -
+2026-01-28T00:55:35.803Z info: Checking price for product 16 with roleId 4
+2026-01-28T00:55:35.807Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T00:55:35.808Z info: Price updated for product 16: 1
+2026-01-28T00:55:35.810Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:55:35.812Z info: GET /api/categories 304 18.909 ms -
+2026-01-28T00:55:35.813Z info: Checking price for product 15 with roleId 4
+2026-01-28T00:55:35.815Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T00:55:35.815Z info: Price updated for product 15: 0.25
+2026-01-28T00:55:35.817Z info: Checking price for product 14 with roleId 4
+2026-01-28T00:55:35.819Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T00:55:35.820Z info: Price updated for product 14: 0.36
+2026-01-28T00:55:35.821Z info: ACTION getAllProducts count=5 filter={} by=user_id=1
+2026-01-28T00:55:35.824Z info: GET /api/products 304 73.495 ms -
+2026-01-28T00:55:35.835Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T00:55:35.838Z info: Checking price for product 18 with roleId 4
+2026-01-28T00:55:35.840Z info: Product 18 - rolePrice: null
+2026-01-28T00:55:35.841Z info: No role price found for product 18, keeping default price: 0.08
+2026-01-28T00:55:35.843Z info: Checking price for product 17 with roleId 4
+2026-01-28T00:55:35.845Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T00:55:35.845Z info: Price updated for product 17: 11111
+2026-01-28T00:55:35.848Z info: Checking price for product 16 with roleId 4
+2026-01-28T00:55:35.850Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T00:55:35.850Z info: Price updated for product 16: 1
+2026-01-28T00:55:35.852Z info: Checking price for product 15 with roleId 4
+2026-01-28T00:55:35.854Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T00:55:35.855Z info: Price updated for product 15: 0.25
+2026-01-28T00:55:35.858Z info: Checking price for product 14 with roleId 4
+2026-01-28T00:55:35.860Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T00:55:35.861Z info: Price updated for product 14: 0.36
+2026-01-28T00:55:35.861Z info: ACTION getAllProducts count=5 filter={} by=user_id=1
+2026-01-28T00:55:35.862Z info: GET /api/products 304 31.133 ms -
+2026-01-28T00:55:35.873Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T00:55:35.876Z info: Checking price for product 18 with roleId 4
+2026-01-28T00:55:35.877Z info: Product 18 - rolePrice: null
+2026-01-28T00:55:35.878Z info: No role price found for product 18, keeping default price: 0.08
+2026-01-28T00:55:35.880Z info: Checking price for product 17 with roleId 4
+2026-01-28T00:55:35.881Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T00:55:35.881Z info: Price updated for product 17: 11111
+2026-01-28T00:55:35.882Z info: Checking price for product 16 with roleId 4
+2026-01-28T00:55:35.883Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T00:55:35.884Z info: Price updated for product 16: 1
+2026-01-28T00:55:35.885Z info: Checking price for product 15 with roleId 4
+2026-01-28T00:55:35.887Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T00:55:35.888Z info: Price updated for product 15: 0.25
+2026-01-28T00:55:35.890Z info: Checking price for product 14 with roleId 4
+2026-01-28T00:55:35.892Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T00:55:35.893Z info: Price updated for product 14: 0.36
+2026-01-28T00:55:35.894Z info: ACTION getAllProducts count=5 filter={} by=user_id=1
+2026-01-28T00:55:35.896Z info: GET /api/products 304 28.747 ms -
+2026-01-28T00:55:35.901Z info: GET /uploads/flavors/1769561321625-dvdv.jpeg 304 2.010 ms -
+2026-01-28T00:55:35.907Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 7.212 ms -
+2026-01-28T00:55:40.289Z info: GET /api/roles/4 304 12.469 ms -
+2026-01-28T00:55:40.290Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T00:55:40.292Z info: GET /api/orders 304 12.381 ms -
+2026-01-28T00:55:40.293Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:55:40.296Z info: GET /api/categories 304 31.366 ms -
+2026-01-28T00:55:40.325Z info: GET /api/roles/4 304 24.916 ms -
+2026-01-28T00:55:40.328Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T00:55:40.333Z info: GET /api/orders 304 22.604 ms -
+2026-01-28T00:55:40.341Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:55:40.345Z info: GET /api/categories 304 30.594 ms -
+2026-01-28T00:55:40.398Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T00:55:40.402Z info: GET /api/orders 304 18.494 ms -
+2026-01-28T00:55:40.407Z info: GET /api/roles 304 32.066 ms -
+2026-01-28T00:55:40.412Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:55:40.414Z info: GET /api/categories 304 46.790 ms -
+2026-01-28T00:55:40.416Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-28T00:55:40.420Z info: GET /api/banks 304 26.384 ms -
+2026-01-28T00:55:40.654Z info: GET /api/roles 304 12.804 ms -
+2026-01-28T00:55:40.655Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T00:55:40.656Z info: GET /api/orders 304 8.156 ms -
+2026-01-28T00:55:40.657Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-28T00:55:40.657Z info: GET /api/banks 304 11.753 ms -
+2026-01-28T00:55:40.658Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T00:55:40.659Z info: GET /api/categories 304 19.587 ms -
+2026-01-28T00:58:05.715Z info: ACTION getOrderById id=25 user_id=1 status=CANCELLED by=user_id=1
+2026-01-28T00:58:05.717Z info: GET /api/orders/25 200 12.664 ms -
+2026-01-28T00:58:18.880Z info: ACTION getOrderById id=25 user_id=1 status=CANCELLED by=user_id=1
+2026-01-28T00:58:18.883Z info: GET /api/orders/25 304 13.983 ms -
+2026-01-28T00:58:42.056Z info: ACTION getPayments order_id=25 count=0 by=user_id=1
+2026-01-28T00:58:42.058Z info: GET /api/orders/25/payments 200 7.462 ms -
+2026-01-28T00:58:44.107Z info: ACTION getOrderById id=25 user_id=1 status=CANCELLED by=user_id=1
+2026-01-28T00:58:44.109Z info: GET /api/orders/25 304 8.978 ms -
+2026-01-28T01:01:09.612Z info: ACTION getOrderById id=25 user_id=1 status=CANCELLED by=user_id=1
+2026-01-28T01:01:09.615Z info: GET /api/orders/25 304 10.780 ms -
+2026-01-28T01:07:13.346Z error: ERROR updateRemise order_id=26: Remise must be a positive number
+2026-01-28T01:07:13.349Z error: Error: Remise must be a positive number
+    at Object.updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\order.service.js:88:17)
+    at updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:136:38)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-01-28T01:07:13.351Z info: PATCH /api/orders/26/remise 500 20.223 ms {"discount_amount":1111111,"discount_type":"percentage"}
+2026-01-28T01:07:20.595Z error: ERROR updateRemise order_id=26: Remise must be a positive number
+2026-01-28T01:07:20.595Z error: Error: Remise must be a positive number
+    at Object.updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\order.service.js:88:17)
+    at updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:136:38)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-01-28T01:07:20.597Z info: PATCH /api/orders/26/remise 500 7.638 ms {"discount_amount":11,"discount_type":"percentage"}
+2026-01-28T01:08:20.496Z error: ERROR updateRemise order_id=26: Remise must be a positive number
+2026-01-28T01:08:20.497Z error: Error: Remise must be a positive number
+    at Object.updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\order.service.js:88:17)
+    at updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:136:38)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-01-28T01:08:20.499Z info: PATCH /api/orders/26/remise 500 11.475 ms {"discount_amount":11,"discount_type":"percentage"}
+2026-01-28T01:08:52.337Z error: ERROR updateRemise order_id=26: Remise must be a positive number
+2026-01-28T01:08:52.340Z error: Error: Remise must be a positive number
+    at Object.updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\order.service.js:88:17)
+    at updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:136:38)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-01-28T01:08:52.342Z info: PATCH /api/orders/26/remise 500 15.030 ms {"discount_amount":11,"discount_type":"percentage"}
+2026-01-28T01:13:28.849Z info: DB updateRemise: order_id=26 remise=11
+2026-01-28T01:13:28.878Z info: ORDER REMISE UPDATED: id=26 remise=11
+2026-01-28T01:13:28.879Z info: ACTION updateRemise order_id=26 remise=11 by=user_id=1
+2026-01-28T01:13:28.882Z info: PATCH /api/orders/26/remise 200 40.904 ms {"remise":11}
+2026-01-28T01:13:28.961Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:13:28.963Z info: GET /api/orders 200 7.064 ms -
+2026-01-28T01:13:38.670Z info: Server listening on port 3000
+2026-01-28T01:13:38.683Z info: Base SQLite connectée avec succès
+2026-01-28T01:14:43.031Z info: ACTION getOrderById id=26 user_id=1 status=PENDING by=user_id=1
+2026-01-28T01:14:43.035Z info: GET /api/orders/26 200 11.017 ms -
+2026-01-28T01:16:56.473Z info: ACTION getOrderById id=26 user_id=1 status=PENDING by=user_id=1
+2026-01-28T01:16:56.476Z info: GET /api/orders/26 304 15.401 ms -
+2026-01-28T01:16:59.642Z info: ACTION getOrderById id=25 user_id=1 status=CANCELLED by=user_id=1
+2026-01-28T01:16:59.643Z info: GET /api/orders/25 304 4.249 ms -
+2026-01-28T01:17:09.169Z info: ACTION getPayments order_id=26 count=0 by=user_id=1
+2026-01-28T01:17:09.171Z info: GET /api/orders/26/payments 200 7.629 ms -
+2026-01-28T01:17:15.370Z info: ACTION getPayments order_id=25 count=0 by=user_id=1
+2026-01-28T01:17:15.371Z info: GET /api/orders/25/payments 304 8.991 ms -
+2026-01-28T01:17:31.729Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:17:31.731Z info: GET /api/orders 304 12.830 ms -
+2026-01-28T01:17:31.733Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T01:17:31.738Z info: Checking price for product 18 with roleId 4
+2026-01-28T01:17:31.740Z info: ACTION getAllUsers by=1 count=3
+2026-01-28T01:17:31.742Z info: GET /api/users 200 16.034 ms -
+2026-01-28T01:17:31.743Z info: Product 18 - rolePrice: null
+2026-01-28T01:17:31.744Z info: No role price found for product 18, keeping default price: 0.08
+2026-01-28T01:17:31.746Z info: Checking price for product 17 with roleId 4
+2026-01-28T01:17:31.748Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T01:17:31.749Z info: Price updated for product 17: 11111
+2026-01-28T01:17:31.751Z info: Checking price for product 16 with roleId 4
+2026-01-28T01:17:31.753Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T01:17:31.754Z info: Price updated for product 16: 1
+2026-01-28T01:17:31.756Z info: Checking price for product 15 with roleId 4
+2026-01-28T01:17:31.759Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T01:17:31.761Z info: Price updated for product 15: 0.25
+2026-01-28T01:17:31.763Z info: Checking price for product 14 with roleId 4
+2026-01-28T01:17:31.766Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T01:17:31.766Z info: Price updated for product 14: 0.36
+2026-01-28T01:17:31.767Z info: ACTION getAllProducts count=5 filter={} by=user_id=1
+2026-01-28T01:17:31.772Z info: GET /api/products 304 48.192 ms -
+2026-01-28T01:18:28.314Z info: GET /api/categories 401 1.233 ms -
+2026-01-28T01:18:29.282Z info: GET /uploads/flavors/1769561321625-dvdv.jpeg 304 3.350 ms -
+2026-01-28T01:18:29.294Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 1.632 ms -
+2026-01-28T01:18:35.194Z info: GET /api/roles/4 304 14.736 ms -
+2026-01-28T01:18:35.195Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:18:35.196Z info: GET /api/orders 304 13.805 ms -
+2026-01-28T01:18:35.202Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:18:35.204Z info: GET /api/categories 304 17.242 ms -
+2026-01-28T01:18:35.222Z info: GET /api/roles/4 304 21.607 ms -
+2026-01-28T01:18:35.224Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:18:35.226Z info: GET /api/orders 304 19.638 ms -
+2026-01-28T01:18:35.228Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:18:35.231Z info: GET /api/categories 304 16.747 ms -
+2026-01-28T01:18:35.355Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:18:35.357Z info: GET /api/orders 304 16.956 ms -
+2026-01-28T01:18:35.359Z info: GET /api/roles 304 15.773 ms -
+2026-01-28T01:18:35.360Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-28T01:18:35.361Z info: GET /api/banks 304 15.821 ms -
+2026-01-28T01:18:35.361Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:18:35.363Z info: GET /api/categories 304 26.004 ms -
+2026-01-28T01:18:35.550Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:18:35.554Z info: GET /api/orders 304 10.403 ms -
+2026-01-28T01:18:35.555Z info: GET /api/roles 304 20.732 ms -
+2026-01-28T01:18:35.556Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-28T01:18:35.556Z info: GET /api/banks 304 18.988 ms -
+2026-01-28T01:18:35.559Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:18:35.563Z info: GET /api/categories 304 31.897 ms -
+2026-01-28T01:18:36.801Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T01:18:36.802Z info: Checking price for product 18 with roleId 4
+2026-01-28T01:18:36.803Z info: Product 18 - rolePrice: null
+2026-01-28T01:18:36.803Z info: No role price found for product 18, keeping default price: 0.08
+2026-01-28T01:18:36.804Z info: Checking price for product 17 with roleId 4
+2026-01-28T01:18:36.805Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T01:18:36.805Z info: Price updated for product 17: 11111
+2026-01-28T01:18:36.806Z info: Checking price for product 16 with roleId 4
+2026-01-28T01:18:36.808Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T01:18:36.808Z info: Price updated for product 16: 1
+2026-01-28T01:18:36.809Z info: Checking price for product 15 with roleId 4
+2026-01-28T01:18:36.810Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T01:18:36.811Z info: Price updated for product 15: 0.25
+2026-01-28T01:18:36.812Z info: Checking price for product 14 with roleId 4
+2026-01-28T01:18:36.815Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T01:18:36.817Z info: Price updated for product 14: 0.36
+2026-01-28T01:18:36.818Z info: ACTION getAllProducts count=5 filter={} by=user_id=1
+2026-01-28T01:18:36.819Z info: GET /api/products 304 21.320 ms -
+2026-01-28T01:18:42.072Z info: DB deleteProduct: id=18 actor=1
+2026-01-28T01:18:42.129Z info: AUDIT DELETE_PRODUCT: id=18 user=1
+2026-01-28T01:18:42.132Z info: ACTION deleteProduct id=18 by=user_id=1
+2026-01-28T01:18:42.134Z info: DELETE /api/products/18 200 73.666 ms -
+2026-01-28T01:18:42.165Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T01:18:42.167Z info: Checking price for product 17 with roleId 4
+2026-01-28T01:18:42.169Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T01:18:42.169Z info: Price updated for product 17: 11111
+2026-01-28T01:18:42.171Z info: Checking price for product 16 with roleId 4
+2026-01-28T01:18:42.173Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T01:18:42.173Z info: Price updated for product 16: 1
+2026-01-28T01:18:42.175Z info: Checking price for product 15 with roleId 4
+2026-01-28T01:18:42.176Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T01:18:42.176Z info: Price updated for product 15: 0.25
+2026-01-28T01:18:42.177Z info: Checking price for product 14 with roleId 4
+2026-01-28T01:18:42.178Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T01:18:42.178Z info: Price updated for product 14: 0.36
+2026-01-28T01:18:42.179Z info: ACTION getAllProducts count=4 filter={} by=user_id=1
+2026-01-28T01:18:42.182Z info: GET /api/products 200 20.576 ms -
+2026-01-28T01:18:45.002Z info: GET /api/categories 401 0.780 ms -
+2026-01-28T01:18:45.950Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 1.494 ms -
+2026-01-28T01:19:10.361Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:19:10.364Z info: GET /api/orders 304 8.347 ms -
+2026-01-28T01:19:10.380Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:19:10.383Z info: GET /api/orders 304 11.233 ms -
+2026-01-28T01:20:48.875Z info: ACTION getOrderById id=26 user_id=1 status=PENDING by=user_id=1
+2026-01-28T01:20:48.878Z info: GET /api/orders/26 304 8.992 ms -
+2026-01-28T01:21:30.114Z info: ACTION getOrderById id=25 user_id=1 status=CANCELLED by=user_id=1
+2026-01-28T01:21:30.115Z info: GET /api/orders/25 304 6.248 ms -
+2026-01-28T01:21:35.987Z info: ACTION getOrderById id=26 user_id=1 status=PENDING by=user_id=1
+2026-01-28T01:21:35.989Z info: GET /api/orders/26 304 12.602 ms -
+2026-01-28T01:26:05.431Z info: GET /api/roles/4 304 15.722 ms -
+2026-01-28T01:26:05.432Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:26:05.434Z info: GET /api/orders 304 11.136 ms -
+2026-01-28T01:26:05.436Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:26:05.437Z info: GET /api/categories 200 17.770 ms -
+2026-01-28T01:26:05.443Z info: GET /api/roles/4 304 7.773 ms -
+2026-01-28T01:26:05.449Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:26:05.450Z info: GET /api/orders 304 12.031 ms -
+2026-01-28T01:26:05.455Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:26:05.456Z info: GET /api/categories 304 8.966 ms -
+2026-01-28T01:26:05.564Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:26:05.566Z info: GET /api/orders 304 11.862 ms -
+2026-01-28T01:26:05.567Z info: GET /api/roles 304 10.262 ms -
+2026-01-28T01:26:05.569Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:26:05.572Z info: GET /api/categories 304 19.841 ms -
+2026-01-28T01:26:05.573Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-28T01:26:05.576Z info: GET /api/banks 304 16.357 ms -
+2026-01-28T01:26:05.741Z info: GET /api/roles 304 10.974 ms -
+2026-01-28T01:26:05.744Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-28T01:26:05.746Z info: GET /api/banks 304 13.508 ms -
+2026-01-28T01:26:05.747Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:26:05.749Z info: GET /api/orders 304 14.795 ms -
+2026-01-28T01:26:05.751Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:26:05.755Z info: GET /api/categories 304 24.483 ms -
+2026-01-28T01:27:31.726Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:27:31.728Z info: GET /api/orders 304 8.454 ms -
+2026-01-28T01:27:31.740Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:27:31.746Z info: GET /api/orders 304 12.639 ms -
+2026-01-28T01:27:44.365Z info: ACTION getOrderById id=21 user_id=1 status=pending by=user_id=1
+2026-01-28T01:27:44.368Z info: GET /api/orders/21 200 10.794 ms -
+2026-01-28T01:30:32.323Z info: ACTION getOrderById id=21 user_id=1 status=pending by=user_id=1
+2026-01-28T01:30:32.326Z info: GET /api/orders/21 304 11.533 ms -
+2026-01-28T01:30:40.218Z info: ACTION getOrderById id=21 user_id=1 status=pending by=user_id=1
+2026-01-28T01:30:40.220Z info: GET /api/orders/21 304 9.954 ms -
+2026-01-28T01:31:12.979Z info: ACTION getOrderById id=21 user_id=1 status=pending by=user_id=1
+2026-01-28T01:31:12.980Z info: GET /api/orders/21 304 9.583 ms -
+2026-01-28T01:35:19.391Z info: Server listening on port 3000
+2026-01-28T01:35:19.400Z info: Base SQLite connectée avec succès
+2026-01-28T01:35:31.803Z info: Server listening on port 3000
+2026-01-28T01:35:31.809Z info: Base SQLite connectée avec succès
+2026-01-28T01:36:00.517Z info: GET /api-docs/ 304 6.435 ms -
+2026-01-28T01:36:00.565Z info: GET /api-docs/swagger-ui.css 304 10.342 ms -
+2026-01-28T01:36:00.576Z info: GET /api-docs/swagger-ui-init.js 200 1.863 ms -
+2026-01-28T01:36:00.579Z info: GET /api-docs/swagger-ui-bundle.js 304 10.440 ms -
+2026-01-28T01:36:00.582Z info: GET /api-docs/swagger-ui-standalone-preset.js 304 11.071 ms -
+2026-01-28T01:36:00.935Z info: GET /api-docs/favicon-32x32.png 304 1.162 ms -
+2026-01-28T01:36:02.740Z info: GET /api-docs/ 304 2.514 ms -
+2026-01-28T01:36:02.788Z info: GET /api-docs/swagger-ui.css 304 6.490 ms -
+2026-01-28T01:36:02.792Z info: GET /api-docs/swagger-ui-bundle.js 304 8.426 ms -
+2026-01-28T01:36:02.795Z info: GET /api-docs/swagger-ui-standalone-preset.js 304 9.436 ms -
+2026-01-28T01:36:02.800Z info: GET /api-docs/swagger-ui-init.js 304 1.096 ms -
+2026-01-28T01:36:02.961Z info: GET /api-docs/favicon-32x32.png 304 0.728 ms -
+2026-01-28T01:37:12.033Z info: ACTION getOrderById id=20 user_id=1 status=DELIVERED by=user_id=1
+2026-01-28T01:37:12.038Z info: GET /api/orders/20 200 29.388 ms -
+2026-01-28T01:43:19.805Z info: ACTION login email=b@gmail.com userId=1
+2026-01-28T01:43:19.807Z info: POST /auth/login 200 231.514 ms {"email":"b@gmail.com","password":"string"}
+2026-01-28T01:43:20.897Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T01:43:20.900Z info: ACTION getProfile userId=1
+2026-01-28T01:43:20.901Z info: GET /auth/profile 200 17.272 ms -
+2026-01-28T01:43:20.903Z info: GET /api/roles 304 9.831 ms -
+2026-01-28T01:43:20.905Z info: Checking price for product 17 with roleId 4
+2026-01-28T01:43:20.910Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:43:20.915Z info: GET /api/categories 304 22.126 ms -
+2026-01-28T01:43:20.930Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T01:43:20.932Z info: Price updated for product 17: 11111
+2026-01-28T01:43:20.939Z info: Checking price for product 16 with roleId 4
+2026-01-28T01:43:20.945Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T01:43:20.946Z info: Price updated for product 16: 1
+2026-01-28T01:43:20.950Z info: GET /api/roles 304 31.939 ms -
+2026-01-28T01:43:20.950Z info: ACTION getProfile userId=1
+2026-01-28T01:43:20.952Z info: GET /auth/profile 304 29.102 ms -
+2026-01-28T01:43:20.953Z info: Checking price for product 15 with roleId 4
+2026-01-28T01:43:20.956Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T01:43:20.957Z info: Price updated for product 15: 0.25
+2026-01-28T01:43:20.959Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:43:20.962Z info: GET /api/categories 304 26.333 ms -
+2026-01-28T01:43:20.964Z info: Checking price for product 14 with roleId 4
+2026-01-28T01:43:20.967Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T01:43:20.967Z info: Price updated for product 14: 0.36
+2026-01-28T01:43:20.968Z info: ACTION getAllProducts count=4 filter={} by=user_id=1
+2026-01-28T01:43:20.970Z info: GET /api/products 304 82.065 ms -
+2026-01-28T01:43:20.980Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T01:43:20.982Z info: Checking price for product 17 with roleId 4
+2026-01-28T01:43:20.983Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T01:43:20.983Z info: Price updated for product 17: 11111
+2026-01-28T01:43:20.984Z info: Checking price for product 16 with roleId 4
+2026-01-28T01:43:20.985Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T01:43:20.985Z info: Price updated for product 16: 1
+2026-01-28T01:43:20.986Z info: Checking price for product 15 with roleId 4
+2026-01-28T01:43:20.987Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T01:43:20.987Z info: Price updated for product 15: 0.25
+2026-01-28T01:43:20.988Z info: Checking price for product 14 with roleId 4
+2026-01-28T01:43:20.989Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T01:43:20.989Z info: Price updated for product 14: 0.36
+2026-01-28T01:43:20.989Z info: ACTION getAllProducts count=4 filter={} by=user_id=1
+2026-01-28T01:43:20.991Z info: GET /api/products 304 14.795 ms -
+2026-01-28T01:43:21.001Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T01:43:21.003Z info: Checking price for product 17 with roleId 4
+2026-01-28T01:43:21.005Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T01:43:21.005Z info: Price updated for product 17: 11111
+2026-01-28T01:43:21.006Z info: Checking price for product 16 with roleId 4
+2026-01-28T01:43:21.009Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T01:43:21.009Z info: Price updated for product 16: 1
+2026-01-28T01:43:21.011Z info: Checking price for product 15 with roleId 4
+2026-01-28T01:43:21.013Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T01:43:21.014Z info: Price updated for product 15: 0.25
+2026-01-28T01:43:21.016Z info: Checking price for product 14 with roleId 4
+2026-01-28T01:43:21.018Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T01:43:21.019Z info: Price updated for product 14: 0.36
+2026-01-28T01:43:21.019Z info: ACTION getAllProducts count=4 filter={} by=user_id=1
+2026-01-28T01:43:21.021Z info: GET /api/products 304 23.195 ms -
+2026-01-28T01:43:21.022Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 3.856 ms -
+2026-01-28T01:43:24.349Z info: GET /api/roles/4 304 16.900 ms -
+2026-01-28T01:43:24.351Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:43:24.354Z info: GET /api/categories 304 30.403 ms -
+2026-01-28T01:43:24.369Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:43:24.372Z info: GET /api/orders 304 32.238 ms -
+2026-01-28T01:43:24.416Z info: GET /api/roles/4 304 51.674 ms -
+2026-01-28T01:43:24.427Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:43:24.437Z info: GET /api/orders 304 34.239 ms -
+2026-01-28T01:43:24.442Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:43:24.449Z info: GET /api/categories 304 66.112 ms -
+2026-01-28T01:43:24.478Z info: GET /api/roles 304 23.938 ms -
+2026-01-28T01:43:24.482Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:43:24.484Z info: GET /api/orders 304 27.928 ms -
+2026-01-28T01:43:24.485Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-28T01:43:24.487Z info: GET /api/banks 304 18.419 ms -
+2026-01-28T01:43:24.489Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:43:24.493Z info: GET /api/categories 304 28.180 ms -
+2026-01-28T01:43:24.718Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:43:24.720Z info: GET /api/orders 304 9.211 ms -
+2026-01-28T01:43:24.721Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-28T01:43:24.722Z info: GET /api/banks 304 15.321 ms -
+2026-01-28T01:43:24.727Z info: GET /api/roles 304 21.104 ms -
+2026-01-28T01:43:24.729Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:43:24.732Z info: GET /api/categories 304 28.360 ms -
+2026-01-28T01:43:28.772Z info: GET /api/roles/4 304 13.610 ms -
+2026-01-28T01:43:28.773Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:43:28.774Z info: GET /api/orders 304 13.046 ms -
+2026-01-28T01:43:28.785Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:43:28.787Z info: GET /api/categories 304 21.233 ms -
+2026-01-28T01:43:28.792Z info: GET /api/roles/4 304 13.571 ms -
+2026-01-28T01:43:28.798Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:43:28.800Z info: GET /api/orders 304 17.624 ms -
+2026-01-28T01:43:28.805Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:43:28.807Z info: GET /api/categories 304 12.478 ms -
+2026-01-28T01:43:28.937Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-28T01:43:28.939Z info: GET /api/banks 304 15.101 ms -
+2026-01-28T01:43:28.940Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:43:28.943Z info: GET /api/orders 304 15.066 ms -
+2026-01-28T01:43:28.947Z info: GET /api/roles 304 15.652 ms -
+2026-01-28T01:43:28.949Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:43:28.950Z info: GET /api/categories 304 28.547 ms -
+2026-01-28T01:43:29.073Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-28T01:43:29.075Z info: GET /api/banks 304 8.690 ms -
+2026-01-28T01:43:29.078Z info: GET /api/roles 304 14.171 ms -
+2026-01-28T01:43:29.082Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:43:29.084Z info: GET /api/orders 304 16.428 ms -
+2026-01-28T01:43:29.087Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:43:29.090Z info: GET /api/categories 304 28.013 ms -
+2026-01-28T01:43:34.507Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:43:34.510Z info: GET /api/orders 304 7.769 ms -
+2026-01-28T01:43:34.521Z info: ACTION getAllOrders count=13 by=1
+2026-01-28T01:43:34.524Z info: GET /api/orders 304 7.902 ms -
+2026-01-28T01:43:35.420Z info: ACTION getOrderById id=26 user_id=1 status=PENDING by=user_id=1
+2026-01-28T01:43:35.422Z info: GET /api/orders/26 304 9.055 ms -
+2026-01-28T01:43:36.904Z info: ACTION downloadDevis order_id=26 by=user_id=1
+2026-01-28T01:43:36.938Z info: GET /api/orders/26/devis 200 34.568 ms -
+2026-01-28T01:45:10.382Z info: ACTION login email=b@gmail.com userId=1
+2026-01-28T01:45:10.384Z info: POST /auth/login 200 147.422 ms {"email":"b@gmail.com","password":"string"}
+2026-01-28T01:45:11.520Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T01:45:11.525Z info: GET /api/roles 304 11.870 ms -
+2026-01-28T01:45:11.525Z info: ACTION getProfile userId=1
+2026-01-28T01:45:11.528Z info: GET /auth/profile 200 18.499 ms -
+2026-01-28T01:45:11.535Z info: Checking price for product 17 with roleId 4
+2026-01-28T01:45:11.538Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:45:11.542Z info: GET /api/categories 304 37.001 ms -
+2026-01-28T01:45:11.551Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T01:45:11.552Z info: Price updated for product 17: 11111
+2026-01-28T01:45:11.561Z info: Checking price for product 16 with roleId 4
+2026-01-28T01:45:11.564Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T01:45:11.565Z info: Price updated for product 16: 1
+2026-01-28T01:45:11.568Z info: GET /api/roles 304 36.471 ms -
+2026-01-28T01:45:11.570Z info: ACTION getProfile userId=1
+2026-01-28T01:45:11.578Z info: GET /auth/profile 304 25.773 ms -
+2026-01-28T01:45:11.580Z info: Checking price for product 15 with roleId 4
+2026-01-28T01:45:11.584Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T01:45:11.584Z info: Price updated for product 15: 0.25
+2026-01-28T01:45:11.585Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:45:11.587Z info: GET /api/categories 304 32.116 ms -
+2026-01-28T01:45:11.592Z info: Checking price for product 14 with roleId 4
+2026-01-28T01:45:11.596Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T01:45:11.596Z info: Price updated for product 14: 0.36
+2026-01-28T01:45:11.597Z info: ACTION getAllProducts count=4 filter={} by=user_id=1
+2026-01-28T01:45:11.598Z info: GET /api/products 304 98.565 ms -
+2026-01-28T01:45:11.610Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T01:45:11.614Z info: Checking price for product 17 with roleId 4
+2026-01-28T01:45:11.616Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T01:45:11.617Z info: Price updated for product 17: 11111
+2026-01-28T01:45:11.618Z info: Checking price for product 16 with roleId 4
+2026-01-28T01:45:11.621Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T01:45:11.622Z info: Price updated for product 16: 1
+2026-01-28T01:45:11.625Z info: Checking price for product 15 with roleId 4
+2026-01-28T01:45:11.627Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T01:45:11.628Z info: Price updated for product 15: 0.25
+2026-01-28T01:45:11.630Z info: Checking price for product 14 with roleId 4
+2026-01-28T01:45:11.632Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T01:45:11.632Z info: Price updated for product 14: 0.36
+2026-01-28T01:45:11.633Z info: ACTION getAllProducts count=4 filter={} by=user_id=1
+2026-01-28T01:45:11.635Z info: GET /api/products 304 30.907 ms -
+2026-01-28T01:45:11.645Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T01:45:11.649Z info: Checking price for product 17 with roleId 4
+2026-01-28T01:45:11.650Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T01:45:11.651Z info: Price updated for product 17: 11111
+2026-01-28T01:45:11.653Z info: Checking price for product 16 with roleId 4
+2026-01-28T01:45:11.655Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T01:45:11.656Z info: Price updated for product 16: 1
+2026-01-28T01:45:11.660Z info: Checking price for product 15 with roleId 4
+2026-01-28T01:45:11.662Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T01:45:11.663Z info: Price updated for product 15: 0.25
+2026-01-28T01:45:11.665Z info: Checking price for product 14 with roleId 4
+2026-01-28T01:45:11.667Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T01:45:11.668Z info: Price updated for product 14: 0.36
+2026-01-28T01:45:11.668Z info: ACTION getAllProducts count=4 filter={} by=user_id=1
+2026-01-28T01:45:11.671Z info: GET /api/products 304 30.270 ms -
+2026-01-28T01:45:11.689Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 1.365 ms -
+2026-01-28T01:48:16.159Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T01:48:16.160Z info: ACTION getProfile userId=1
+2026-01-28T01:48:16.161Z info: GET /auth/profile 304 8.268 ms -
+2026-01-28T01:48:16.162Z info: Checking price for product 17 with roleId 4
+2026-01-28T01:48:16.163Z info: GET /api/roles 304 6.059 ms -
+2026-01-28T01:48:16.164Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-28T01:48:16.165Z info: GET /api/categories 304 8.344 ms -
+2026-01-28T01:48:16.167Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T01:48:16.167Z info: Price updated for product 17: 11111
+2026-01-28T01:48:16.169Z info: Checking price for product 16 with roleId 4
+2026-01-28T01:48:16.171Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T01:48:16.171Z info: Price updated for product 16: 1
+2026-01-28T01:48:16.173Z info: Checking price for product 15 with roleId 4
+2026-01-28T01:48:16.174Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T01:48:16.174Z info: Price updated for product 15: 0.25
+2026-01-28T01:48:16.175Z info: Checking price for product 14 with roleId 4
+2026-01-28T01:48:16.176Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T01:48:16.177Z info: Price updated for product 14: 0.36
+2026-01-28T01:48:16.177Z info: ACTION getAllProducts count=4 filter={} by=user_id=1
+2026-01-28T01:48:16.178Z info: GET /api/products 304 23.459 ms -
+2026-01-28T01:48:16.188Z info: DB getAllProducts: filter={} roleId=4
+2026-01-28T01:48:16.190Z info: Checking price for product 17 with roleId 4
+2026-01-28T01:48:16.191Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-28T01:48:16.191Z info: Price updated for product 17: 11111
+2026-01-28T01:48:16.193Z info: Checking price for product 16 with roleId 4
+2026-01-28T01:48:16.194Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-28T01:48:16.194Z info: Price updated for product 16: 1
+2026-01-28T01:48:16.195Z info: Checking price for product 15 with roleId 4
+2026-01-28T01:48:16.197Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-28T01:48:16.197Z info: Price updated for product 15: 0.25
+2026-01-28T01:48:16.198Z info: Checking price for product 14 with roleId 4
+2026-01-28T01:48:16.200Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-28T01:48:16.201Z info: Price updated for product 14: 0.36
+2026-01-28T01:48:16.202Z info: ACTION getAllProducts count=4 filter={} by=user_id=1
+2026-01-28T01:48:16.203Z info: GET /api/products 304 18.872 ms -
+2026-01-28T01:50:26.525Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 0.928 ms -
+2026-01-28T01:51:01.922Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 0.633 ms -

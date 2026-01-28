@@ -187,10 +187,82 @@ const router = express.Router();
  *         description: Payment deleted
  */
 
+/**
+ * @swagger
+ * /api/orders/{id}/remise:
+ *   patch:
+ *     summary: Update discount (remise) for an order
+ *     tags: [Orders]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: Order ID
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - remise
+ *             properties:
+ *               remise:
+ *                 type: number
+ *                 format: double
+ *                 minimum: 0
+ *                 description: Discount amount
+ *                 example: 10.50
+ *     responses:
+ *       200:
+ *         description: Order updated with new discount
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Order'
+ *       400:
+ *         description: Invalid remise value
+ *       404:
+ *         description: Order not found
+ */
+
+/**
+ * @swagger
+ * /api/orders/{id}/devis:
+ *   get:
+ *     summary: Download order quotation (devis) PDF
+ *     tags: [Orders]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: Order ID
+ *     responses:
+ *       200:
+ *         description: PDF file downloaded successfully
+ *         content:
+ *           application/pdf:
+ *             schema:
+ *               type: string
+ *               format: binary
+ *       404:
+ *         description: Order or devis file not found
+ */
+
 router.post('/', authMiddleware, controller.create);
 router.get('/:id', authMiddleware, controller.getById);
 router.get('/', authMiddleware, controller.getByUser);
+router.get('/:id/devis', authMiddleware, controller.downloadDevis);
 router.patch('/:id/status', authMiddleware, controller.updateStatus);
+router.patch('/:id/remise', authMiddleware, controller.updateRemise);
 router.post('/:id/payments', authMiddleware, controller.addPayment);
 router.get('/:id/payments', authMiddleware, controller.getPayments);
 router.delete('/:id/payments/:paymentId', authMiddleware, controller.deletePayment);

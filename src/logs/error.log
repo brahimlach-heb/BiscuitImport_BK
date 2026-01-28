@@ -1010,3 +1010,31 @@
     at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
     at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
     at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.optional.middleware.js:32:5)
+2026-01-28T01:07:13.346Z error: ERROR updateRemise order_id=26: Remise must be a positive number
+2026-01-28T01:07:13.349Z error: Error: Remise must be a positive number
+    at Object.updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\order.service.js:88:17)
+    at updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:136:38)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-01-28T01:07:20.595Z error: ERROR updateRemise order_id=26: Remise must be a positive number
+2026-01-28T01:07:20.595Z error: Error: Remise must be a positive number
+    at Object.updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\order.service.js:88:17)
+    at updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:136:38)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-01-28T01:08:20.496Z error: ERROR updateRemise order_id=26: Remise must be a positive number
+2026-01-28T01:08:20.497Z error: Error: Remise must be a positive number
+    at Object.updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\order.service.js:88:17)
+    at updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:136:38)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-01-28T01:08:52.337Z error: ERROR updateRemise order_id=26: Remise must be a positive number
+2026-01-28T01:08:52.340Z error: Error: Remise must be a positive number
+    at Object.updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\order.service.js:88:17)
+    at updateRemise (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\order.controller.js:136:38)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)

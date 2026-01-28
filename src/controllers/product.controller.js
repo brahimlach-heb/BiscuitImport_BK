@@ -5,9 +5,9 @@ const getAll = async (req, res, next) => {
   try {
     const filter = {};
     if (req.query.category_id) filter.category_id = Number(req.query.category_id);
-    const roleId = req.user ? req.user.role_id : null;
+    const roleId = req.user.role_id;
     const rows = await productService.getAllProducts(filter, roleId);
-    const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
+    const userInfo = `user_id=${req.user.id}`;
     logger.info(`ACTION getAllProducts count=${Array.isArray(rows) ? rows.length : 0} filter=${JSON.stringify(filter)} by=${userInfo}`);
     res.status(200).json(rows);
   } catch (err) {
@@ -20,7 +20,7 @@ const getById = async (req, res, next) => {
   try {
     const id = Number(req.params.id);
     const row = await productService.getProductById(id);
-    const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
+    const userInfo = `user_id=${req.user.id}`;
     if (!row) {
       logger.info(`ACTION getProductById_not_found id=${id} by=${userInfo}`);
       return res.status(404).json({ error: 'Product not found' });

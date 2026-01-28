@@ -1,5 +1,7 @@
 const orderService = require('../services/order.service');
 const logger = require('../config/logger');
+const path = require('path');
+const fs = require('fs');
 
 const create = async (req, res, next) => {
   try {
@@ -129,4 +131,56 @@ const deletePayment = async (req, res, next) => {
   }
 };
 
-module.exports = { create, getById, getByUser, updateStatus, addPayment, getPayments, deletePayment };
+const updateRemise = async (req, res, next) => {
+  try {
+    const order_id = Number(req.params.id);
+    const { remise } = req.body;
+    const order = await orderService.updateRemise(order_id, remise);
+    const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
+    logger.info(`ACTION updateRemise order_id=${order_id} remise=${remise} by=${userInfo}`);
+    res.status(200).json(order);
+  } catch (err) {
+    const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
+    logger.error(`ERROR updateRemise order_id=${req.params.id}: ${err.message}`, { user: userInfo });
+    next(err);
+  }
+};
+
+const downloadDevis = async (req, res, next) => {
+  try {
+    const order_id = Number(req.params.id);
+    const order = await orderService.getOrderById(order_id);
+    
+    if (!order) {
+      logger.info(`ACTION downloadDevis_order_not_found id=${order_id}`);
+      return res.status(404).json({ error: 'Order not found' });
+    }
+    
+    const devisPath = path.join(__dirname, '..', '..', 'Devis', 'AMSDevis.pdf');
+    
+    // Vérifier si le fichier existe
+    if (!fs.existsSync(devisPath)) {
+      logger.warn(`ACTION downloadDevis_file_not_found path=${devisPath}`);
+      return res.status(404).json({ error: 'Devis file not found' });
+    }
+    
+    const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
+    logger.info(`ACTION downloadDevis order_id=${order_id} by=${userInfo}`);
+    
+    // Télécharger le fichier avec un nom personnalisé
+    res.download(devisPath, `Devis_Commande_${order_id}.pdf`, (err) => {
+      if (err) {
+        logger.error(`ERROR downloadDevis order_id=${order_id}: ${err.message}`);
+        if (!res.headersSent) {
+          next(err);
+        }
+      }
+    });
+  } catch (err) {
+    const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
+    logger.error(`ERROR downloadDevis order_id=${req.params.id}: ${err.message}`, { user: userInfo });
+    next(err);
+  }
+};
+
+module.exports = { create, getById, getByUser, updateStatus, addPayment, getPayments, deletePayment, updateRemise, downloadDevis };

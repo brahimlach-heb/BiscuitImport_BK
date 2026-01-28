@@ -8,6 +8,7 @@ db.run(`CREATE TABLE IF NOT EXISTS orders (
   status TEXT DEFAULT 'PENDING',
   subtotal REAL NOT NULL,
   total REAL NOT NULL,
+  remise REAL DEFAULT 0,
   customer_name TEXT,
   customer_email TEXT,
   customer_phone TEXT,
@@ -62,18 +63,19 @@ const tryAddColumn = (sql) => {
 
 tryAddColumn("ALTER TABLE order_line ADD COLUMN final_price REAL");
 tryAddColumn("ALTER TABLE orders ADD COLUMN subtotal REAL");
+tryAddColumn("ALTER TABLE orders ADD COLUMN remise REAL DEFAULT 0");
 tryAddColumn("ALTER TABLE orders ADD COLUMN customer_name TEXT");
 tryAddColumn("ALTER TABLE orders ADD COLUMN customer_email TEXT");
 tryAddColumn("ALTER TABLE orders ADD COLUMN customer_phone TEXT");
 tryAddColumn("ALTER TABLE orders ADD COLUMN customer_address TEXT");
 
-const createOrder = async ({ user_id, subtotal, total, status = 'PENDING', lines = [], customer_name, customer_email, customer_phone, customer_address }) => {
+const createOrder = async ({ user_id, subtotal, total, remise = 0, status = 'PENDING', lines = [], customer_name, customer_email, customer_phone, customer_address }) => {
   return new Promise((resolve, reject) => {
     db.run('BEGIN TRANSACTION', (bErr) => {
       if (bErr) return reject(bErr);
       const orderStatus = status.toUpperCase();
-      const sql = 'INSERT INTO orders (user_id, subtotal, total, status, customer_name, customer_email, customer_phone, customer_address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
-      db.run(sql, [user_id, subtotal || total, total, orderStatus, customer_name || null, customer_email || null, customer_phone || null, customer_address || null], function (err) {
+      const sql = 'INSERT INTO orders (user_id, subtotal, total, remise, status, customer_name, customer_email, customer_phone, customer_address) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+      db.run(sql, [user_id, subtotal || total, total, remise, orderStatus, customer_name || null, customer_email || null, customer_phone || null, customer_address || null], function (err) {
         if (err) {
           db.run('ROLLBACK');
           return reject(err);
@@ -232,6 +234,19 @@ const deletePayment = (id) => {
   });
 };
 
+const updateRemise = (order_id, remise) => {
+  return new Promise((resolve, reject) => {
+    db.run('UPDATE orders SET remise = ? WHERE id = ?', [remise, order_id], function (err) {
+      if (err) return reject(err);
+      if (this.changes === 0) return resolve(false);
+      db.get('SELECT * FROM orders WHERE id = ?', [order_id], (err2, row) => {
+        if (err2) return reject(err2);
+        resolve(row);
+      });
+    });
+  });
+};
+
 module.exports = {
   createOrder,
   getOrderById,
@@ -240,5 +255,6 @@ module.exports = {
   updateOrderStatus,
   addPayment,
   getPaymentsByOrder,
-  deletePayment
+  deletePayment,
+  updateRemise
 };

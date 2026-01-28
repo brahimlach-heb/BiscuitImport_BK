@@ -16,22 +16,27 @@ const router = express.Router();
  * @swagger
  * /api/products:
  *   get:
- *     summary: Get all products (optional category filter)
+ *     summary: Get all products with role-based pricing (authentication required)
  *     tags: [Products]
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - in: query
  *         name: category_id
  *         schema:
  *           type: integer
+ *         description: Optional category filter
  *     responses:
  *       200:
- *         description: List of products
+ *         description: List of products with prices based on user role
  *         content:
  *           application/json:
  *             schema:
  *               type: array
  *               items:
  *                 $ref: '#/components/schemas/Product'
+ *       401:
+ *         description: Authentication required
  */
 
 /**
@@ -288,7 +293,7 @@ const router = express.Router();
  *         description: Association removed
  */
 
-router.get('/', authOptionalMiddleware, controller.getAll);
+router.get('/', authMiddleware, controller.getAll);
 router.get('/:id', authMiddleware, controller.getById);
 router.post('/', authMiddleware, controller.create);
 router.put('/:id', authMiddleware, controller.update);

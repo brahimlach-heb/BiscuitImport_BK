@@ -113,6 +113,7 @@ const options = {
             status: { type: 'string' },
             subtotal: { type: 'number', format: 'double', description: 'Total before discount' },
             total: { type: 'number', format: 'double', description: 'Total after discount' },
+            remise: { type: 'number', format: 'double', default: 0, description: 'Discount amount' },
             customer_name: { type: 'string', description: 'Customer full name' },
             customer_email: { type: 'string', description: 'Customer email' },
             customer_phone: { type: 'string', description: 'Customer phone' },

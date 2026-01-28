@@ -7,11 +7,12 @@ const createOrder = async (data) => {
     err.status = 400;
     throw err;
   }
-  logger.info(`DB createOrder: user_id=${data.user_id} subtotal=${data.subtotal || data.total} total=${data.total} lines=${data.lines.length} customer=${data.customer_name || 'N/A'}`);
+  logger.info(`DB createOrder: user_id=${data.user_id} subtotal=${data.subtotal || data.total} total=${data.total} remise=${data.remise || 0} lines=${data.lines.length} customer=${data.customer_name || 'N/A'}`);
   const order = await orderModel.createOrder({
     user_id: data.user_id,
     subtotal: data.subtotal,
     total: data.total,
+    remise: data.remise,
     status: data.status,
     lines: data.lines,
     customer_name: data.customer_name,
@@ -82,6 +83,24 @@ const deletePayment = async (id) => {
   return true;
 };
 
+const updateRemise = async (order_id, remise) => {
+  if (typeof remise !== 'number' || remise < 0) {
+    const err = new Error('Remise must be a positive number');
+    err.status = 400;
+    throw err;
+  }
+  
+  logger.info(`DB updateRemise: order_id=${order_id} remise=${remise}`);
+  const order = await orderModel.updateRemise(order_id, remise);
+  if (!order) {
+    const err = new Error('Order not found');
+    err.status = 404;
+    throw err;
+  }
+  logger.info(`ORDER REMISE UPDATED: id=${order_id} remise=${remise}`);
+  return order;
+};
+
 module.exports = {
   createOrder,
   getOrderById,
@@ -90,5 +109,7 @@ module.exports = {
   updateOrderStatus,
   addPayment,
   getPaymentsByOrder,
-  deletePayment
+  deletePayment,
+  updateRemise
+
 };
