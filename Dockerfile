@@ -8,9 +8,14 @@ RUN npm ci --omit=dev
 COPY . .
 RUN chown -R node:node /app
 
-USER node
+ENV PORT \
+	NODE_ENV \
+	JWT_SECRET \
+	JWT_EXPIRES_IN \
+	LOG_LEVEL \
+	BASE_URL
 
-ENV NODE_ENV=production
+USER node
 EXPOSE 3000
 
 CMD ["node", "server.js"]
