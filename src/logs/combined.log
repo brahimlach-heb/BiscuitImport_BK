@@ -13449,3 +13449,176 @@
 2026-01-29T09:49:24.262Z info: Base SQLite connectée avec succès
 2026-01-29T09:49:41.231Z info: ACTION downloadDevis order_id=29 by=user_id=1
 2026-01-29T09:49:41.491Z info: GET /api/orders/29/devis 200 269.598 ms -
+2026-01-29T13:20:44.538Z info: Server listening on port 3000
+2026-01-29T13:20:44.555Z info: Base SQLite connectée avec succès
+2026-01-29T13:21:28.979Z info: ACTION login email=b@gmail.com userId=1
+2026-01-29T13:21:28.985Z info: POST /auth/login 200 315.841 ms {"email":"b@gmail.com","password":"string"}
+2026-01-29T13:21:30.146Z info: DB getAllProducts: filter={} roleId=4 roleCode=ADMIN
+2026-01-29T13:21:30.148Z info: ACTION getProfile userId=1
+2026-01-29T13:21:30.149Z info: GET /auth/profile 200 25.833 ms -
+2026-01-29T13:21:30.157Z info: GET /api/roles 304 18.800 ms -
+2026-01-29T13:21:30.166Z info: Checking price for product 17 with roleId 4
+2026-01-29T13:21:30.170Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T13:21:30.173Z info: GET /api/categories 304 40.874 ms -
+2026-01-29T13:21:30.178Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-29T13:21:30.179Z info: Price updated for product 17: 11111
+2026-01-29T13:21:30.201Z info: Checking price for product 16 with roleId 4
+2026-01-29T13:21:30.214Z info: GET /api/roles 304 52.629 ms -
+2026-01-29T13:21:30.215Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-29T13:21:30.216Z info: Price updated for product 16: 1
+2026-01-29T13:21:30.220Z info: ACTION getProfile userId=1
+2026-01-29T13:21:30.223Z info: GET /auth/profile 304 58.232 ms -
+2026-01-29T13:21:30.226Z info: Checking price for product 15 with roleId 4
+2026-01-29T13:21:30.228Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-29T13:21:30.228Z info: Price updated for product 15: 0.25
+2026-01-29T13:21:30.230Z info: Checking price for product 14 with roleId 4
+2026-01-29T13:21:30.232Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T13:21:30.235Z info: GET /api/categories 304 46.568 ms -
+2026-01-29T13:21:30.241Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-29T13:21:30.242Z info: Price updated for product 14: 0.36
+2026-01-29T13:21:30.243Z info: ACTION getAllProducts count=4 filter={} role=ADMIN by=user_id=1
+2026-01-29T13:21:30.246Z info: GET /api/products 304 116.895 ms -
+2026-01-29T13:21:30.255Z info: DB getAllProducts: filter={} roleId=4 roleCode=ADMIN
+2026-01-29T13:21:30.257Z info: Checking price for product 17 with roleId 4
+2026-01-29T13:21:30.259Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-29T13:21:30.260Z info: Price updated for product 17: 11111
+2026-01-29T13:21:30.262Z info: Checking price for product 16 with roleId 4
+2026-01-29T13:21:30.263Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-29T13:21:30.263Z info: Price updated for product 16: 1
+2026-01-29T13:21:30.264Z info: Checking price for product 15 with roleId 4
+2026-01-29T13:21:30.265Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-29T13:21:30.265Z info: Price updated for product 15: 0.25
+2026-01-29T13:21:30.266Z info: Checking price for product 14 with roleId 4
+2026-01-29T13:21:30.267Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-29T13:21:30.268Z info: Price updated for product 14: 0.36
+2026-01-29T13:21:30.269Z info: ACTION getAllProducts count=4 filter={} role=ADMIN by=user_id=1
+2026-01-29T13:21:30.272Z info: GET /api/products 304 19.998 ms -
+2026-01-29T13:21:30.280Z info: DB getAllProducts: filter={} roleId=4 roleCode=ADMIN
+2026-01-29T13:21:30.282Z info: Checking price for product 17 with roleId 4
+2026-01-29T13:21:30.283Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-29T13:21:30.283Z info: Price updated for product 17: 11111
+2026-01-29T13:21:30.285Z info: Checking price for product 16 with roleId 4
+2026-01-29T13:21:30.290Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-29T13:21:30.291Z info: Price updated for product 16: 1
+2026-01-29T13:21:30.292Z info: Checking price for product 15 with roleId 4
+2026-01-29T13:21:30.294Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-29T13:21:30.295Z info: Price updated for product 15: 0.25
+2026-01-29T13:21:30.296Z info: Checking price for product 14 with roleId 4
+2026-01-29T13:21:30.298Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-29T13:21:30.298Z info: Price updated for product 14: 0.36
+2026-01-29T13:21:30.299Z info: ACTION getAllProducts count=4 filter={} role=ADMIN by=user_id=1
+2026-01-29T13:21:30.303Z info: GET /api/products 304 22.663 ms -
+2026-01-29T13:21:30.312Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 2.751 ms -
+2026-01-29T13:21:38.065Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T13:21:38.069Z info: GET /api/orders 304 17.043 ms -
+2026-01-29T13:21:38.075Z info: GET /api/roles/4 304 33.447 ms -
+2026-01-29T13:21:38.085Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T13:21:38.090Z info: GET /api/categories 304 42.053 ms -
+2026-01-29T13:21:38.107Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T13:21:38.110Z info: GET /api/orders 304 29.216 ms -
+2026-01-29T13:21:38.116Z info: GET /api/roles/4 304 20.387 ms -
+2026-01-29T13:21:38.125Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T13:21:38.128Z info: GET /api/categories 304 27.521 ms -
+2026-01-29T13:21:38.271Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T13:21:38.275Z info: GET /api/orders 304 22.078 ms -
+2026-01-29T13:21:38.281Z info: GET /api/roles 304 20.163 ms -
+2026-01-29T13:21:38.282Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-29T13:21:38.283Z info: GET /api/banks 304 18.762 ms -
+2026-01-29T13:21:38.285Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T13:21:38.294Z info: GET /api/categories 304 40.231 ms -
+2026-01-29T13:21:38.510Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T13:21:38.511Z info: GET /api/orders 304 4.437 ms -
+2026-01-29T13:21:38.513Z info: GET /api/roles 304 14.171 ms -
+2026-01-29T13:21:38.514Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-29T13:21:38.515Z info: GET /api/banks 304 11.806 ms -
+2026-01-29T13:21:38.519Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T13:21:38.521Z info: GET /api/categories 304 20.254 ms -
+2026-01-29T13:21:52.100Z info: DB getAllProducts: filter={} roleId=4 roleCode=ADMIN
+2026-01-29T13:21:52.104Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T13:21:52.105Z info: GET /api/orders 304 9.914 ms -
+2026-01-29T13:21:52.112Z info: Checking price for product 17 with roleId 4
+2026-01-29T13:21:52.113Z info: ACTION getAllUsers by=1 count=3
+2026-01-29T13:21:52.115Z info: GET /api/users 200 21.091 ms -
+2026-01-29T13:21:52.122Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-29T13:21:52.123Z info: Price updated for product 17: 11111
+2026-01-29T13:21:52.127Z info: Checking price for product 16 with roleId 4
+2026-01-29T13:21:52.130Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-29T13:21:52.131Z info: Price updated for product 16: 1
+2026-01-29T13:21:52.133Z info: Checking price for product 15 with roleId 4
+2026-01-29T13:21:52.136Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-29T13:21:52.137Z info: Price updated for product 15: 0.25
+2026-01-29T13:21:52.140Z info: Checking price for product 14 with roleId 4
+2026-01-29T13:21:52.142Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-29T13:21:52.143Z info: Price updated for product 14: 0.36
+2026-01-29T13:21:52.145Z info: ACTION getAllProducts count=4 filter={} role=ADMIN by=user_id=1
+2026-01-29T13:21:52.150Z info: GET /api/products 304 57.781 ms -
+2026-01-29T13:23:56.827Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T13:23:56.829Z info: GET /api/orders 304 11.711 ms -
+2026-01-29T13:23:56.845Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T13:23:56.850Z info: GET /api/orders 304 11.755 ms -
+2026-01-29T13:25:23.564Z info: ACTION login email=b@gmail.com userId=1
+2026-01-29T13:25:23.568Z info: POST /auth/login 200 129.038 ms {"email":"b@gmail.com","password":"string"}
+2026-01-29T13:25:24.742Z info: DB getAllProducts: filter={} roleId=4 roleCode=ADMIN
+2026-01-29T13:25:24.771Z info: GET /api/roles 304 44.302 ms -
+2026-01-29T13:25:24.773Z info: ACTION getProfile userId=1
+2026-01-29T13:25:24.780Z info: GET /auth/profile 200 66.388 ms -
+2026-01-29T13:25:24.791Z info: Checking price for product 17 with roleId 4
+2026-01-29T13:25:24.797Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T13:25:24.807Z info: GET /api/categories 304 81.544 ms -
+2026-01-29T13:25:24.818Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-29T13:25:24.819Z info: Price updated for product 17: 11111
+2026-01-29T13:25:24.831Z info: Checking price for product 16 with roleId 4
+2026-01-29T13:25:24.839Z info: GET /api/roles 304 51.869 ms -
+2026-01-29T13:25:24.841Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-29T13:25:24.842Z info: Price updated for product 16: 1
+2026-01-29T13:25:24.848Z info: ACTION getProfile userId=1
+2026-01-29T13:25:24.853Z info: GET /auth/profile 304 40.253 ms -
+2026-01-29T13:25:24.858Z info: Checking price for product 15 with roleId 4
+2026-01-29T13:25:24.873Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-29T13:25:24.874Z info: Price updated for product 15: 0.25
+2026-01-29T13:25:24.876Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T13:25:24.879Z info: GET /api/categories 304 55.648 ms -
+2026-01-29T13:25:24.881Z info: Checking price for product 14 with roleId 4
+2026-01-29T13:25:24.884Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-29T13:25:24.885Z info: Price updated for product 14: 0.36
+2026-01-29T13:25:24.887Z info: ACTION getAllProducts count=4 filter={} role=ADMIN by=user_id=1
+2026-01-29T13:25:24.890Z info: GET /api/products 304 172.833 ms -
+2026-01-29T13:25:24.905Z info: DB getAllProducts: filter={} roleId=4 roleCode=ADMIN
+2026-01-29T13:25:24.906Z info: Checking price for product 17 with roleId 4
+2026-01-29T13:25:24.907Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-29T13:25:24.908Z info: Price updated for product 17: 11111
+2026-01-29T13:25:24.909Z info: Checking price for product 16 with roleId 4
+2026-01-29T13:25:24.911Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-29T13:25:24.912Z info: Price updated for product 16: 1
+2026-01-29T13:25:24.917Z info: Checking price for product 15 with roleId 4
+2026-01-29T13:25:24.918Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-29T13:25:24.919Z info: Price updated for product 15: 0.25
+2026-01-29T13:25:24.921Z info: Checking price for product 14 with roleId 4
+2026-01-29T13:25:24.922Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-29T13:25:24.923Z info: Price updated for product 14: 0.36
+2026-01-29T13:25:24.923Z info: ACTION getAllProducts count=4 filter={} role=ADMIN by=user_id=1
+2026-01-29T13:25:24.925Z info: GET /api/products 304 25.723 ms -
+2026-01-29T13:25:24.939Z info: DB getAllProducts: filter={} roleId=4 roleCode=ADMIN
+2026-01-29T13:25:24.941Z info: Checking price for product 17 with roleId 4
+2026-01-29T13:25:24.943Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-29T13:25:24.944Z info: Price updated for product 17: 11111
+2026-01-29T13:25:24.946Z info: Checking price for product 16 with roleId 4
+2026-01-29T13:25:24.950Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-29T13:25:24.951Z info: Price updated for product 16: 1
+2026-01-29T13:25:24.952Z info: Checking price for product 15 with roleId 4
+2026-01-29T13:25:24.953Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-29T13:25:24.954Z info: Price updated for product 15: 0.25
+2026-01-29T13:25:24.955Z info: Checking price for product 14 with roleId 4
+2026-01-29T13:25:24.956Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-29T13:25:24.957Z info: Price updated for product 14: 0.36
+2026-01-29T13:25:24.957Z info: ACTION getAllProducts count=4 filter={} role=ADMIN by=user_id=1
+2026-01-29T13:25:24.959Z info: GET /api/products 304 25.572 ms -
+2026-01-29T13:25:24.992Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 304 1.420 ms -
+2026-01-29T13:25:34.809Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T13:25:34.814Z info: GET /api/orders 304 8.301 ms -
+2026-01-29T13:25:34.830Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T13:25:34.836Z info: GET /api/orders 304 14.021 ms -
+2026-01-29T13:27:28.578Z info: Server listening on port 3000
+2026-01-29T13:27:28.595Z info: Base SQLite connectée avec succès
+2026-01-29T13:27:33.278Z info: Server listening on port 3000
+2026-01-29T13:27:33.293Z info: Base SQLite connectée avec succès

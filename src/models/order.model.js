@@ -312,6 +312,15 @@ const getPaymentsByOrder = (order_id) => {
   });
 };
 
+const getPaymentById = (id) => {
+  return new Promise((resolve, reject) => {
+    db.get('SELECT * FROM order_payments WHERE id = ?', [id], (err, row) => {
+      if (err) return reject(err);
+      resolve(row || null);
+    });
+  });
+};
+
 const deletePayment = (id) => {
   return new Promise((resolve, reject) => {
     db.run('DELETE FROM order_payments WHERE id = ?', [id], function (err) {
@@ -432,6 +441,7 @@ module.exports = {
   updateOrderStatus,
   addPayment,
   getPaymentsByOrder,
+  getPaymentById,
   deletePayment,
   updateRemise,
   deleteOrder

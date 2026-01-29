@@ -121,7 +121,8 @@ const getPayments = async (req, res, next) => {
 const deletePayment = async (req, res, next) => {
   try {
     const payment_id = Number(req.params.paymentId);
-    await orderService.deletePayment(payment_id);
+    const changed_by = req.user ? req.user.id : null;
+    await orderService.deletePayment(payment_id, changed_by);
     const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
     logger.info(`ACTION deletePayment payment_id=${payment_id} by=${userInfo}`);
     res.status(200).json({ success: true, message: 'Payment deleted' });

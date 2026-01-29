@@ -71,15 +71,38 @@ const getPaymentsByOrder = async (order_id) => {
   return await orderModel.getPaymentsByOrder(order_id);
 };
 
-const deletePayment = async (id) => {
+const deletePayment = async (id, changed_by = null) => {
   logger.info(`DB deletePayment: id=${id}`);
+  const payment = await orderModel.getPaymentById(id);
+  if (!payment) {
+    const err = new Error('Payment not found');
+    err.status = 404;
+    throw err;
+  }
+
   const success = await orderModel.deletePayment(id);
   if (!success) {
     const err = new Error('Payment not found');
     err.status = 404;
     throw err;
   }
-  logger.info(`PAYMENT DELETED: id=${id}`);
+
+  logger.info(`PAYMENT DELETED: id=${id} order_id=${payment.order_id}`);
+
+  const order = await orderModel.getOrderById(payment.order_id);
+  if (order) {
+    const amountPaid = Array.isArray(order.payments)
+      ? order.payments.reduce((sum, p) => sum + Number(p.amount || 0), 0)
+      : 0;
+    const orderTotal = Number(order.total || 0);
+    const currentStatus = String(order.status || '').toUpperCase();
+
+    if (currentStatus === 'PAID' && amountPaid < orderTotal) {
+      await orderModel.updateOrderStatus(order.id, 'CONFIRMED', changed_by, 'payment deleted');
+      logger.info(`ORDER STATUS UPDATED: id=${order.id} status=CONFIRMED reason=payment_deleted`);
+    }
+  }
+
   return true;
 };
 
