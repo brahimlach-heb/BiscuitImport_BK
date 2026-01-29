@@ -21,8 +21,8 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-  origin: '*',
-  credentials: true
+  origin: '*', // temporaire pour test
+  methods: ['GET', 'POST', 'PUT','PATCH','DELETE'],
 }));
 
 // Middlewares
