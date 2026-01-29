@@ -2,7 +2,7 @@ const orderService = require('../services/order.service');
 const logger = require('../config/logger');
 const path = require('path');
 const fs = require('fs');
-const { PDFDocument, rgb, StandardFonts } = require('pdf-lib');
+const { PDFDocument, rgb, StandardFonts, PDFName } = require('pdf-lib');
 
 const create = async (req, res, next) => {
   try {
@@ -443,6 +443,55 @@ const downloadDevis = async (req, res, next) => {
       });
       termsCurrentY -= 10;
     });
+
+    // Supprimer la 2ème page si elle n'a pas de texte
+    const allPages = pdfDoc.getPages();
+    if (allPages.length > 1) {
+      const secondPage = allPages[1];
+      let shouldRemove = false;
+      try {
+        const contentsRef = secondPage.node?.get(PDFName.of('Contents'));
+        if (!contentsRef) {
+          shouldRemove = true;
+        } else {
+          const contents = pdfDoc.context.lookup(contentsRef);
+          const getStreamBytes = (stream) => {
+            if (!stream) return null;
+            if (typeof stream.getContents === 'function') {
+              return stream.getContents() || null;
+            }
+            if (stream.contents && typeof stream.contents.length === 'number') {
+              return stream.contents;
+            }
+            return null;
+          };
+
+          let combined = '';
+          if (contents && typeof contents.size === 'function' && typeof contents.get === 'function') {
+            for (let i = 0; i < contents.size(); i += 1) {
+              const item = pdfDoc.context.lookup(contents.get(i));
+              const bytes = getStreamBytes(item);
+              if (bytes && bytes.length) {
+                combined += Buffer.from(bytes).toString('latin1');
+              }
+            }
+          } else {
+            const bytes = getStreamBytes(contents);
+            if (bytes && bytes.length) {
+              combined += Buffer.from(bytes).toString('latin1');
+            }
+          }
+
+          const hasText = /\b(Tj|TJ)\b/.test(combined);
+          shouldRemove = !hasText;
+        }
+      } catch (e) {
+        // Si on ne peut pas déterminer le contenu, on ne supprime pas
+      }
+      if (shouldRemove) {
+        pdfDoc.removePage(1);
+      }
+    }
 
     // Générer le PDF modifié
     const pdfBytes = await pdfDoc.save();

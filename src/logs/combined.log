@@ -13311,3 +13311,141 @@
 2026-01-28T15:52:37.446Z info: Price updated for product 14: 0.36
 2026-01-28T15:52:37.611Z info: ACTION getAllProducts count=4 filter={} role=ADMIN by=user_id=1
 2026-01-28T15:52:38.007Z info: GET /api/products 304 3435.735 ms -
+2026-01-29T09:27:09.280Z info: Server listening on port 3000
+2026-01-29T09:27:09.299Z info: Base SQLite connectée avec succès
+2026-01-29T09:27:13.623Z info: GET /api-docs/ 200 23.447 ms -
+2026-01-29T09:27:13.682Z info: GET /api-docs/swagger-ui-init.js 200 1.470 ms -
+2026-01-29T09:27:13.700Z info: GET /api-docs/swagger-ui.css 200 22.249 ms -
+2026-01-29T09:27:13.728Z info: GET /api-docs/swagger-ui-standalone-preset.js 200 33.359 ms -
+2026-01-29T09:27:13.759Z info: GET /api-docs/swagger-ui-bundle.js 200 54.956 ms -
+2026-01-29T09:27:14.277Z info: GET /api-docs/favicon-32x32.png 200 11.538 ms -
+2026-01-29T09:27:27.305Z info: ACTION login email=b@gmail.com userId=1
+2026-01-29T09:27:27.309Z info: POST /auth/login 200 252.483 ms {"email":"b@gmail.com","password":"string"}
+2026-01-29T09:27:28.489Z info: DB getAllProducts: filter={} roleId=4 roleCode=ADMIN
+2026-01-29T09:27:28.493Z info: GET /api/roles 200 10.501 ms -
+2026-01-29T09:27:28.494Z info: ACTION getProfile userId=1
+2026-01-29T09:27:28.495Z info: GET /auth/profile 200 23.456 ms -
+2026-01-29T09:27:28.498Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T09:27:28.504Z info: GET /api/categories 200 22.436 ms -
+2026-01-29T09:27:28.510Z info: Checking price for product 17 with roleId 4
+2026-01-29T09:27:28.529Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-29T09:27:28.530Z info: Price updated for product 17: 11111
+2026-01-29T09:27:28.531Z info: Checking price for product 16 with roleId 4
+2026-01-29T09:27:28.533Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-29T09:27:28.534Z info: Price updated for product 16: 1
+2026-01-29T09:27:28.542Z info: GET /api/roles 304 24.329 ms -
+2026-01-29T09:27:28.544Z info: ACTION getProfile userId=1
+2026-01-29T09:27:28.546Z info: GET /auth/profile 304 24.113 ms -
+2026-01-29T09:27:28.548Z info: Checking price for product 15 with roleId 4
+2026-01-29T09:27:28.549Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-29T09:27:28.550Z info: Price updated for product 15: 0.25
+2026-01-29T09:27:28.551Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T09:27:28.554Z info: GET /api/categories 304 27.500 ms -
+2026-01-29T09:27:28.559Z info: Checking price for product 14 with roleId 4
+2026-01-29T09:27:28.561Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-29T09:27:28.561Z info: Price updated for product 14: 0.36
+2026-01-29T09:27:28.562Z info: ACTION getAllProducts count=4 filter={} role=ADMIN by=user_id=1
+2026-01-29T09:27:28.564Z info: GET /api/products 200 85.786 ms -
+2026-01-29T09:27:28.576Z info: DB getAllProducts: filter={} roleId=4 roleCode=ADMIN
+2026-01-29T09:27:28.579Z info: Checking price for product 17 with roleId 4
+2026-01-29T09:27:28.581Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-29T09:27:28.582Z info: Price updated for product 17: 11111
+2026-01-29T09:27:28.583Z info: Checking price for product 16 with roleId 4
+2026-01-29T09:27:28.586Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-29T09:27:28.587Z info: Price updated for product 16: 1
+2026-01-29T09:27:28.591Z info: Checking price for product 15 with roleId 4
+2026-01-29T09:27:28.596Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-29T09:27:28.596Z info: Price updated for product 15: 0.25
+2026-01-29T09:27:28.597Z info: Checking price for product 14 with roleId 4
+2026-01-29T09:27:28.599Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-29T09:27:28.599Z info: Price updated for product 14: 0.36
+2026-01-29T09:27:28.599Z info: ACTION getAllProducts count=4 filter={} role=ADMIN by=user_id=1
+2026-01-29T09:27:28.601Z info: GET /api/products 304 28.258 ms -
+2026-01-29T09:27:28.615Z info: DB getAllProducts: filter={} roleId=4 roleCode=ADMIN
+2026-01-29T09:27:28.620Z info: Checking price for product 17 with roleId 4
+2026-01-29T09:27:28.623Z info: Product 17 - rolePrice: {"id":34,"product_id":17,"role_id":4,"price":11111}
+2026-01-29T09:27:28.624Z info: Price updated for product 17: 11111
+2026-01-29T09:27:28.626Z info: Checking price for product 16 with roleId 4
+2026-01-29T09:27:28.629Z info: Product 16 - rolePrice: {"id":38,"product_id":16,"role_id":4,"price":1}
+2026-01-29T09:27:28.630Z info: Price updated for product 16: 1
+2026-01-29T09:27:28.637Z info: Checking price for product 15 with roleId 4
+2026-01-29T09:27:28.643Z info: Product 15 - rolePrice: {"id":36,"product_id":15,"role_id":4,"price":0.25}
+2026-01-29T09:27:28.644Z info: Price updated for product 15: 0.25
+2026-01-29T09:27:28.645Z info: Checking price for product 14 with roleId 4
+2026-01-29T09:27:28.647Z info: Product 14 - rolePrice: {"id":29,"product_id":14,"role_id":4,"price":0.36}
+2026-01-29T09:27:28.648Z info: Price updated for product 14: 0.36
+2026-01-29T09:27:28.650Z info: ACTION getAllProducts count=4 filter={} role=ADMIN by=user_id=1
+2026-01-29T09:27:28.652Z info: GET /api/products 304 39.381 ms -
+2026-01-29T09:27:28.679Z info: GET /uploads/flavors/1769382443749-cdxcdx.jpeg 200 23.260 ms -
+2026-01-29T09:27:39.068Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T09:27:39.077Z info: GET /api/orders 200 11.477 ms -
+2026-01-29T09:27:39.115Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T09:27:39.127Z info: GET /api/orders 304 17.467 ms -
+2026-01-29T09:27:57.610Z info: ACTION getOrderById id=29 user_id=1 status=PENDING by=user_id=1
+2026-01-29T09:27:57.613Z info: GET /api/orders/29 200 19.320 ms -
+2026-01-29T09:27:59.271Z info: ACTION downloadDevis order_id=29 by=user_id=1
+2026-01-29T09:28:01.098Z info: GET /api/orders/29/devis 200 1851.925 ms -
+2026-01-29T09:28:30.076Z info: ACTION getOrderById id=25 user_id=1 status=CANCELLED by=user_id=1
+2026-01-29T09:28:30.079Z info: GET /api/orders/25 200 8.428 ms -
+2026-01-29T09:28:33.099Z info: ACTION downloadDevis order_id=25 by=user_id=1
+2026-01-29T09:28:33.510Z info: GET /api/orders/25/devis 200 416.594 ms -
+2026-01-29T09:33:03.206Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T09:33:03.208Z info: GET /api/orders 304 8.639 ms -
+2026-01-29T09:33:03.211Z info: GET /api/roles/4 200 21.934 ms -
+2026-01-29T09:33:03.213Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T09:33:03.216Z info: GET /api/categories 304 22.133 ms -
+2026-01-29T09:33:03.236Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T09:33:03.238Z info: GET /api/orders 304 19.259 ms -
+2026-01-29T09:33:03.244Z info: GET /api/roles/4 304 15.770 ms -
+2026-01-29T09:33:03.247Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T09:33:03.251Z info: GET /api/categories 304 25.448 ms -
+2026-01-29T09:33:03.465Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T09:33:03.466Z info: GET /api/orders 304 26.269 ms -
+2026-01-29T09:33:03.468Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-29T09:33:03.470Z info: GET /api/banks 200 17.635 ms -
+2026-01-29T09:33:03.473Z info: GET /api/roles 304 26.071 ms -
+2026-01-29T09:33:03.474Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T09:33:03.482Z info: GET /api/categories 304 41.513 ms -
+2026-01-29T09:33:03.540Z info: GET /api/roles 304 17.113 ms -
+2026-01-29T09:33:03.541Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-29T09:33:03.547Z info: GET /api/banks 304 20.752 ms -
+2026-01-29T09:33:03.550Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T09:33:03.557Z info: GET /api/orders 304 26.866 ms -
+2026-01-29T09:33:03.568Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T09:33:03.572Z info: GET /api/categories 304 50.011 ms -
+2026-01-29T09:33:08.795Z info: ACTION getOrderById id=28 user_id=1 status=PENDING by=user_id=1
+2026-01-29T09:33:08.797Z info: GET /api/orders/28 200 12.042 ms -
+2026-01-29T09:33:12.835Z info: ACTION getOrderById id=28 user_id=1 status=PENDING by=user_id=1
+2026-01-29T09:33:12.836Z info: GET /api/orders/28 304 4.798 ms -
+2026-01-29T09:33:20.440Z info: ACTION getOrderById id=28 user_id=1 status=PENDING by=user_id=1
+2026-01-29T09:33:20.443Z info: GET /api/orders/28 304 9.376 ms -
+2026-01-29T09:33:23.030Z info: ACTION getOrderById id=28 user_id=1 status=PENDING by=user_id=1
+2026-01-29T09:33:23.031Z info: GET /api/orders/28 304 9.737 ms -
+2026-01-29T09:38:43.774Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T09:38:43.778Z info: GET /api/orders 304 11.619 ms -
+2026-01-29T09:38:43.781Z info: GET /api/roles/4 304 19.718 ms -
+2026-01-29T09:38:43.791Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T09:38:43.796Z info: GET /api/categories 304 30.609 ms -
+2026-01-29T09:38:43.997Z info: ACTION getAllOrders count=14 by=1
+2026-01-29T09:38:43.999Z info: GET /api/orders 304 17.024 ms -
+2026-01-29T09:38:43.999Z info: ACTION getAllCategories count=4 by=user_id=1
+2026-01-29T09:38:44.001Z info: GET /api/categories 304 24.737 ms -
+2026-01-29T09:38:44.007Z info: ACTION getAllBanks count=1 by=user_id=1
+2026-01-29T09:38:44.011Z info: GET /api/banks 304 22.756 ms -
+2026-01-29T09:38:44.014Z info: GET /api/roles 304 19.170 ms -
+2026-01-29T09:41:05.772Z info: ACTION downloadDevis order_id=29 by=user_id=1
+2026-01-29T09:41:05.857Z info: GET /api/orders/29/devis 200 93.549 ms -
+2026-01-29T09:44:12.601Z info: Server listening on port 3000
+2026-01-29T09:44:12.624Z info: Base SQLite connectée avec succès
+2026-01-29T09:44:18.617Z info: ACTION downloadDevis order_id=29 by=user_id=1
+2026-01-29T09:44:18.779Z info: GET /api/orders/29/devis 200 183.642 ms -
+2026-01-29T09:44:47.773Z info: ACTION downloadDevis order_id=29 by=user_id=1
+2026-01-29T09:44:47.950Z info: GET /api/orders/29/devis 200 193.039 ms -
+2026-01-29T09:46:25.421Z info: Server listening on port 3000
+2026-01-29T09:46:25.431Z info: Base SQLite connectée avec succès
+2026-01-29T09:47:28.735Z info: ACTION downloadDevis order_id=29 by=user_id=1
+2026-01-29T09:47:28.984Z info: GET /api/orders/29/devis 200 265.266 ms -
+2026-01-29T09:49:24.247Z info: Server listening on port 3000
+2026-01-29T09:49:24.262Z info: Base SQLite connectée avec succès
+2026-01-29T09:49:41.231Z info: ACTION downloadDevis order_id=29 by=user_id=1
+2026-01-29T09:49:41.491Z info: GET /api/orders/29/devis 200 269.598 ms -
