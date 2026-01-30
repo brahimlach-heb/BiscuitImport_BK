@@ -26,7 +26,7 @@ const saveImageAndReturnUrl = (imageInput, flavorName) => {
   const buffer = Buffer.from(dataUriMatch[2], 'base64');
   const dir = ensureFlavorUploadDir();
   fs.writeFileSync(path.join(dir, fileName), buffer);
-  return `${BASE_URL}/uploads/flavors/${fileName}`;
+  return `http://72.62.237.60:3000/uploads/flavors/${fileName}`;
 };
 
 const getAll = async (req, res, next) => {
