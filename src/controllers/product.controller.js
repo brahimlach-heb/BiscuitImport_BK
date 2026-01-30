@@ -10,15 +10,30 @@ const getAll = async (req, res, next) => {
     const rows = await productService.getAllProducts(filter, roleId, roleCode);
     const userInfo = `user_id=${req.user.id}`;
     logger.info(`ACTION getAllProducts count=${Array.isArray(rows) ? rows.length : 0} filter=${JSON.stringify(filter)} role=${roleCode} by=${userInfo}`);
- const productsWithFlavors = rows.map(p => ({
-  flavors: p.flavors.map(f => ({
-    id: f.id,
-    name: f.name,
-    description: f.description,
-    color: f.color,
-    image: f.image
-  }))
-}));
+const productsWithFlavors = rows.map(p => {
+  console.log('Flavors for product:', p.id, p.flavors); // tableau brut
+
+  console.table(
+    p.flavors.map(f => ({
+      id: f.id,
+      name: f.name,
+      description: f.description,
+      color: f.color,
+      image: f.image
+    }))
+  );
+
+  return {
+    flavors: p.flavors.map(f => ({
+      id: f.id,
+      name: f.name,
+      description: f.description,
+      color: f.color,
+      image: f.image
+    }))
+  };
+});
+
 
     console.table(productsWithFlavors);
     res.status(200).json(rows);
