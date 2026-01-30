@@ -100,7 +100,7 @@ const getAllProducts = async (filter, roleId, roleCode) => {
       if (product.flavors && Array.isArray(product.flavors)) {
         product.flavors = product.flavors.map(flavor => {
           const imageUrl = flavor.image && !flavor.image.startsWith('http') 
-            ? `http://72.62.237.602:3000${flavor.image.startsWith('/') ? '' : '/'}${flavor.image}`
+            ? `${BASE_URL}${flavor.image.startsWith('/') ? '' : '/'}${flavor.image}`
             : flavor.image;
           
           return {
