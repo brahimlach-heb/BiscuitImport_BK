@@ -8,6 +8,6 @@ module.exports = {
   BASE_URL: process.env.BASE_URL || `http://72.62.237.60:${process.env.PORT || 3000}`,
   NODE_ENV: process.env.NODE_ENV || 'development',
   JWT_SECRET: process.env.JWT_SECRET || 'change_me',
-  JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || '7d',
+  JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || '1d',
   LOG_LEVEL: process.env.LOG_LEVEL || 'info'
 };

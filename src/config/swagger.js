@@ -40,7 +40,7 @@ const options = {
             name: { type: 'string' },
             description: { type: 'string' },
             color: { type: 'string' },
-            image: { type: 'string', description: 'Full URL to the flavor image (e.g., http://localhost:3000/uploads/flavors/image.png)' }
+            image: { type: 'string', description: 'Full URL to the flavor image (e.g., http://ipserveur:3000/uploads/flavors/image.png)' }
           }
         },
         Product: {
