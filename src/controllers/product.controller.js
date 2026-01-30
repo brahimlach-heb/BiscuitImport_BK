@@ -10,11 +10,16 @@ const getAll = async (req, res, next) => {
     const rows = await productService.getAllProducts(filter, roleId, roleCode);
     const userInfo = `user_id=${req.user.id}`;
     logger.info(`ACTION getAllProducts count=${Array.isArray(rows) ? rows.length : 0} filter=${JSON.stringify(filter)} role=${roleCode} by=${userInfo}`);
-    const productsWithFlavors = rows.map(p => ({
-      product_id: p.id,
-      product_name: p.name,
-      flavors: p.flavors
-    }));
+ const productsWithFlavors = rows.map(p => ({
+  flavors: p.flavors.map(f => ({
+    id: f.id,
+    name: f.name,
+    description: f.description,
+    color: f.color,
+    image: f.image
+  }))
+}));
+
     console.table(productsWithFlavors);
     res.status(200).json(rows);
   } catch (err) {
