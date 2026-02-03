@@ -30,6 +30,8 @@ const router = express.Router();
  *                 type: string
  *               phone:
  *                 type: string
+ *               address:
+ *                 type: string
  *               password:
  *                 type: string
  *               deactivated_at:
@@ -102,6 +104,9 @@ router.post('/register', controller.register);
  *                         phone:
  *                           type: string
  *                           example: "+1234567890"
+ *                         address:
+ *                           type: string
+ *                           example: "123 Rue Principale, Ville"
  *                         role_id:
  *                           type: integer
  *                           example: 1
@@ -157,6 +162,8 @@ router.get('/profile', authMiddleware, controller.profile);
  *               email:
  *                 type: string
  *               phone:
+ *                 type: string
+ *               address:
  *                 type: string
  *               password:
  *                 type: string

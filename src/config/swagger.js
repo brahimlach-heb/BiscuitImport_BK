@@ -172,6 +172,7 @@ const options = {
             last_name: { type: 'string', description: 'User last name' },
             email: { type: 'string', format: 'email', description: 'User email address' },
             phone: { type: 'string', description: 'User phone number' },
+            address: { type: 'string', description: 'User address' },
             role_id: { type: 'integer', description: 'Role ID' },
             role_code: { type: 'string', description: 'Role code (e.g., ADMIN, CLIENT)' },
             discount_percent: { type: 'number', format: 'float', description: 'Discount percentage' },

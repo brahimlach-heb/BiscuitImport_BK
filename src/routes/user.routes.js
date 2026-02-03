@@ -91,6 +91,9 @@ router.get('/:id', authMiddleware, controller.getById);
  *               phone:
  *                 type: string
  *                 example: '0123456789'
+ *               address:
+ *                 type: string
+ *                 example: '123 Rue Principale, Ville'
  *               password:
  *                 type: string
  *                 example: SecurePass123
@@ -161,6 +164,9 @@ router.post('/', controller.create);
  *               phone:
  *                 type: string
  *                 example: '0123456789'
+ *               address:
+ *                 type: string
+ *                 example: '123 Rue Principale, Ville'
  *               password:
  *                 type: string
  *                 example: NewSecurePass123

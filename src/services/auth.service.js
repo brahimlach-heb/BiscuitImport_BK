@@ -14,7 +14,7 @@ const validatePhone = (phone) => {
 };
 
 const register = async (data) => {
-  const { first_name, last_name, email, phone, password, deactivated_at, role_id, discount_percent, is_active } = data;
+  const { first_name, last_name, email, phone, address, password, deactivated_at, role_id, discount_percent, is_active } = data;
   
   if (!first_name || !last_name || !email || !password || !role_id) {
     const err = new Error('Missing required fields (first_name, last_name, email, password, role_id)');
@@ -55,7 +55,8 @@ const register = async (data) => {
     first_name, 
     last_name, 
     email, 
-    phone, 
+    phone,
+    address,
     password, 
     role_id,
     discount_percent,
@@ -120,6 +121,7 @@ const login = async (email, password) => {
     last_name: user.last_name,
     email: user.email,
     phone: user.phone,
+    address: user.address,
     role_id: user.role_id,
     role_code: role ? role.code : null,
     discount_percent: user.discount_percent,
@@ -130,11 +132,17 @@ const login = async (email, password) => {
 
 const getProfile = async (id) => {
   const user = await userModel.getUserById(id);
-  return user;
+  if (!user) return null;
+  const orders = await orderModel.getOrdersByUser(user.id);
+  const pendingInvoices = orders.filter(o => o.status && o.status.toUpperCase() === 'PENDING').length;
+  return {
+    ...user,
+    pendingInvoices
+  };
 };
 
 const updateProfile = async (id, data, modified_by) => {
-  const { first_name, last_name, email, phone, password } = data;
+  const { first_name, last_name, email, phone, address, password } = data;
   if (email && !validator.isEmail(email)) {
     const err = new Error('Invalid email');
     err.status = 400;
@@ -145,7 +153,7 @@ const updateProfile = async (id, data, modified_by) => {
     err.status = 400;
     throw err;
   }
-  const success = await userModel.updateUser(id, { first_name, last_name, email, phone, password, modified_by });
+  const success = await userModel.updateUser(id, { first_name, last_name, email, phone, address, password, modified_by });
   if (!success) {
     const err = new Error('User not found');
     err.status = 404;
