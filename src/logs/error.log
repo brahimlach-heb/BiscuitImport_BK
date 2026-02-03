@@ -1043,3 +1043,23 @@
     at Statement.<anonymous> (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\order.model.js:315:23)
     at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)
     at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)
+2026-02-03T19:43:05.976Z error: ERROR deleteOrder order_id=21: Only pending orders can be deleted
+2026-02-03T19:43:05.981Z error: Error: Only pending orders can be deleted
+    at Statement.<anonymous> (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\order.model.js:367:23)
+    at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)
+    at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)
+2026-02-03T19:43:09.452Z error: ERROR deleteOrder order_id=21: Only pending orders can be deleted
+2026-02-03T19:43:09.460Z error: Error: Only pending orders can be deleted
+    at Statement.<anonymous> (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\order.model.js:367:23)
+    at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)
+    at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)
+2026-02-03T19:43:22.480Z error: ERROR deleteOrder order_id=21: Only pending orders can be deleted
+2026-02-03T19:43:22.482Z error: Error: Only pending orders can be deleted
+    at Statement.<anonymous> (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\order.model.js:367:23)
+    at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)
+    at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)
+2026-02-03T19:43:34.946Z error: ERROR deleteOrder order_id=19: Only pending orders can be deleted
+2026-02-03T19:43:34.950Z error: Error: Only pending orders can be deleted
+    at Statement.<anonymous> (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\order.model.js:367:23)
+    at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)
+    at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)
