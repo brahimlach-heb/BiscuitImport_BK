@@ -1,3 +1,80 @@
+const ExcelJS = require('exceljs');
+/**
+ * Export all products to Excel with intuitive cell design
+ * @returns {Promise<Buffer>} Excel file buffer
+ */
+const exportProductsToExcel = async () => {
+  let products = await productModel.getAllProducts({ includeInactive: true });
+  // Pour chaque produit, récupérer les flavors
+  for (const product of products) {
+    product.flavors = await productModel.getFlavorsForProduct(product.id);
+  }
+  // Sort by product id ascending
+  products = (products || []).sort((a, b) => a.id - b.id);
+  const workbook = new ExcelJS.Workbook();
+  const worksheet = workbook.addWorksheet('Produits');
+
+  // Header row with style
+  worksheet.columns = [
+    { header: 'ID', key: 'id', width: 8 },
+    { header: 'Nom', key: 'name', width: 25 },
+    { header: 'Prix', key: 'price', width: 12 },
+    { header: 'Statut', key: 'statut', width: 12 },
+    { header: 'Flavors', key: 'flavors', width: 30 },
+  ];
+  worksheet.getRow(1).font = { bold: true, color: { argb: 'FFFFFFFF' } };
+  worksheet.getRow(1).fill = {
+    type: 'pattern',
+    pattern: 'solid',
+    fgColor: { argb: 'FF007ACC' }
+  };
+
+  // Add product rows
+  products.forEach((product, idx) => {
+    // Always fill flavors with joined names (even if empty array)
+    let flavorNames = '';
+    if (Array.isArray(product.flavors) && product.flavors.length > 0) {
+      flavorNames = product.flavors.map(f => f.name).join(', ');
+    }
+    worksheet.addRow({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      statut: product.is_active ? 'Actif' : 'Inactif',
+      flavors: flavorNames
+    });
+    // Alternate row color for better readability
+    const row = worksheet.getRow(idx + 2);
+    if ((idx + 1) % 2 === 0) {
+      row.fill = {
+        type: 'pattern',
+        pattern: 'solid',
+        fgColor: { argb: 'FFE6F7FF' }
+      };
+    }
+  });
+
+  // Borders for all cells
+  worksheet.eachRow({ includeEmpty: false }, (row) => {
+    row.eachCell((cell) => {
+      cell.border = {
+        top: { style: 'thin' },
+        left: { style: 'thin' },
+        bottom: { style: 'thin' },
+        right: { style: 'thin' }
+      };
+    });
+  });
+
+  // Auto filter
+  worksheet.autoFilter = {
+    from: 'A1',
+    to: 'E1',
+  };
+
+  // Return as buffer
+  return workbook.xlsx.writeBuffer();
+};
 const productModel = require('../models/product.model');
 const productPriceRoleModel = require('../models/product_price_role.model');
 const flavorModel = require('../models/flavor.model');
@@ -238,5 +315,6 @@ module.exports = {
   updateProduct,
   deleteProduct,
   addFlavorToProduct,
-  removeFlavorFromProduct
+  removeFlavorFromProduct,
+  exportProductsToExcel
 };

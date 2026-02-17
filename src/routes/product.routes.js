@@ -1,3 +1,4 @@
+// ...existing code...
 /**
  * @swagger
  * tags:
@@ -10,7 +11,11 @@ const controller = require('../controllers/product.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
 const authOptionalMiddleware = require('../middlewares/auth.optional.middleware');
 
+
 const router = express.Router();
+
+// Export all products to Excel
+router.get('/export/excel', authMiddleware, controller.exportExcel);
 
 /**
  * @swagger

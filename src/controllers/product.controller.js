@@ -1,3 +1,15 @@
+// Export all products to Excel
+const exportExcel = async (req, res, next) => {
+  try {
+    const buffer = await productService.exportProductsToExcel();
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    res.setHeader('Content-Disposition', 'attachment; filename="produits.xlsx"');
+    res.send(buffer);
+  } catch (err) {
+    logger.error(`ERROR exportProductsToExcel: ${err.message}`);
+    next(err);
+  }
+};
 const productService = require('../services/product.service');
 const logger = require('../config/logger');
 
@@ -151,4 +163,4 @@ const removeFlavor = async (req, res, next) => {
   }
 };
 
-module.exports = { getAll, getById, create, update, remove, addFlavor, removeFlavor };
+module.exports = { getAll, getById, create, update, remove, addFlavor, removeFlavor, exportExcel };

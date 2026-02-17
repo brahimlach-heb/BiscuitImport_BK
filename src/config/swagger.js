@@ -1,4 +1,5 @@
 const swaggerJsdoc = require("swagger-jsdoc");
+const { BASE_URL } = require("./env");
 
 const options = {
   definition: {
@@ -10,7 +11,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://72.62.237.60:3000",
+        url: BASE_URL || "http://localhost:3000",
       },
     ],
     components: {

@@ -51,6 +51,7 @@ jobs:
               --name backend \
               --restart unless-stopped \
               -v /srv/biscuitimport/db:/app/src/database \
+              -v /srv/biscuitimport/uploads:/app/uploads \
               -e PORT=${{ secrets.PORT }} \
               -e NODE_ENV=${{ secrets.NODE_ENV }} \
               -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
@@ -59,3 +60,4 @@ jobs:
               -e BASE_URL=${{ secrets.BASE_URL }} \
               -p 3000:3000 \
               lachheb/biscuitimport:v1
+                
