@@ -50,6 +50,7 @@ jobs:
             docker run -d \
               --name backend \
               --restart unless-stopped \
+              -v /srv/biscuitimport/db:/app/src/database \
               -e PORT=${{ secrets.PORT }} \
               -e NODE_ENV=${{ secrets.NODE_ENV }} \
               -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
