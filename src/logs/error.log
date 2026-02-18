@@ -1063,3 +1063,12 @@
     at Statement.<anonymous> (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\order.model.js:367:23)
     at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)
     at Statement.replacement (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\sqlite3\lib\trace.js:25:27)
+2026-02-17T16:21:45.820Z error: ERROR getAllProducts: productsWithFlavors is not defined
+2026-02-17T16:21:45.822Z error: ReferenceError: productsWithFlavors is not defined
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:40:19)
+2026-02-17T16:21:45.958Z error: ERROR getAllProducts: productsWithFlavors is not defined
+2026-02-17T16:21:45.960Z error: ReferenceError: productsWithFlavors is not defined
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:40:19)
+2026-02-17T16:21:46.058Z error: ERROR getAllProducts: productsWithFlavors is not defined
+2026-02-17T16:21:46.067Z error: ReferenceError: productsWithFlavors is not defined
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:40:19)

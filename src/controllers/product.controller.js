@@ -10,6 +10,21 @@ const exportExcel = async (req, res, next) => {
     next(err);
   }
 };
+
+// Import products from Excel
+const importExcel = async (req, res, next) => {
+  try {
+    if (!req.file || !req.file.buffer) {
+      return res.status(400).json({ error: 'Excel file is required' });
+    }
+    const actor = req.user ? req.user.id : null;
+    const result = await productService.importProductsFromExcel(req.file.buffer, actor);
+    res.status(200).json(result);
+  } catch (err) {
+    logger.error(`ERROR importProductsFromExcel: ${err.message}`);
+    next(err);
+  }
+};
 const productService = require('../services/product.service');
 const logger = require('../config/logger');
 
@@ -22,32 +37,6 @@ const getAll = async (req, res, next) => {
     const rows = await productService.getAllProducts(filter, roleId, roleCode);
     const userInfo = `user_id=${req.user.id}`;
     logger.info(`ACTION getAllProducts count=${Array.isArray(rows) ? rows.length : 0} filter=${JSON.stringify(filter)} role=${roleCode} by=${userInfo}`);
-const productsWithFlavors = rows.map(p => {
-  console.log('Flavors for product:', p.id, p.flavors); // tableau brut
-
-  console.table(
-    p.flavors.map(f => ({
-      id: f.id,
-      name: f.name,
-      description: f.description,
-      color: f.color,
-      image: f.image
-    }))
-  );
-
-  return {
-    flavors: p.flavors.map(f => ({
-      id: f.id,
-      name: f.name,
-      description: f.description,
-      color: f.color,
-      image: f.image
-    }))
-  };
-});
-
-
-    console.table(productsWithFlavors);
     res.status(200).json(rows);
   } catch (err) {
     logger.error(`ERROR getAllProducts: ${err.message}`, { query: req.query });
@@ -163,4 +152,4 @@ const removeFlavor = async (req, res, next) => {
   }
 };
 
-module.exports = { getAll, getById, create, update, remove, addFlavor, removeFlavor, exportExcel };
+module.exports = { getAll, getById, create, update, remove, addFlavor, removeFlavor, exportExcel, importExcel };

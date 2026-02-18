@@ -10,12 +10,76 @@ const express = require('express');
 const controller = require('../controllers/product.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
 const authOptionalMiddleware = require('../middlewares/auth.optional.middleware');
+const multer = require('multer');
+
+const upload = multer({ storage: multer.memoryStorage() });
 
 
 const router = express.Router();
 
-// Export all products to Excel
+
+/**
+ * @swagger
+ * /api/products/export/excel:
+ *   get:
+ *     summary: Export all products to Excel
+ *     tags: [Products]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Excel file containing all products
+ *         content:
+ *           application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+ *             schema:
+ *               type: string
+ *               format: binary
+ *       401:
+ *         description: Unauthorized
+ */
 router.get('/export/excel', authMiddleware, controller.exportExcel);
+
+/**
+ * @swagger
+ * /api/products/import/excel:
+ *   post:
+ *     summary: Import products from Excel file
+ *     tags: [Products]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               file:
+ *                 type: string
+ *                 format: binary
+ *     responses:
+ *       200:
+ *         description: Import result
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 created:
+ *                   type: integer
+ *                   example: 2
+ *                 errors:
+ *                   type: integer
+ *                   example: 1
+ *                 errorFileUrl:
+ *                   type: string
+ *                   example: /uploads/errors/import_error_20260218.xlsx
+ *       400:
+ *         description: Bad request (missing or invalid file)
+ *       401:
+ *         description: Unauthorized
+ */
+router.post('/import/excel', authMiddleware, upload.single('file'), controller.importExcel);
 
 /**
  * @swagger
