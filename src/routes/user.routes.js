@@ -99,7 +99,8 @@ router.get('/:id', authMiddleware, controller.getById);
  *                 example: SecurePass123
  *               role_id:
  *                 type: integer
- *                 example: 1
+ *                 example: 2
+ *               
  *               discount_percent:
  *                 type: number
  *                 format: float
@@ -173,6 +174,7 @@ router.post('/', controller.create);
  *               role_id:
  *                 type: integer
  *                 example: 2
+ *               
  *               discount_percent:
  *                 type: number
  *                 format: float

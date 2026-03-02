@@ -14,7 +14,7 @@ const validatePhone = (phone) => {
 };
 
 const register = async (data) => {
-  const { first_name, last_name, email, phone, address, password, deactivated_at, role_id, discount_percent, is_active } = data;
+  const { first_name, last_name, email, phone, address, password, deactivated_at, role_id, discount_percent, is_active, user_type } = data;
   
   if (!first_name || !last_name || !email || !password || !role_id) {
     const err = new Error('Missing required fields (first_name, last_name, email, password, role_id)');
@@ -61,7 +61,8 @@ const register = async (data) => {
     role_id,
     discount_percent,
     is_active,
-    deactivated_at: deact 
+    deactivated_at: deact,
+    user_type
   });
   
   // Récupérer le code du rôle
@@ -142,7 +143,7 @@ const getProfile = async (id) => {
 };
 
 const updateProfile = async (id, data, modified_by) => {
-  const { first_name, last_name, email, phone, address, password } = data;
+  const { first_name, last_name, email, phone, address, password, user_type } = data;
   if (email && !validator.isEmail(email)) {
     const err = new Error('Invalid email');
     err.status = 400;
@@ -153,7 +154,7 @@ const updateProfile = async (id, data, modified_by) => {
     err.status = 400;
     throw err;
   }
-  const success = await userModel.updateUser(id, { first_name, last_name, email, phone, address, password, modified_by });
+  const success = await userModel.updateUser(id, { first_name, last_name, email, phone, address, password, modified_by, user_type });
   if (!success) {
     const err = new Error('User not found');
     err.status = 404;

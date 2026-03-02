@@ -34,6 +34,10 @@ const router = express.Router();
  *                 type: string
  *               password:
  *                 type: string
+ *               user_type:
+ *                 type: string
+ *                 enum: [candy, ams, both]
+ *                 description: Type d'utilisateur (candy, ams ou both)
  *               deactivated_at:
  *                 type: string
  *                 format: date
@@ -167,6 +171,10 @@ router.get('/profile', authMiddleware, controller.profile);
  *                 type: string
  *               password:
  *                 type: string
+ *               user_type:
+ *                 type: string
+ *                 enum: [candy, ams, both]
+ *                 description: Type d'utilisateur (candy, ams ou both)
  *     responses:
  *       200:
  *         description: Profile updated

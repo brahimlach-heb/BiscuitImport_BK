@@ -18,6 +18,7 @@ db.run(`CREATE TABLE IF NOT EXISTS users (
   is_active INTEGER DEFAULT 1,
   deactivated_at DATETIME,
   modified_by TEXT,
+  user_type TEXT DEFAULT 'candy',
   FOREIGN KEY (role_id) REFERENCES roles(id)
 )`);
 
@@ -38,6 +39,7 @@ tryAddColumn("ALTER TABLE users ADD COLUMN is_active INTEGER DEFAULT 1");
 tryAddColumn("ALTER TABLE users ADD COLUMN deactivated_at DATETIME");
 tryAddColumn("ALTER TABLE users ADD COLUMN modified_by TEXT");
 // Add modified_at column (try with and without DEFAULT to handle older SQLite versions)
+tryAddColumn("ALTER TABLE users ADD COLUMN user_type TEXT DEFAULT 'candy'");
 tryAddColumn("ALTER TABLE users ADD COLUMN modified_at DATETIME DEFAULT CURRENT_TIMESTAMP");
 tryAddColumn("ALTER TABLE users ADD COLUMN modified_at DATETIME");
 
@@ -46,7 +48,7 @@ db.run("UPDATE users SET modified_at = created_at WHERE modified_at IS NULL", (e
   // ignore errors
 });
 
-const createUser = async ({ first_name, last_name, email, phone, address, password, role_id, discount_percent, is_active, deactivated_at }) => {
+const createUser = async ({ first_name, last_name, email, phone, address, password, role_id, discount_percent, is_active, deactivated_at, user_type }) => {
   const hash = await bcrypt.hash(password, 10);
   const deact = deactivated_at || '2099-12-31';
   
@@ -58,13 +60,12 @@ const createUser = async ({ first_name, last_name, email, phone, address, passwo
   }
   
   return new Promise((resolve, reject) => {
-    const sql = 'INSERT INTO users (first_name, last_name, email, phone, address, password, role_id, discount_percent, is_active, deactivated_at, modified_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)';
-    console.log('SQL params:', [first_name, last_name, email, phone || null, address || null, 'HASH', role_id, discount_percent || 0.00, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : 1, deact]);
-    db.run(sql, [first_name, last_name, email, phone || null, address || null, hash, role_id, discount_percent || 0.00, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : 1, deact], function (err) {
+    const sql = 'INSERT INTO users (first_name, last_name, email, phone, address, password, role_id, discount_percent, is_active, deactivated_at, user_type, modified_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)';
+    db.run(sql, [first_name, last_name, email, phone || null, address || null, hash, role_id, discount_percent || 0.00, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : 1, deact, user_type || 'candy'], function (err) {
       if (err) return reject(err);
       const id = this.lastID;
       // return the stored row including created_at and modified_at
-      db.get('SELECT id, first_name, last_name, email, phone, address, role_id, discount_percent, is_active, created_at, modified_at, deactivated_at FROM users WHERE id = ?', [id], (err2, row) => {
+      db.get('SELECT id, first_name, last_name, email, phone, address, role_id, discount_percent, is_active, created_at, modified_at, deactivated_at, user_type FROM users WHERE id = ?', [id], (err2, row) => {
         if (err2) return reject(err2);
         resolve(row);
       });
@@ -102,13 +103,13 @@ const getUserById = (id) => {
   });
 };
 
-const updateUser = async (id, { first_name, last_name, email, phone, address, password, modified_by, role_id, discount_percent, is_active }) => {
+const updateUser = async (id, { first_name, last_name, email, phone, address, password, modified_by, role_id, discount_percent, is_active, user_type }) => {
   if (password) {
     password = await bcrypt.hash(password, 10);
   }
   return new Promise((resolve, reject) => {
-    const sql = 'UPDATE users SET first_name = ?, last_name = ?, email = ?, phone = ?, address = ?, password = COALESCE(?, password), modified_by = ?, role_id = COALESCE(?, role_id), discount_percent = COALESCE(?, discount_percent), is_active = COALESCE(?, is_active), modified_at = CURRENT_TIMESTAMP WHERE id = ?';
-    db.run(sql, [first_name, last_name, email, phone || null, address || null, password || null, modified_by || null, role_id || null, typeof discount_percent !== 'undefined' ? discount_percent : null, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, id], function (err) {
+    const sql = 'UPDATE users SET first_name = ?, last_name = ?, email = ?, phone = ?, address = ?, password = COALESCE(?, password), modified_by = ?, role_id = COALESCE(?, role_id), discount_percent = COALESCE(?, discount_percent), is_active = COALESCE(?, is_active), user_type = COALESCE(?, user_type), modified_at = CURRENT_TIMESTAMP WHERE id = ?';
+    db.run(sql, [first_name, last_name, email, phone || null, address || null, password || null, modified_by || null, role_id || null, typeof discount_percent !== 'undefined' ? discount_percent : null, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, user_type || null, id], function (err) {
       if (err) return reject(err);
       resolve(this.changes > 0);
     });

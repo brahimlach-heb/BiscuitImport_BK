@@ -181,7 +181,8 @@ const options = {
             created_at: { type: 'string', format: 'date-time' },
             modified_at: { type: 'string', format: 'date-time' },
             last_login: { type: 'string', format: 'date-time' },
-            deactivated_at: { type: 'string', format: 'date' }
+            deactivated_at: { type: 'string', format: 'date' },
+            
           }
         }
       }

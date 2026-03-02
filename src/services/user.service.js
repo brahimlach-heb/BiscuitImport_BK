@@ -14,27 +14,25 @@ const createUser = async (data) => {
 
 const getAllUsers = async () => {
   const users = await userModel.getAllUsers();
-  
   // Ajouter le role_label pour chaque utilisateur
   const usersWithRoles = await Promise.all(users.map(async (user) => {
     const role = await roleModel.getRoleById(user.role_id);
     return {
       ...user,
-      role_label: role ? role.label : null
+      role_label: role ? role.label : null,
+      
     };
   }));
-  
   return usersWithRoles;
 };
 
 const getUserById = async (id) => {
   const user = await userModel.getUserById(id);
-  return user;
+  return user ? { ...user } : null;
 };
 
 const updateUser = async (id, data) => {
   const { first_name, last_name, email, phone, address, password, role_id, discount_percent, is_active, modified_by } = data;
-  
   const updated = await userModel.updateUser(id, { first_name, last_name, email, phone, address, password, role_id, discount_percent, is_active, modified_by });
   return updated;
 };
