@@ -18,7 +18,7 @@ db.run(`CREATE TABLE IF NOT EXISTS users (
   is_active INTEGER DEFAULT 1,
   deactivated_at DATETIME,
   modified_by TEXT,
-  user_type TEXT DEFAULT 'candy',
+  user_type TEXT DEFAULT 'ams',
   FOREIGN KEY (role_id) REFERENCES roles(id)
 )`);
 
@@ -39,7 +39,7 @@ tryAddColumn("ALTER TABLE users ADD COLUMN is_active INTEGER DEFAULT 1");
 tryAddColumn("ALTER TABLE users ADD COLUMN deactivated_at DATETIME");
 tryAddColumn("ALTER TABLE users ADD COLUMN modified_by TEXT");
 // Add modified_at column (try with and without DEFAULT to handle older SQLite versions)
-tryAddColumn("ALTER TABLE users ADD COLUMN user_type TEXT DEFAULT 'candy'");
+tryAddColumn("ALTER TABLE users ADD COLUMN user_type TEXT DEFAULT 'ams'");
 tryAddColumn("ALTER TABLE users ADD COLUMN modified_at DATETIME DEFAULT CURRENT_TIMESTAMP");
 tryAddColumn("ALTER TABLE users ADD COLUMN modified_at DATETIME");
 
@@ -61,7 +61,7 @@ const createUser = async ({ first_name, last_name, email, phone, address, passwo
   
   return new Promise((resolve, reject) => {
     const sql = 'INSERT INTO users (first_name, last_name, email, phone, address, password, role_id, discount_percent, is_active, deactivated_at, user_type, modified_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)';
-    db.run(sql, [first_name, last_name, email, phone || null, address || null, hash, role_id, discount_percent || 0.00, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : 1, deact, user_type || 'candy'], function (err) {
+    db.run(sql, [first_name, last_name, email, phone || null, address || null, hash, role_id, discount_percent || 0.00, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : 1, deact, user_type || 'ams'], function (err) {
       if (err) return reject(err);
       const id = this.lastID;
       // return the stored row including created_at and modified_at
@@ -85,7 +85,7 @@ const findByEmail = (email) => {
 
 const getAllUsers = () => {
   return new Promise((resolve, reject) => {
-    const sql = 'SELECT id, first_name, last_name, email, phone, address, role_id, discount_percent, is_active, created_at, modified_at, last_login, deactivated_at, modified_by FROM users';
+    const sql = 'SELECT id, first_name, last_name, email, phone, address, role_id, discount_percent, is_active, created_at, modified_at, last_login, deactivated_at, modified_by, user_type FROM users';
     db.all(sql, [], (err, rows) => {
       if (err) return reject(err);
       resolve(rows);
@@ -95,7 +95,7 @@ const getAllUsers = () => {
 
 const getUserById = (id) => {
   return new Promise((resolve, reject) => {
-    const sql = 'SELECT id, first_name, last_name, email, phone, address, role_id, discount_percent, is_active, created_at, modified_at, last_login, deactivated_at, modified_by FROM users WHERE id = ?';
+    const sql = 'SELECT id, first_name, last_name, email, phone, address, role_id, discount_percent, is_active, created_at, modified_at, last_login, deactivated_at, modified_by, user_type FROM users WHERE id = ?';
     db.get(sql, [id], (err, row) => {
       if (err) return reject(err);
       resolve(row || null);

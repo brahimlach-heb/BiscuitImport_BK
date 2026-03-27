@@ -31,9 +31,20 @@ const logger = require('../config/logger');
 const getAll = async (req, res, next) => {
   try {
     const filter = {};
+    const roleCode = req.user.role_code;
+    const isAdminOrManager = roleCode && (roleCode.toUpperCase() === 'ADMIN' || roleCode.toUpperCase() === 'MANAGER');
+    
+    // product_type is required for non-ADMIN/MANAGER roles
+    if (!isAdminOrManager && !req.query.product_type) {
+      return res.status(400).json({ error: 'product_type query parameter is required' });
+    }
+    
+    // Only apply product_type filter for non-ADMIN/MANAGER roles
+    if (!isAdminOrManager && req.query.product_type) {
+      filter.product_type = req.query.product_type;
+    }
     if (req.query.category_id) filter.category_id = Number(req.query.category_id);
     const roleId = req.user.role_id;
-    const roleCode = req.user.role_code;
     const rows = await productService.getAllProducts(filter, roleId, roleCode);
     const userInfo = `user_id=${req.user.id}`;
     logger.info(`ACTION getAllProducts count=${Array.isArray(rows) ? rows.length : 0} filter=${JSON.stringify(filter)} role=${roleCode} by=${userInfo}`);

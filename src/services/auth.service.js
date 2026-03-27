@@ -127,6 +127,7 @@ const login = async (email, password) => {
     role_code: role ? role.code : null,
     discount_percent: user.discount_percent,
     is_active: user.is_active,
+    user_type: user.user_type,
     pendingInvoices: pendingInvoices
   }};
 };
@@ -138,6 +139,7 @@ const getProfile = async (id) => {
   const pendingInvoices = orders.filter(o => o.status && o.status.toUpperCase() === 'PENDING').length;
   return {
     ...user,
+    user_type: user.user_type,
     pendingInvoices
   };
 };

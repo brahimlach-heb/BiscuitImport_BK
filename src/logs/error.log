@@ -1072,3 +1072,73 @@
 2026-02-17T16:21:46.058Z error: ERROR getAllProducts: productsWithFlavors is not defined
 2026-02-17T16:21:46.067Z error: ReferenceError: productsWithFlavors is not defined
     at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:40:19)
+2026-03-24T13:59:13.115Z error: ERROR getAllProducts: product_type filter is required
+2026-03-24T13:59:13.119Z error: Error: product_type filter is required
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:64:21
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:57:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:455:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:47:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-03-24T13:59:13.173Z error: ERROR getAllProducts: product_type filter is required
+2026-03-24T13:59:13.175Z error: Error: product_type filter is required
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:64:21
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:57:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:455:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:47:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-03-24T13:59:13.210Z error: ERROR getAllProducts: product_type filter is required
+2026-03-24T13:59:13.211Z error: Error: product_type filter is required
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:64:21
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:57:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:455:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:47:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-03-24T14:02:26.769Z error: ERROR getAllProducts: product_type filter is required
+2026-03-24T14:02:26.771Z error: Error: product_type filter is required
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:64:21
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:57:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:455:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:48:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-03-24T14:02:27.545Z error: ERROR getAllProducts: product_type filter is required
+2026-03-24T14:02:27.546Z error: Error: product_type filter is required
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:64:21
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:57:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:455:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:48:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-03-24T14:02:29.540Z error: ERROR getAllProducts: product_type filter is required
+2026-03-24T14:02:29.541Z error: Error: product_type filter is required
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:64:21
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:57:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:455:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:48:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-03-24T14:02:29.567Z error: ERROR getAllProducts: product_type filter is required
+2026-03-24T14:02:29.568Z error: Error: product_type filter is required
+    at C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:64:21
+    at new Promise (<anonymous>)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\product.model.js:57:10)
+    at Object.getAllProducts (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\product.service.js:455:39)
+    at getAll (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\product.controller.js:48:39)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)

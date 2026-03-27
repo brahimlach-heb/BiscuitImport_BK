@@ -142,6 +142,10 @@ router.post('/import/excel', authMiddleware, upload.single('file'), controller.i
  *               stock:
  *                 type: integer
  *                 example: 100
+ *               stock_securite:
+ *                 type: integer
+ *                 example: 10
+ *                 description: "Stock de sécurité du produit"
  *               is_active:
  *                 type: boolean
  *                 example: true
@@ -155,6 +159,11 @@ router.post('/import/excel', authMiddleware, upload.single('file'), controller.i
  *                 type: integer
  *                 example: 12
  *                 description: "Number of products in package (defaults to 1)"
+ *               product_type:
+ *                 type: string
+ *                 enum: [candy, ams, both]
+ *                 example: "candy"
+ *                 description: "Type de produit (candy, ams ou both)"
  *               flavors:
  *                 type: array
  *                 items:
@@ -265,6 +274,9 @@ router.post('/import/excel', authMiddleware, upload.single('file'), controller.i
  *                 type: number
  *               stock:
  *                 type: integer
+ *               stock_securite:
+ *                 type: integer
+ *                 description: "Stock de sécurité du produit"
  *               is_active:
  *                 type: boolean
  *               category_id:
@@ -274,6 +286,11 @@ router.post('/import/excel', authMiddleware, upload.single('file'), controller.i
  *               packageUnit:
  *                 type: integer
  *                 description: "Number of products in package"
+ *               product_type:
+ *                 type: string
+ *                 enum: [candy, ams, both]
+ *                 example: "candy"
+ *                 description: "Type de produit (candy, ams ou both)"
  *               price_roles:
  *                 type: array
  *                 items:

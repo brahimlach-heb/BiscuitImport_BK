@@ -45,15 +45,19 @@ const getByUser = async (req, res, next) => {
 
     // Vérifier si l'utilisateur est MANAGER ou ADMIN
     const allowedRoles = ['MANAGER', 'ADMIN'];
-    if (!req.user.role_code || !allowedRoles.includes(req.user.role_code.toUpperCase())) {
-      logger.warn(`ACTION getOrdersByUser_forbidden user_id=${req.user.id} role=${req.user.role_code}`);
-      return res.status(403).json({ error: 'Access forbidden: Only MANAGER and ADMIN can access orders' });
-    }
+    const isManagerOrAdmin = req.user.role_code && allowedRoles.includes(req.user.role_code.toUpperCase());
 
-    // MANAGER et ADMIN voient toutes les commandes
-    const rows = await orderService.getAllOrders();
-    logger.info(`ACTION getAllOrders count=${Array.isArray(rows) ? rows.length : 0} by=${req.user.id}`);
-    res.status(200).json(rows);
+    if (isManagerOrAdmin) {
+      // MANAGER et ADMIN voient toutes les commandes
+      const rows = await orderService.getAllOrders();
+      logger.info(`ACTION getAllOrders count=${Array.isArray(rows) ? rows.length : 0} by=${req.user.id}`);
+      res.status(200).json(rows);
+    } else {
+      // Les autres utilisateurs voient uniquement leurs propres commandes
+      const rows = await orderService.getOrdersByUser(req.user.id);
+      logger.info(`ACTION getOrdersByUser user_id=${req.user.id} count=${Array.isArray(rows) ? rows.length : 0}`);
+      res.status(200).json(rows);
+    }
   } catch (err) {
     const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
     logger.error(`ERROR getOrdersByUser: ${err.message}`, { user: userInfo });

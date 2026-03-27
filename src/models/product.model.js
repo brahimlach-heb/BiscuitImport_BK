@@ -10,9 +10,11 @@ db.run(`CREATE TABLE IF NOT EXISTS product (
   price REAL NOT NULL,
   image TEXT,
   stock INTEGER DEFAULT 0,
+  stock_securite INTEGER DEFAULT 0,
   is_active INTEGER DEFAULT 1,
   category_id INTEGER,
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  product_type TEXT DEFAULT 'ams',
   FOREIGN KEY (category_id) REFERENCES category(id)
 )`);
 
@@ -26,6 +28,8 @@ const tryAddColumn = (sql) => {
 tryAddColumn("ALTER TABLE product ADD COLUMN marque TEXT");
 tryAddColumn("ALTER TABLE product ADD COLUMN packageUnit INTEGER DEFAULT 1");
 tryAddColumn("ALTER TABLE product ADD COLUMN created_at DATETIME DEFAULT CURRENT_TIMESTAMP");
+tryAddColumn("ALTER TABLE product ADD COLUMN product_type TEXT DEFAULT 'ams'");
+tryAddColumn("ALTER TABLE product ADD COLUMN stock_securite INTEGER DEFAULT 0");
 
 // Create association table product_flavor if not exists
 db.run(`CREATE TABLE IF NOT EXISTS product_flavor (
@@ -36,10 +40,10 @@ db.run(`CREATE TABLE IF NOT EXISTS product_flavor (
   FOREIGN KEY (flavor_id) REFERENCES flavor(id)
 )`);
 
-const createProduct = ({ name, description, ingredients, marque, price, stock, is_active, category_id, packageUnit }) => {
+const createProduct = ({ name, description, ingredients, marque, price, stock, stock_securite, is_active, category_id, packageUnit, product_type }) => {
   return new Promise((resolve, reject) => {
-    const sql = 'INSERT INTO product (name, description, ingredients, marque, price, stock, is_active, category_id, packageUnit) VALUES (?, ?, ?, ?, ?, ?, COALESCE(?, 1), ?, COALESCE(?, 1))';
-    db.run(sql, [name, description || null, ingredients || null, marque || null, price, typeof stock !== 'undefined' ? stock : 0, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, category_id || null, typeof packageUnit !== 'undefined' ? packageUnit : null], function (err) {
+    const sql = 'INSERT INTO product (name, description, ingredients, marque, price, stock, stock_securite, is_active, category_id, packageUnit, product_type) VALUES (?, ?, ?, ?, ?, ?, ?, COALESCE(?, 1), ?, COALESCE(?, 1), ?)';
+    db.run(sql, [name, description || null, ingredients || null, marque || null, price, typeof stock !== 'undefined' ? stock : 0, typeof stock_securite !== 'undefined' ? stock_securite : 0, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, category_id || null, typeof packageUnit !== 'undefined' ? packageUnit : null, product_type || 'ams'], function (err) {
       if (err) return reject(err);
       db.get('SELECT * FROM product WHERE id = ?', [this.lastID], (err2, row) => {
         if (err2) return reject(err2);
@@ -54,21 +58,28 @@ const getAllProducts = (filter = {}) => {
     const params = [];
     let sql = 'SELECT * FROM product';
     const conditions = [];
-    
+
+    // product_type optionnel sauf pour les rôles non ADMIN/MANAGER
+    // La vérification est faite au niveau du contrôleur
+    if (filter.product_type) {
+      conditions.push('product_type = ?');
+      params.push(filter.product_type);
+    }
+
     if (filter.category_id) {
       conditions.push('category_id = ?');
       params.push(filter.category_id);
     }
-    
+
     // Filtrer par is_active sauf pour ADMIN et MANAGER
     if (filter.includeInactive !== true) {
       conditions.push('is_active = 1');
     }
-    
+
     if (conditions.length > 0) {
       sql += ' WHERE ' + conditions.join(' AND ');
     }
-    
+
     sql += ' ORDER BY id DESC';
     db.all(sql, params, (err, rows) => {
       if (err) return reject(err);

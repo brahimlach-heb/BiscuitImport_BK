@@ -124,6 +124,10 @@ router.post('/register', controller.register);
  *                         is_active:
  *                           type: boolean
  *                           example: true
+ *                         user_type:
+ *                           type: string
+ *                           example: "ams"
+ *                           description: "Type d'utilisateur (ams, candy, both)"
  *       401:
  *         description: Invalid credentials
  */
