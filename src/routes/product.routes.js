@@ -379,10 +379,46 @@ router.post('/import/excel', authMiddleware, upload.single('file'), controller.i
  *         description: Association removed
  */
 
+/**
+ * @swagger
+ * /api/products/{id}/security-stock:
+ *   patch:
+ *     summary: Update product security stock (stock de sécurité)
+ *     tags: [Products]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema: { type: integer }
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - stock_securite
+ *             properties:
+ *               stock_securite: { type: integer, minimum: 0, description: "Security stock level" }
+ *     responses:
+ *       200:
+ *         description: Product security stock updated
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Product'
+ *       400:
+ *         description: Invalid input
+ *       404:
+ *         description: Product not found
+ */
 router.get('/', authMiddleware, controller.getAll);
 router.get('/:id', authMiddleware, controller.getById);
 router.post('/', authMiddleware, controller.create);
 router.put('/:id', authMiddleware, controller.update);
+router.patch('/:id/security-stock', authMiddleware, controller.updateSecurityStock);
 router.delete('/:id', authMiddleware, controller.remove);
 
 // flavor association

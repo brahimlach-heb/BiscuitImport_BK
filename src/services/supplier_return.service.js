@@ -2,15 +2,38 @@ const srModel = require('../models/supplier_return.model');
 const stockModel = require('../models/stock_movement.model');
 
 const createSupplierReturn = async (data) => {
-  const { purchase_order_id, supplier_id, return_reason } = data;
-  if (!purchase_order_id || !supplier_id) {
-    const err = new Error('purchase_order_id and supplier_id are required');
+  const { po_id, purchase_order_id, product_id, quantity_returned, reason, return_reason, unit_price } = data;
+  
+  // Map po_id to purchase_order_id
+  const poId = po_id || purchase_order_id;
+  
+  if (!poId) {
+    const err = new Error('po_id or purchase_order_id is required');
     err.status = 400;
     throw err;
   }
-  return await srModel.createSupplierReturn({
-    purchase_order_id, supplier_id, return_reason
+  
+  // Create supplier return without product_id (that's the parent record)
+  const sr = await srModel.createSupplierReturn({
+    purchase_order_id: poId,
+    return_reason: return_reason || reason
   });
+  
+  // If product_id and quantity_returned are provided, add the item
+  if (product_id && quantity_returned) {
+    await srModel.addSupplierReturnItem({
+      supplier_return_id: sr.id,
+      product_id,
+      quantity: quantity_returned,
+      unit_price: unit_price || 0,
+      reason: reason || return_reason
+    });
+    
+    // Reload with items
+    return await srModel.getSupplierReturnById(sr.id);
+  }
+  
+  return sr;
 };
 
 const getSupplierReturnById = async (id) => {

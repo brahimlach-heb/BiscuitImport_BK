@@ -31,12 +31,28 @@ db.run(`CREATE TABLE IF NOT EXISTS supplier_return_items (
 const createSupplierReturn = (data) => {
   return new Promise((resolve, reject) => {
     const { purchase_order_id, supplier_id, return_reason } = data;
-    const sql = `INSERT INTO supplier_returns (purchase_order_id, supplier_id, status, return_reason)
-                 VALUES (?, ?, 'pending', ?)`;
-    db.run(sql, [purchase_order_id, supplier_id, return_reason || null], function (err) {
-      if (err) return reject(err);
-      getSupplierReturnById(this.lastID).then(resolve).catch(reject);
-    });
+    
+    // If supplier_id not provided, fetch it from purchase_orders
+    if (!supplier_id) {
+      db.get('SELECT supplier_id FROM purchase_orders WHERE id = ?', [purchase_order_id], (err, po) => {
+        if (err) return reject(err);
+        if (!po) return reject(new Error('Purchase order not found'));
+        
+        const sql = `INSERT INTO supplier_returns (purchase_order_id, supplier_id, status, return_reason)
+                     VALUES (?, ?, 'pending', ?)`;
+        db.run(sql, [purchase_order_id, po.supplier_id, return_reason || null], function (err) {
+          if (err) return reject(err);
+          getSupplierReturnById(this.lastID).then(resolve).catch(reject);
+        });
+      });
+    } else {
+      const sql = `INSERT INTO supplier_returns (purchase_order_id, supplier_id, status, return_reason)
+                   VALUES (?, ?, 'pending', ?)`;
+      db.run(sql, [purchase_order_id, supplier_id, return_reason || null], function (err) {
+        if (err) return reject(err);
+        getSupplierReturnById(this.lastID).then(resolve).catch(reject);
+      });
+    }
   });
 };
 
@@ -84,9 +100,23 @@ const getSupplierReturns = (filter = {}) => {
 
     sql += ' ORDER BY sr.created_at DESC';
 
-    db.all(sql, params, (err, rows) => {
+    db.all(sql, params, async (err, rows) => {
       if (err) return reject(err);
-      resolve(rows || []);
+      
+      // Load items for each return
+      try {
+        const rowsWithItems = await Promise.all(rows.map(async (row) => {
+          try {
+            row.items = await getSupplierReturnItems(row.id);
+          } catch (e) {
+            row.items = [];
+          }
+          return row;
+        }));
+        resolve(rowsWithItems || []);
+      } catch (e) {
+        reject(e);
+      }
     });
   });
 };

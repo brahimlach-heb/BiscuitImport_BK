@@ -2,15 +2,35 @@ const crModel = require('../models/customer_return.model');
 const stockModel = require('../models/stock_movement.model');
 
 const createCustomerReturn = async (data) => {
-  const { order_id, return_reason } = data;
+  const { order_id, return_reason, reason, return_date, product_id, quantity_returned, unit_price } = data;
   if (!order_id) {
     const err = new Error('order_id is required');
     err.status = 400;
     throw err;
   }
-  return await crModel.createCustomerReturn({
-    order_id, return_reason
+  
+  // Create the return record
+  const cr = await crModel.createCustomerReturn({
+    order_id, 
+    return_reason: return_reason || reason,
+    return_date
   });
+  
+  // If product_id and quantity_returned are provided, add the item
+  if (product_id && quantity_returned) {
+    await crModel.addCustomerReturnItem({
+      customer_return_id: cr.id,
+      product_id,
+      quantity: quantity_returned,
+      unit_price: unit_price || 0,
+      reason: reason || return_reason
+    });
+    
+    // Reload with items
+    return await crModel.getCustomerReturnById(cr.id);
+  }
+  
+  return cr;
 };
 
 const getCustomerReturnById = async (id) => {

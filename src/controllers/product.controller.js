@@ -163,4 +163,34 @@ const removeFlavor = async (req, res, next) => {
   }
 };
 
-module.exports = { getAll, getById, create, update, remove, addFlavor, removeFlavor, exportExcel, importExcel };
+const updateSecurityStock = async (req, res, next) => {
+  try {
+    const id = Number(req.params.id);
+    const { stock_securite } = req.body;
+    
+    if (stock_securite === undefined || stock_securite === null) {
+      return res.status(400).json({ error: 'stock_securite is required' });
+    }
+    
+    if (typeof stock_securite !== 'number' || stock_securite < 0) {
+      return res.status(400).json({ error: 'stock_securite must be a positive number' });
+    }
+    
+    const updated = await productService.updateSecurityStock(id, stock_securite);
+    const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
+    
+    if (!updated) {
+      logger.info(`ACTION updateSecurityStock_not_found id=${id} by=${userInfo}`);
+      return res.status(404).json({ error: 'Product not found' });
+    }
+    
+    logger.info(`ACTION updateSecurityStock id=${id} stock_securite=${stock_securite} by=${userInfo}`);
+    res.status(200).json(updated);
+  } catch (err) {
+    const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
+    logger.error(`ERROR updateSecurityStock id=${req.params.id}: ${err.message}`, { body: req.body, user: userInfo });
+    next(err);
+  }
+};
+
+module.exports = { getAll, getById, create, update, remove, addFlavor, removeFlavor, updateSecurityStock, exportExcel, importExcel };

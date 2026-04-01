@@ -97,10 +97,10 @@ const getProductById = (id) => {
   });
 };
 
-const updateProduct = (id, { name, description, ingredients, marque, price, stock, is_active, category_id, packageUnit }) => {
+const updateProduct = (id, { name, description, ingredients, marque, price, stock, stock_securite, is_active, category_id, packageUnit }) => {
   return new Promise((resolve, reject) => {
-    const sql = 'UPDATE product SET name = COALESCE(?, name), description = COALESCE(?, description), ingredients = COALESCE(?, ingredients), marque = COALESCE(?, marque), price = COALESCE(?, price), stock = COALESCE(?, stock), is_active = COALESCE(?, is_active), category_id = COALESCE(?, category_id), packageUnit = COALESCE(?, packageUnit) WHERE id = ?';
-    db.run(sql, [name || null, description || null, ingredients || null, marque || null, typeof price !== 'undefined' ? price : null, typeof stock !== 'undefined' ? stock : null, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, typeof category_id !== 'undefined' ? category_id : null, typeof packageUnit !== 'undefined' ? packageUnit : null, id], function (err) {
+    const sql = 'UPDATE product SET name = COALESCE(?, name), description = COALESCE(?, description), ingredients = COALESCE(?, ingredients), marque = COALESCE(?, marque), price = COALESCE(?, price), stock = COALESCE(?, stock), stock_securite = COALESCE(?, stock_securite), is_active = COALESCE(?, is_active), category_id = COALESCE(?, category_id), packageUnit = COALESCE(?, packageUnit) WHERE id = ?';
+    db.run(sql, [name || null, description || null, ingredients || null, marque || null, typeof price !== 'undefined' ? price : null, typeof stock !== 'undefined' ? stock : null, typeof stock_securite !== 'undefined' ? stock_securite : null, typeof is_active !== 'undefined' ? (is_active ? 1 : 0) : null, typeof category_id !== 'undefined' ? category_id : null, typeof packageUnit !== 'undefined' ? packageUnit : null, id], function (err) {
       if (err) return reject(err);
       resolve(this.changes > 0);
     });
@@ -164,6 +164,22 @@ const updateStock = (product_id, quantity_change) => {
   });
 };
 
+const updateSecurityStock = (product_id, stock_securite) => {
+  return new Promise((resolve, reject) => {
+    const sql = 'UPDATE product SET stock_securite = ? WHERE id = ?';
+    db.run(sql, [stock_securite, product_id], function (err) {
+      if (err) return reject(err);
+      if (this.changes === 0) {
+        return reject(new Error(`Product with id ${product_id} not found`));
+      }
+      db.get('SELECT * FROM product WHERE id = ?', [product_id], (err2, row) => {
+        if (err2) return reject(err2);
+        resolve(row);
+      });
+    });
+  });
+};
+
 module.exports = {
   createProduct,
   getAllProducts,
@@ -173,5 +189,6 @@ module.exports = {
   addFlavorToProduct,
   removeFlavorFromProduct,
   getFlavorsForProduct,
-  updateStock
+  updateStock,
+  updateSecurityStock
 };

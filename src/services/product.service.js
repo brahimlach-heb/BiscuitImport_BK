@@ -594,6 +594,11 @@ const removeFlavorFromProduct = async (product_id, flavor_id) => {
   return await productModel.removeFlavorFromProduct(product_id, flavor_id);
 };
 
+const updateSecurityStock = async (product_id, stock_securite) => {
+  logger.info(`DB updateSecurityStock: product_id=${product_id} stock_securite=${stock_securite}`);
+  return await productModel.updateSecurityStock(product_id, stock_securite);
+};
+
 module.exports = {
   createProduct,
   getAllProducts,
@@ -602,6 +607,7 @@ module.exports = {
   deleteProduct,
   addFlavorToProduct,
   removeFlavorFromProduct,
+  updateSecurityStock,
   exportProductsToExcel,
   importProductsFromExcel
 };

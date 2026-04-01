@@ -29,10 +29,10 @@ db.run(`CREATE TABLE IF NOT EXISTS customer_return_items (
 
 const createCustomerReturn = (data) => {
   return new Promise((resolve, reject) => {
-    const { order_id, return_reason } = data;
-    const sql = `INSERT INTO customer_returns (order_id, status, return_reason)
-                 VALUES (?, 'pending', ?)`;
-    db.run(sql, [order_id, return_reason || null], function (err) {
+    const { order_id, return_reason, return_date } = data;
+    const sql = `INSERT INTO customer_returns (order_id, status, return_reason, return_date)
+                 VALUES (?, 'pending', ?, ?)`;
+    db.run(sql, [order_id, return_reason || null, return_date || new Date().toISOString()], function (err) {
       if (err) return reject(err);
       getCustomerReturnById(this.lastID).then(resolve).catch(reject);
     });
@@ -41,7 +41,7 @@ const createCustomerReturn = (data) => {
 
 const getCustomerReturnById = (id) => {
   return new Promise((resolve, reject) => {
-    db.get('SELECT * FROM customer_returns WHERE id = ?', [id], async (err, row) => {
+    db.get('SELECT *, return_reason as reason FROM customer_returns WHERE id = ?', [id], async (err, row) => {
       if (err) return reject(err);
       if (row) {
         try {
@@ -57,7 +57,7 @@ const getCustomerReturnById = (id) => {
 
 const getCustomerReturns = (filter = {}) => {
   return new Promise((resolve, reject) => {
-    let sql = `SELECT cr.*, o.order_number 
+    let sql = `SELECT cr.*, cr.return_reason as reason, o.customer_name as order_customer 
                FROM customer_returns cr
                LEFT JOIN orders o ON cr.order_id = o.id WHERE 1=1`;
     const params = [];
@@ -71,15 +71,29 @@ const getCustomerReturns = (filter = {}) => {
       params.push(filter.status);
     }
     if (filter.search) {
-      sql += ' AND o.order_number LIKE ?';
+      sql += ' AND o.customer_name LIKE ?';
       params.push(`%${filter.search}%`);
     }
 
     sql += ' ORDER BY cr.created_at DESC';
 
-    db.all(sql, params, (err, rows) => {
+    db.all(sql, params, async (err, rows) => {
       if (err) return reject(err);
-      resolve(rows || []);
+      
+      // Load items for each return
+      try {
+        const rowsWithItems = await Promise.all(rows.map(async (row) => {
+          try {
+            row.items = await getCustomerReturnItems(row.id);
+          } catch (e) {
+            row.items = [];
+          }
+          return row;
+        }));
+        resolve(rowsWithItems || []);
+      } catch (e) {
+        reject(e);
+      }
     });
   });
 };
@@ -93,10 +107,11 @@ const updateCustomerReturn = (id, data) => {
         return reject(new Error('Can only modify pending returns'));
       }
 
-      const { return_reason } = data;
+      const { return_reason, reason } = data;
+      const finalReason = return_reason || reason;
       const sql = `UPDATE customer_returns SET return_reason = ?, updated_at = CURRENT_TIMESTAMP
                    WHERE id = ?`;
-      db.run(sql, [return_reason || null, id], (err) => {
+      db.run(sql, [finalReason || null, id], (err) => {
         if (err) return reject(err);
         getCustomerReturnById(id).then(resolve).catch(reject);
       });
