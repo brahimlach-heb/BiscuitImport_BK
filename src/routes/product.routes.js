@@ -381,9 +381,9 @@ router.post('/import/excel', authMiddleware, upload.single('file'), controller.i
 
 /**
  * @swagger
- * /api/products/{id}/security-stock:
+ * /api/products/{id}/adjust-stock:
  *   patch:
- *     summary: Update product security stock (stock de sécurité)
+ *     summary: Adjust product stock with reason (add or remove)
  *     tags: [Products]
  *     security:
  *       - bearerAuth: []
@@ -399,26 +399,66 @@ router.post('/import/excel', authMiddleware, upload.single('file'), controller.i
  *           schema:
  *             type: object
  *             required:
- *               - stock_securite
+ *               - quantity
+ *               - reason
  *             properties:
- *               stock_securite: { type: integer, minimum: 0, description: "Security stock level" }
+ *               quantity: { type: number, description: "Quantity change (positive or negative)" }
+ *               reason: { type: string, description: "Reason for adjustment" }
  *     responses:
  *       200:
- *         description: Product security stock updated
+ *         description: Product stock adjusted
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Product'
  *       400:
- *         description: Invalid input
+ *         description: Invalid input or stock would go negative
+ *       404:
+ *         description: Product not found
+ */
+
+/**
+ * @swagger
+ * /api/products/{id}/stock-history:
+ *   get:
+ *     summary: Get stock movement history for a product
+ *     tags: [Products]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema: { type: integer }
+ *     responses:
+ *       200:
+ *         description: Stock history with before/after values
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id: { type: integer }
+ *                   product_id: { type: integer }
+ *                   quantity_before: { type: number, description: "Stock before change" }
+ *                   quantity_after: { type: number, description: "Stock after change" }
+ *                   difference: { type: number, description: "Net change (quantity_after - quantity_before)" }
+ *                   reason: { type: string, description: "Reason for adjustment" }
+ *                   type: { type: string, description: "Type of movement (adjustment, purchase_order, customer_return, supplier_return)" }
+ *                   created_at: { type: string, format: date-time }
+ *                   created_by: { type: integer, description: "User ID who created the movement" }
  *       404:
  *         description: Product not found
  */
 router.get('/', authMiddleware, controller.getAll);
 router.get('/:id', authMiddleware, controller.getById);
+router.get('/:id/stock-history', authMiddleware, controller.getStockHistory);
 router.post('/', authMiddleware, controller.create);
 router.put('/:id', authMiddleware, controller.update);
 router.patch('/:id/security-stock', authMiddleware, controller.updateSecurityStock);
+router.patch('/:id/adjust-stock', authMiddleware, controller.adjustStock);
 router.delete('/:id', authMiddleware, controller.remove);
 
 // flavor association

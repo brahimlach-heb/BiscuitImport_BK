@@ -599,6 +599,55 @@ const updateSecurityStock = async (product_id, stock_securite) => {
   return await productModel.updateSecurityStock(product_id, stock_securite);
 };
 
+const adjustStock = async (product_id, quantity, reason, userId) => {
+  logger.info(`DB adjustStock: product_id=${product_id} quantity=${quantity} reason=${reason}`);
+  
+  // Get current stock
+  const product = await productModel.getProductById(product_id);
+  if (!product) {
+    const err = new Error('Product not found');
+    err.status = 404;
+    throw err;
+  }
+  
+  // Calculate new stock: current + quantity change
+  const newStock = product.stock + quantity;
+  
+  if (newStock < 0) {
+    const err = new Error(`Cannot reduce stock below 0. Current stock: ${product.stock}, requested change: ${quantity}`);
+    err.status = 400;
+    throw err;
+  }
+  
+  // Use stockModel to adjust stock and create movement record
+  const stockModel = require('../models/stock_movement.model');
+  await stockModel.adjustStock(product_id, newStock, reason, userId);
+  
+  // Return updated product
+  return await productModel.getProductById(product_id);
+};
+
+const getStockHistory = async (product_id) => {
+  logger.info(`DB getStockHistory: product_id=${product_id}`);
+  
+  // Get stock movements for this product ordered by date DESC
+  const stockModel = require('../models/stock_movement.model');
+  const movements = await stockModel.getStockMovementsByProduct(product_id);
+  
+  // Format response with readable data
+  return movements.map(m => ({
+    id: m.id,
+    product_id: m.product_id,
+    quantity_before: m.quantity_before,
+    quantity_after: m.quantity_after,
+    difference: m.quantity_after - m.quantity_before,
+    reason: m.notes || 'No reason provided',
+    type: m.reference_type || 'unknown',
+    created_at: m.created_at,
+    created_by: m.created_by
+  }));
+};
+
 module.exports = {
   createProduct,
   getAllProducts,
@@ -608,6 +657,8 @@ module.exports = {
   addFlavorToProduct,
   removeFlavorFromProduct,
   updateSecurityStock,
+  adjustStock,
+  getStockHistory,
   exportProductsToExcel,
   importProductsFromExcel
 };

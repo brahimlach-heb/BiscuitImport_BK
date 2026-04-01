@@ -193,4 +193,60 @@ const updateSecurityStock = async (req, res, next) => {
   }
 };
 
-module.exports = { getAll, getById, create, update, remove, addFlavor, removeFlavor, updateSecurityStock, exportExcel, importExcel };
+const adjustStock = async (req, res, next) => {
+  try {
+    const id = Number(req.params.id);
+    const { quantity, reason } = req.body;
+    
+    if (quantity === undefined || quantity === null) {
+      return res.status(400).json({ error: 'quantity is required' });
+    }
+    
+    if (typeof quantity !== 'number') {
+      return res.status(400).json({ error: 'quantity must be a number' });
+    }
+    
+    if (!reason || typeof reason !== 'string' || reason.trim() === '') {
+      return res.status(400).json({ error: 'reason is required and must be a string' });
+    }
+    
+    const updated = await productService.adjustStock(id, quantity, reason, req.user?.id);
+    const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
+    
+    if (!updated) {
+      logger.info(`ACTION adjustStock_not_found id=${id} by=${userInfo}`);
+      return res.status(404).json({ error: 'Product not found' });
+    }
+    
+    logger.info(`ACTION adjustStock id=${id} quantity=${quantity} reason=${reason} by=${userInfo}`);
+    res.status(200).json(updated);
+  } catch (err) {
+    const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
+    logger.error(`ERROR adjustStock id=${req.params.id}: ${err.message}`, { body: req.body, user: userInfo });
+    next(err);
+  }
+};
+
+const getStockHistory = async (req, res, next) => {
+  try {
+    const id = Number(req.params.id);
+    const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
+    
+    // Verify product exists
+    const product = await productService.getProductById(id);
+    if (!product) {
+      logger.info(`ACTION getStockHistory_not_found id=${id} by=${userInfo}`);
+      return res.status(404).json({ error: 'Product not found' });
+    }
+    
+    const history = await productService.getStockHistory(id);
+    logger.info(`ACTION getStockHistory id=${id} count=${history.length} by=${userInfo}`);
+    res.status(200).json(history);
+  } catch (err) {
+    const userInfo = req.user ? `user_id=${req.user.id}` : 'anonymous';
+    logger.error(`ERROR getStockHistory id=${req.params.id}: ${err.message}`, { user: userInfo });
+    next(err);
+  }
+};
+
+module.exports = { getAll, getById, create, update, remove, addFlavor, removeFlavor, updateSecurityStock, adjustStock, getStockHistory, exportExcel, importExcel };
