@@ -1142,3 +1142,50 @@
     at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
     at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
     at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-03-27T15:21:32.256Z error: ERROR getPurchaseOrderHistory: Purchase order not found
+2026-03-27T15:21:32.276Z error: Error: Purchase order not found
+    at getPurchaseOrderById (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\purchase_order.service.js:20:17)
+    at async Object.getPurchaseOrderHistory (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\purchase_order.service.js:126:3)
+    at async getPurchaseOrderHistory (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\purchase_order.controller.js:150:21)
+2026-03-27T15:23:52.644Z error: ERROR getPurchaseOrderHistory: Purchase order not found
+2026-03-27T15:23:52.645Z error: Error: Purchase order not found
+    at getPurchaseOrderById (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\purchase_order.service.js:20:17)
+    at async Object.getPurchaseOrderHistory (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\purchase_order.service.js:126:3)
+    at async getPurchaseOrderHistory (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\purchase_order.controller.js:150:21)
+2026-03-27T15:32:16.220Z error: ERROR getPurchaseOrderHistory: Purchase order not found
+2026-03-27T15:32:16.235Z error: Error: Purchase order not found
+    at getPurchaseOrderById (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\purchase_order.service.js:20:17)
+    at async Object.getPurchaseOrderHistory (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\purchase_order.service.js:126:3)
+    at async getPurchaseOrderHistory (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\purchase_order.controller.js:150:21)
+2026-03-30T09:31:07.814Z error: Error: SQLITE_ERROR: ambiguous column name: id
+--> in Database#all('\n' +
+  '        SELECT w.*, \n' +
+  '               COALESCE(ws.total_stock, 0) as total_stock,\n' +
+  '               COALESCE(ws.used_capacity, 0) as used_capacity,\n' +
+  '               ROUND((COALESCE(ws.used_capacity, 0) * 100.0 / w.capacity), 2) as capacity_percentage\n' +
+  '        FROM warehouses w\n' +
+  '        LEFT JOIN warehouse_stock ws ON w.id = ws.warehouse_id\n' +
+  '        WHERE soft_delete_flag = 0 AND id = ?\n' +
+  '        ORDER BY w.created_at DESC\n' +
+  '        LIMIT ? OFFSET ?\n' +
+  '      ', [ 1, 10, 0 ], [Function (anonymous)])
+    at Statement.<anonymous> (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\models\warehouse.model.js:120:10)
+2026-03-30T09:40:29.131Z error: Error: Warehouse not found
+    at Object.updateWarehouse (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\warehouse.service.js:112:17)
+    at async updateWarehouse (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\warehouse.controller.js:121:23)
+2026-03-30T09:42:15.726Z error: ERROR getPurchaseOrderHistory: Purchase order not found
+2026-03-30T09:42:15.728Z error: Error: Purchase order not found
+    at getPurchaseOrderById (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\purchase_order.service.js:20:17)
+    at async Object.getPurchaseOrderHistory (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\purchase_order.service.js:126:3)
+    at async getPurchaseOrderHistory (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\purchase_order.controller.js:150:21)
+2026-03-30T13:58:45.777Z error: ERROR createSupplierReturn: purchase_order_id and supplier_id are required
+2026-03-30T13:58:45.778Z error: Error: purchase_order_id and supplier_id are required
+    at Object.createSupplierReturn (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\supplier_return.service.js:7:17)
+    at createSupplierReturn (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\supplier_return.controller.js:40:32)
+    at Layer.handleRequest (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\node_modules\router\lib\route.js:157:13)
+    at module.exports (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\middlewares\auth.middleware.js:31:5)
+2026-03-31T23:03:22.156Z error: ERROR receivePurchaseOrder: Purchase order has no items
+2026-03-31T23:03:22.158Z error: Error: Purchase order has no items
+    at Object.receivePurchaseOrder (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\services\purchase_order.service.js:129:17)
+    at async receivePurchaseOrder (C:\Users\blachheb\Desktop\Projects\BiscuitImport\BiscuitImport_BK\src\controllers\purchase_order.controller.js:132:16)

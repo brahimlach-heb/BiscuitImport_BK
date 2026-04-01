@@ -181,8 +181,216 @@ const options = {
             created_at: { type: 'string', format: 'date-time' },
             modified_at: { type: 'string', format: 'date-time' },
             last_login: { type: 'string', format: 'date-time' },
-            deactivated_at: { type: 'string', format: 'date' },
-            
+            deactivated_at: { type: 'string', format: 'date' }
+          }
+        },
+        Supplier: {
+          type: 'object',
+          required: ['name'],
+          properties: {
+            id: { type: 'integer' },
+            name: { type: 'string', description: 'Supplier name' },
+            email: { type: 'string', format: 'email', description: 'Supplier email' },
+            phone: { type: 'string', description: 'Supplier phone number' },
+            address: { type: 'string', description: 'Supplier address' },
+            city: { type: 'string', description: 'City' },
+            postal_code: { type: 'string', description: 'Postal code' },
+            country: { type: 'string', description: 'Country' },
+            payment_terms: { type: 'string', description: 'Payment terms (e.g., Net 30)' },
+            is_active: { type: 'boolean', default: true },
+            soft_delete_flag: { type: 'boolean', default: false },
+            created_at: { type: 'string', format: 'date-time' },
+            updated_at: { type: 'string', format: 'date-time' }
+          }
+        },
+        SupplierProduct: {
+          type: 'object',
+          properties: {
+            id: { type: 'integer' },
+            supplier_id: { type: 'integer' },
+            product_id: { type: 'integer' },
+            supplier_sku: { type: 'string', description: 'Supplier SKU' },
+            lead_time_days: { type: 'integer', description: 'Lead time in days' },
+            min_order_qty: { type: 'integer', description: 'Minimum order quantity' },
+            unit_price: { type: 'number', format: 'double', description: 'Unit price' },
+            last_order_date: { type: 'string', format: 'date-time' },
+            performance_rating: { type: 'number', format: 'float', default: 0 },
+            product_name: { type: 'string' },
+            price: { type: 'number' },
+            stock: { type: 'integer' },
+            created_at: { type: 'string', format: 'date-time' },
+            updated_at: { type: 'string', format: 'date-time' }
+          }
+        },
+        PurchaseOrder: {
+          type: 'object',
+          required: ['supplier_id'],
+          properties: {
+            id: { type: 'integer' },
+            supplier_id: { type: 'integer', description: 'Supplier ID' },
+            status: { type: 'string', enum: ['draft', 'sent', 'received', 'cancelled'], default: 'draft' },
+            order_date: { type: 'string', format: 'date-time' },
+            expected_delivery: { type: 'string', format: 'date-time' },
+            received_date: { type: 'string', format: 'date-time' },
+            total_amount: { type: 'number', format: 'double', default: 0 },
+            notes: { type: 'string' },
+            created_by: { type: 'integer' },
+            supplier_name: { type: 'string' },
+            lines: { type: 'array', items: { $ref: '#/components/schemas/PurchaseOrderLine' } },
+            created_at: { type: 'string', format: 'date-time' },
+            updated_at: { type: 'string', format: 'date-time' }
+          }
+        },
+        PurchaseOrderLine: {
+          type: 'object',
+          required: ['product_id', 'quantity', 'unit_price'],
+          properties: {
+            id: { type: 'integer' },
+            purchase_order_id: { type: 'integer' },
+            product_id: { type: 'integer' },
+            quantity: { type: 'integer' },
+            unit_price: { type: 'number', format: 'double' },
+            total: { type: 'number', format: 'double' },
+            received_quantity: { type: 'integer', default: 0 },
+            product_name: { type: 'string' },
+            created_at: { type: 'string', format: 'date-time' },
+            updated_at: { type: 'string', format: 'date-time' }
+          }
+        },
+        CustomerReturn: {
+          type: 'object',
+          required: ['order_id'],
+          properties: {
+            id: { type: 'integer' },
+            order_id: { type: 'integer' },
+            status: { type: 'string', enum: ['pending', 'approved', 'rejected', 'refunded'], default: 'pending' },
+            return_reason: { type: 'string' },
+            return_date: { type: 'string', format: 'date-time' },
+            refund_amount: { type: 'number', format: 'double', default: 0 },
+            refund_method: { type: 'string', description: 'e.g., credit_card, bank_transfer' },
+            order_number: { type: 'string' },
+            items: { type: 'array', items: { $ref: '#/components/schemas/CustomerReturnItem' } },
+            created_at: { type: 'string', format: 'date-time' },
+            updated_at: { type: 'string', format: 'date-time' }
+          }
+        },
+        CustomerReturnItem: {
+          type: 'object',
+          required: ['product_id', 'quantity', 'unit_price'],
+          properties: {
+            id: { type: 'integer' },
+            customer_return_id: { type: 'integer' },
+            product_id: { type: 'integer' },
+            quantity: { type: 'integer' },
+            unit_price: { type: 'number', format: 'double' },
+            reason: { type: 'string' },
+            product_name: { type: 'string' },
+            created_at: { type: 'string', format: 'date-time' }
+          }
+        },
+        SupplierReturn: {
+          type: 'object',
+          required: ['purchase_order_id', 'supplier_id'],
+          properties: {
+            id: { type: 'integer' },
+            purchase_order_id: { type: 'integer' },
+            supplier_id: { type: 'integer' },
+            status: { type: 'string', enum: ['pending', 'approved', 'credited', 'rejected'], default: 'pending' },
+            return_reason: { type: 'string' },
+            return_date: { type: 'string', format: 'date-time' },
+            credit_amount: { type: 'number', format: 'double', default: 0 },
+            supplier_name: { type: 'string' },
+            po_status: { type: 'string' },
+            items: { type: 'array', items: { $ref: '#/components/schemas/SupplierReturnItem' } },
+            created_at: { type: 'string', format: 'date-time' },
+            updated_at: { type: 'string', format: 'date-time' }
+          }
+        },
+        SupplierReturnItem: {
+          type: 'object',
+          required: ['product_id', 'quantity', 'unit_price'],
+          properties: {
+            id: { type: 'integer' },
+            supplier_return_id: { type: 'integer' },
+            product_id: { type: 'integer' },
+            quantity: { type: 'integer' },
+            unit_price: { type: 'number', format: 'double' },
+            reason: { type: 'string' },
+            product_name: { type: 'string' },
+            created_at: { type: 'string', format: 'date-time' }
+          }
+        },
+        StockMovement: {
+          type: 'object',
+          required: ['product_id', 'type'],
+          properties: {
+            id: { type: 'integer' },
+            product_id: { type: 'integer' },
+            type: { type: 'string', enum: ['in', 'out', 'adjustment', 'transfer', 'return'], description: 'Movement type' },
+            quantity_before: { type: 'integer' },
+            quantity_after: { type: 'integer' },
+            reference_type: { type: 'string', description: 'Reference type (po, cr, sr, adjustment)' },
+            reference_id: { type: 'integer', description: 'Reference ID' },
+            notes: { type: 'string' },
+            product_name: { type: 'string' },
+            created_by: { type: 'integer' },
+            created_at: { type: 'string', format: 'date-time' }
+          }
+        },
+        Stock: {
+          type: 'object',
+          properties: {
+            id: { type: 'integer' },
+            name: { type: 'string' },
+            price: { type: 'number', format: 'double' },
+            stock: { type: 'integer' },
+            stock_securite: { type: 'integer' },
+            category_id: { type: 'integer' },
+            category_name: { type: 'string' }
+          }
+        },
+        Pagination: {
+          type: 'object',
+          properties: {
+            page: { type: 'integer' },
+            limit: { type: 'integer' },
+            total: { type: 'integer' },
+            pages: { type: 'integer' }
+          }
+        },
+        Warehouse: {
+          type: 'object',
+          required: ['name', 'location', 'capacity'],
+          properties: {
+            id: { type: 'integer' },
+            name: { type: 'string', description: 'Unique warehouse name' },
+            location: { type: 'string', description: 'Warehouse location' },
+            city: { type: 'string', description: 'City' },
+            capacity: { type: 'integer', description: 'Total capacity in units' },
+            is_active: { type: 'boolean', default: true },
+            total_stock: { type: 'integer', description: 'Current total stock' },
+            used_capacity: { type: 'integer', description: 'Used capacity' },
+            capacity_percentage: { type: 'number', format: 'float', description: 'Percentage of capacity used' },
+            created_at: { type: 'string', format: 'date-time' },
+            updated_at: { type: 'string', format: 'date-time' }
+          }
+        },
+        WarehouseTransfer: {
+          type: 'object',
+          required: ['from_warehouse_id', 'to_warehouse_id', 'product_id', 'quantity'],
+          properties: {
+            id: { type: 'integer' },
+            from_warehouse_id: { type: 'integer' },
+            to_warehouse_id: { type: 'integer' },
+            product_id: { type: 'integer' },
+            quantity: { type: 'integer' },
+            transfer_date: { type: 'string', format: 'date-time' },
+            status: { type: 'string', enum: ['completed', 'pending', 'cancelled'], default: 'completed' },
+            notes: { type: 'string' },
+            from_warehouse_name: { type: 'string' },
+            to_warehouse_name: { type: 'string' },
+            product_name: { type: 'string' },
+            created_by: { type: 'integer' }
           }
         }
       }

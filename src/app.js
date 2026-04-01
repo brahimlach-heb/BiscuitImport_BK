@@ -16,8 +16,17 @@ require('./models/product_price_role.model');
 require('./models/order.model');
 require('./models/history.model');
 require('./models/bank.model');
+require('./models/supplier.model');
+require('./models/purchase_order.model');
+require('./models/customer_return.model');
+require('./models/supplier_return.model');
+require('./models/stock_movement.model');
+require('./models/warehouse.model');
 
 const app = express();
+
+// Disable ETags to avoid 304 responses
+app.disable('etag');
 
 // CORS configuration
 app.use(cors({
@@ -50,6 +59,14 @@ app.use('/api/flavors', require('./routes/flavor.routes'));
 app.use('/api/orders', require('./routes/order.routes'));
 app.use('/api/history', require('./routes/history.routes'));
 app.use('/api/banks', require('./routes/bank.routes'));
+
+// Suppliers, Purchase Orders, Returns, Stock, Warehouses routes
+app.use('/api/suppliers', require('./routes/supplier.routes'));
+app.use('/api/purchase-orders', require('./routes/purchase_order.routes'));
+app.use('/api/supplier-returns', require('./routes/supplier_return.routes'));
+app.use('/api/customer-returns', require('./routes/customer_return.routes'));
+app.use('/api/stock', require('./routes/stock.routes'));
+app.use('/api/warehouses', require('./routes/warehouse.routes'));
 
 // Health check
 app.get('/', (req, res) => {
